@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Text;
 using ApprovalTests;
 using WaffleGenerator;
@@ -12,6 +13,30 @@ public class WaffleEngineTests
     public WaffleEngineTests(ITestOutputHelper output)
     {
         this.output = output;
+    }
+
+    [Fact]
+    public void TextWaffleSample()
+    {
+        var waffleEngine = new WaffleEngine();
+        var builder = new StringBuilder();
+        waffleEngine.TextWaffle(
+            paragraphs: 1,
+            includeHeading: true,
+            builder);
+        Debug.WriteLine(builder.ToString());
+    }
+
+    [Fact]
+    public void HtmlWaffleSample()
+    {
+        var waffleEngine = new WaffleEngine();
+        var builder = new StringBuilder();
+        waffleEngine.HtmlWaffle(
+            paragraphs: 1,
+            includeHeading: true,
+            builder);
+        Debug.WriteLine(builder.ToString());
     }
 
     [Fact]

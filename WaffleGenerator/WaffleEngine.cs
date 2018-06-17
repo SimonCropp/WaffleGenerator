@@ -597,6 +597,9 @@ namespace WaffleGenerator
         int cardinalSequence;
         int ordinalSequence;
 
+        public WaffleEngine():this(new Random())
+        {
+        }
         public WaffleEngine(Random random)
         {
             this.random = x => random.Next(0, x);

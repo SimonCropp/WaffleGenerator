@@ -1,26 +1,29 @@
 # WaffleGenerator
 
+The Waffle Generator produces of text which, on first glance, looks like real, ponderous, prose; replete with clichés. For example:
 
-### Code sourced  from
+
+```
+The Aesthetic Of Economico-Social Disposition
+
+"In this regard, the underlying surrealism of the  take home message should not 
+divert attention from The Aesthetic Of Economico-Social Disposition"
+(Humphrey Yokomoto in The Journal of the Total Entative Item (20044U))
+
+On any rational basis, a particular factor, such as the functional baseline, the 
+analogy of object, the strategic requirements or the principal overriding programming 
+provides an interesting insight into the complementary functional derivation. 
+This trend may dissipate due to the mensurable proficiency.
+```
+
+This output can be used in similar way to [Lorem ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum) content, in that it is useful for producing text for build software and producing design mockups.
+
+Based on the awesome work by [Andrew Clarke](https://www.red-gate.com/simple-talk/author/andrew-clarke/) outlined in [The Waffle Generator](https://www.red-gate.com/simple-talk/dotnet/net-tools/the-waffle-generator/).
  
-https://archive.codeplex.com/?p=sdggenerators
-
-Provides a strong typed .NET API for [big-list-of-naughty-strings](https://github.com/minimaxir/big-list-of-naughty-strings)
-
-### Original Article
-
-Title: The Waffle Generator
-Author: Andrew Clarke
-
-The article about this generator and how it was created can be found at:
-
-http://www.simple-talk.com/dotnet/.net-tools/the-waffle-generator/
+Code based on [SDGGenerators - Red Gate SQL Data Generator Community Generators](https://archive.codeplex.com/?p=sdggenerators).
 
 
-## WaffleGenerator
-
-
-### The NuGet packages [![NuGet Status](http://img.shields.io/nuget/v/WaffleGenerator.svg?style=flat)](https://www.nuget.org/packages/WaffleGenerator/)
+## Main Package - WaffleGenerator [![NuGet Status](http://img.shields.io/nuget/v/WaffleGenerator.svg?style=flat)](https://www.nuget.org/packages/WaffleGenerator/)
 
 https://nuget.org/packages/WaffleGenerator/
 
@@ -29,19 +32,31 @@ https://nuget.org/packages/WaffleGenerator/
 
 ### Usage
 
-The entry type is a static class `TheNaughtyStrings`. It exposes all strings via `TheNaughtyStrings.All` and individual categories by name:
+The `WaffleEngine` can be used to produce Html or text:
 
 ```csharp
-var items = TheNaughtyStrings.All.Take(10);
-var emoji = TheNaughtyStrings.Emoji.Take(10);
+var waffleEngine = new WaffleEngine();
+var builder = new StringBuilder();
+waffleEngine.HtmlWaffle(
+    paragraphs: 1,
+    includeHeading: true,
+    builder);
+Debug.WriteLine(builder.ToString());
 ```
 
-## WaffleGenerator.Bogus
+```csharp
+var waffleEngine = new WaffleEngine();
+var builder = new StringBuilder();
+waffleEngine.TextWaffle(
+    paragraphs: 1,
+    includeHeading: true,
+    builder);
+Debug.WriteLine(builder.ToString());
+```
 
-Extends [Bogus](https://github.com/bchavez/Bogus) to use Naughty Strings.
+## WaffleGenerator.Bogus [![NuGet Status](http://img.shields.io/nuget/v/WaffleGenerator.Bogus.svg?style=flat)](https://www.nuget.org/packages/WaffleGenerator.Bogus/)
 
-
-### WaffleGenerator.Bogus [![NuGet Status](http://img.shields.io/nuget/v/WaffleGenerator.Bogus.svg?style=flat)](https://www.nuget.org/packages/WaffleGenerator.Bogus/)
+Extends [Bogus](https://github.com/bchavez/Bogus) to use WaffleGenerator.
 
 https://nuget.org/packages/WaffleGenerator.Bogus/
 
@@ -50,23 +65,24 @@ https://nuget.org/packages/WaffleGenerator.Bogus/
 
 ### Usage
 
-The entry extension method is `Naughty()`. It exposes all strings via `.String()` and individual categories by name:
+The entry extension method is `WaffleHtml()` or `WaffleText()`:
 
 ```csharp
 var faker = new Faker<Target>()
-    .RuleFor(u => u.Property1, (f, u) => f.Naughty().String())
-    .RuleFor(u => u.Property2, (f, u) => f.Naughty().Emoji());
+    .RuleFor(u => u.Property1, (f, u) => f.WaffleHtml())
+    .RuleFor(u => u.Property2, (f, u) => f.WaffleHtml(paragraphs: 4, includeHeading: true))
+    .RuleFor(u => u.Property3, (f, u) => f.WaffleText())
+    .RuleFor(u => u.Property4, (f, u) => f.WaffleText(paragraphs: 4, includeHeading: false));
 
 var target = faker.Generate();
 Debug.WriteLine(target.Property1);
 Debug.WriteLine(target.Property2);
+Debug.WriteLine(target.Property3);
+Debug.WriteLine(target.Property4);
 ```
 
 
 ## Icon
 
-
-<a href="https://thenounproject.com/term/naughty/1777956/" target="_blank">Naughty</a> designed by <a href="https://thenounproject.com/AomAm/" target="_blank">AomAm</a> from The Noun Project
-
-Lock by from the Noun Project
+<a href="https://thenounproject.com/term/waffle/836862/" target="_blank">Waffle</a> designed by Made by Made from The Noun Project
 
