@@ -535,7 +535,7 @@ namespace WaffleGenerator
             "reciprocity", "consciousness", "feeling", "fact", "individuality", "comparison", "awareness",
             "expression", "appreciation", "correspondence", "interpretation", "interpolation", "interpenetration",
             "statement", "emphasis", "feeling", "empathy", "sensibility", "insight", "attitude", "consciousness",
-            "absorbtion", "self-forgetfulness", "parallelism", "classification", "evidence", "aspect", "distinction",
+            "absorption", "self-forgetfulness", "parallelism", "classification", "evidence", "aspect", "distinction",
             "idealism", "naturalism", "disposition", "apprehension", "morality", "object", "idealism", "quality",
             "romanticism", "realism", "idealism", "quality", "transposition", "determinism", "attitude", "terminology",
             "individuality", "category", "integration", "concept", "phenomenon", "element", "analogy", "perception",
@@ -591,7 +591,7 @@ namespace WaffleGenerator
             "", "", "|n", ""
         };
 
-        Random random;
+        Func<int,int> random;
 
         string title;
         int cardinalSequence;
@@ -599,12 +599,17 @@ namespace WaffleGenerator
 
         public WaffleEngine(Random random)
         {
+            this.random = x => random.Next(0, x);
+        }
+
+        public WaffleEngine(Func<int,int> random)
+        {
             this.random = random;
         }
 
         void EvaluateRandomPhrase(string[] phrases, StringBuilder output)
         {
-            EvaluatePhrase(phrases[random.Next(0, phrases.Length)], output);
+            EvaluatePhrase(phrases[random(phrases.Length)], output);
         }
 
         void EvaluatePhrase(string phrase, StringBuilder result)
@@ -723,7 +728,7 @@ namespace WaffleGenerator
 
         void RandomDate(StringBuilder output)
         {
-            output.AppendFormat("{0:04u}", DateTime.Now.Year - random.Next(0, 31));
+            output.AppendFormat("{0:04u}", DateTime.Now.Year - random(31));
         }
 
         public static string TitleCaseWords(string input)
