@@ -609,7 +609,8 @@ namespace WaffleGenerator
 
         void EvaluateRandomPhrase(string[] phrases, StringBuilder output)
         {
-            EvaluatePhrase(phrases[random(phrases.Length)], output);
+            var index = random(phrases.Length);
+            EvaluatePhrase(phrases[index], output);
         }
 
         void EvaluatePhrase(string phrase, StringBuilder result)
