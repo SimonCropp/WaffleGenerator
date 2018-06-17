@@ -735,10 +735,7 @@ namespace WaffleGenerator
 
             if (includeHeading)
             {
-                var title = new StringBuilder();
-                EvaluatePhrase("the |o of |2 |o", title);
-
-                this.title = TitleCaseWords(title.ToString());
+                BuildTitle();
 
                 result.AppendLine("<html>");
                 result.AppendLine("<head>");
@@ -773,6 +770,14 @@ namespace WaffleGenerator
             result.AppendLine("</html>");
         }
 
+        void BuildTitle()
+        {
+            var builder = new StringBuilder();
+            EvaluatePhrase("the |o of |2 |o", builder);
+
+            title = TitleCaseWords(builder.ToString());
+        }
+
         public void TextWaffle(int paragraphs, bool includeHeading, StringBuilder result)
         {
             title = string.Empty;
@@ -781,10 +786,8 @@ namespace WaffleGenerator
 
             if (includeHeading)
             {
-                var title = new StringBuilder();
-                EvaluatePhrase("the |o of |2 |o", title);
+                BuildTitle();
 
-                this.title = TitleCaseWords(title.ToString());
 
                 result.AppendLine(this.title);
                 result.AppendLine();
