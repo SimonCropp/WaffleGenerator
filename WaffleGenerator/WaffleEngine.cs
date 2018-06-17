@@ -1,7 +1,11 @@
 using System;
+using System.Globalization;
 using System.Text;
 
 namespace WaffleGenerator
+#if Bogus
+.Bogus
+#endif
 {
     public class WaffleEngine
     {
@@ -724,7 +728,7 @@ namespace WaffleGenerator
 
         public static string TitleCaseWords(string input)
         {
-            return System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(input);
+            return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(input);
         }
 
         public void HtmlWaffle(int paragraphs, bool includeHeading, StringBuilder result)
@@ -739,11 +743,11 @@ namespace WaffleGenerator
 
                 result.AppendLine("<html>");
                 result.AppendLine("<head>");
-                result.AppendFormat("<title>{0}</title>", this.title);
+                result.AppendFormat("<title>{0}</title>", title);
                 result.AppendLine();
                 result.AppendLine("</head>");
                 result.AppendLine("<body>");
-                result.AppendFormat(@"<h1>{0}</h1>", this.title);
+                result.AppendFormat(@"<h1>{0}</h1>", title);
                 result.AppendLine();
                 EvaluatePhrase("<blockquote>\"|A |B |C |t\"<br>", result);
                 EvaluatePhrase("<cite>|f |s in The Journal of the |uc (|uy)</cite></blockquote>", result);
@@ -789,7 +793,7 @@ namespace WaffleGenerator
                 BuildTitle();
 
 
-                result.AppendLine(this.title);
+                result.AppendLine(title);
                 result.AppendLine();
                 EvaluatePhrase("\"|A |B |C |t\"\n", result);
                 EvaluatePhrase("(|f |s in The Journal of the |uc (|uy))", result);
