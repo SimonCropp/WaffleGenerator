@@ -607,13 +607,13 @@ namespace WaffleGenerator
             this.random = random;
         }
 
-        void EvaluateRandomPhrase(string[] phrases, StringBuilder output)
+        void EvaluateRandomPhrase(string[] phrases, StringBuilder output, bool html)
         {
             var index = random(phrases.Length);
-            EvaluatePhrase(phrases[index], output);
+            EvaluatePhrase(phrases[index], output, html);
         }
 
-        void EvaluatePhrase(string phrase, StringBuilder result)
+        void EvaluatePhrase(string phrase, StringBuilder result, bool html)
         {
             for (var i = 0; i < phrase.Length; i++)
             {
@@ -640,58 +640,65 @@ namespace WaffleGenerator
                             EvaluateOrdinalSequence(escape);
                             break;
                         case 'c':
-                            EvaluateRandomPhrase(buzzphrases, escape);
+                            EvaluateRandomPhrase(buzzphrases, escape, html);
                             break;
                         case 'd':
-                            EvaluateRandomPhrase(verbs, escape);
+                            EvaluateRandomPhrase(verbs, escape, html);
                             break;
                         case 'e':
-                            EvaluateRandomPhrase(adverbs, escape);
+                            EvaluateRandomPhrase(adverbs, escape, html);
                             break;
                         case 'f':
-                            EvaluateRandomPhrase(forenames, escape);
+                            EvaluateRandomPhrase(forenames, escape, html);
                             break;
                         case 's':
-                            EvaluateRandomPhrase(surnames, escape);
+                            EvaluateRandomPhrase(surnames, escape, html);
                             break;
                         case 'o':
-                            EvaluateRandomPhrase(artyNouns, escape);
+                            EvaluateRandomPhrase(artyNouns, escape, html);
                             break;
                         case 'y':
                             RandomDate(escape);
                             break;
                         case 'h':
-                            EvaluateRandomPhrase(prefixes, escape);
+                            EvaluateRandomPhrase(prefixes, escape, html);
                             break;
                         case 'A':
-                            EvaluateRandomPhrase(preamblePhrases, escape);
+                            EvaluateRandomPhrase(preamblePhrases, escape, html);
                             break;
                         case 'B':
-                            EvaluateRandomPhrase(subjectPhrases, escape);
+                            EvaluateRandomPhrase(subjectPhrases, escape, html);
                             break;
                         case 'C':
-                            EvaluateRandomPhrase(verbPhrases, escape);
+                            EvaluateRandomPhrase(verbPhrases, escape, html);
                             break;
                         case 'D':
-                            EvaluateRandomPhrase(objectPhrases, escape);
+                            EvaluateRandomPhrase(objectPhrases, escape, html);
                             break;
                         case '1':
-                            EvaluateRandomPhrase(firstAdjectivePhrases, escape);
+                            EvaluateRandomPhrase(firstAdjectivePhrases, escape, html);
                             break;
                         case '2':
-                            EvaluateRandomPhrase(secondAdjectivePhrases, escape);
+                            EvaluateRandomPhrase(secondAdjectivePhrases, escape, html);
                             break;
                         case '3':
-                            EvaluateRandomPhrase(nounPhrases, escape);
+                            EvaluateRandomPhrase(nounPhrases, escape, html);
                             break;
                         case '4':
-                            EvaluateRandomPhrase(cliches, escape);
+                            EvaluateRandomPhrase(cliches, escape, html);
                             break;
                         case 't':
                             escape.Append(title);
                             break;
                         case 'n':
-                            escape.Append("</p>\n<p>");
+                            if (html)
+                            {
+                                escape.Append("</p>\n<p>");
+                            }
+                            else
+                            {
+                                escape.Append("\n");
+                            }
                             break;
                     }
 
@@ -745,7 +752,7 @@ namespace WaffleGenerator
 
             if (includeHeading)
             {
-                BuildTitle();
+                BuildTitle(true);
 
                 result.AppendLine("<html>");
                 result.AppendLine("<head>");
@@ -755,10 +762,10 @@ namespace WaffleGenerator
                 result.AppendLine("<body>");
                 result.AppendFormat(@"<h1>{0}</h1>", title);
                 result.AppendLine();
-                EvaluatePhrase("<blockquote>\"|A |B |C |t\"<br>", result);
-                EvaluatePhrase("<cite>|f |s in The Journal of the |uc (|uy)</cite></blockquote>", result);
+                EvaluatePhrase("<blockquote>\"|A |B |C |t\"<br>", result, true);
+                EvaluatePhrase("<cite>|f |s in The Journal of the |uc (|uy)</cite></blockquote>", result, true);
                 result.AppendLine();
-                EvaluatePhrase("<h2>|c.</h2>", result);
+                EvaluatePhrase("<h2>|c.</h2>", result, true);
                 result.AppendLine();
             }
 
@@ -768,11 +775,11 @@ namespace WaffleGenerator
             {
                 if (i != 0)
                 {
-                    EvaluateRandomPhrase(maybeHeading, result);
+                    EvaluateRandomPhrase(maybeHeading, result, true);
                 }
 
-                EvaluatePhrase("|A |B |C |D.  ", result);
-                EvaluateRandomPhrase(maybeParagraph, result);
+                EvaluatePhrase("|A |B |C |D.  ", result, true);
+                EvaluateRandomPhrase(maybeParagraph, result, true);
             }
 
             result.AppendLine("</p>");
@@ -780,10 +787,10 @@ namespace WaffleGenerator
             result.AppendLine("</html>");
         }
 
-        void BuildTitle()
+        void BuildTitle(bool html)
         {
             var builder = new StringBuilder();
-            EvaluatePhrase("the |o of |2 |o", builder);
+            EvaluatePhrase("the |o of |2 |o", builder, html);
 
             title = TitleCaseWords(builder.ToString());
         }
@@ -796,15 +803,15 @@ namespace WaffleGenerator
 
             if (includeHeading)
             {
-                BuildTitle();
+                BuildTitle(false);
 
 
                 result.AppendLine(title);
                 result.AppendLine();
-                EvaluatePhrase("\"|A |B |C |t\"\n", result);
-                EvaluatePhrase("(|f |s in The Journal of the |uc (|uy))", result);
+                EvaluatePhrase("\"|A |B |C |t\"\n", result,false);
+                EvaluatePhrase("(|f |s in The Journal of the |uc (|uy))", result,false);
                 result.AppendLine();
-                EvaluatePhrase("|c.", result);
+                EvaluatePhrase("|c.", result, false);
                 result.AppendLine();
             }
 
@@ -812,11 +819,11 @@ namespace WaffleGenerator
             {
                 if (i != 0)
                 {
-                    EvaluateRandomPhrase(maybeHeading, result);
+                    EvaluateRandomPhrase(maybeHeading, result, false);
                 }
 
-                EvaluatePhrase("|A |B |C |D.  ", result);
-                EvaluateRandomPhrase(maybeParagraph, result);
+                EvaluatePhrase("|A |B |C |D.  ", result, false);
+                EvaluateRandomPhrase(maybeParagraph, result, false);
             }
         }
     }
