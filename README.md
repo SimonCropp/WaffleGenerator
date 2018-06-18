@@ -6,7 +6,7 @@ The Waffle Generator produces of text which, on first glance, looks like real, p
 ```
 The Aesthetic Of Economico-Social Disposition
 
-"In this regard, the underlying surrealism of the  take home message should not 
+"In this regard, the underlying surrealism of the take home message should not 
 divert attention from The Aesthetic Of Economico-Social Disposition"
 (Humphrey Yokomoto in The Journal of the Total Entative Item (20044U))
 
