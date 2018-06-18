@@ -1,5 +1,4 @@
-﻿using System.Text;
-using WaffleGenerator.Bogus;
+﻿using WaffleGenerator.Bogus;
 
 namespace Bogus
 {
@@ -7,23 +6,17 @@ namespace Bogus
     {
         public string Html(int paragraphs = 1, bool includeHeading = true)
         {
-            var engine = BuildEngine();
-            var builder = new StringBuilder();
-            engine.HtmlWaffle(paragraphs, includeHeading, builder);
-            return builder.ToString();
+            return WaffleEngine.Html(RandomNumber, paragraphs, includeHeading);
         }
 
         public string Text(int paragraphs = 1, bool includeHeading = true)
         {
-            var engine = BuildEngine();
-            var builder = new StringBuilder();
-            engine.TextWaffle(paragraphs, includeHeading, builder);
-            return builder.ToString();
+            return WaffleEngine.Text(RandomNumber, paragraphs, includeHeading);
         }
 
-        WaffleEngine BuildEngine()
+        int RandomNumber(int i)
         {
-            return new WaffleEngine(i => Random.Number(i - 1));
+            return Random.Number(i - 1);
         }
     }
 }

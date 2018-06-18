@@ -12,7 +12,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="..\WaffleGenerator\WaffleEngine.cs" Link="WaffleEngine.cs" />
+    <Compile Include="..\WaffleGenerator\*.cs"/>
   </ItemGroup>
 
   <ItemGroup>
