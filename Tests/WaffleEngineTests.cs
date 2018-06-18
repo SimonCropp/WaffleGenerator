@@ -40,22 +40,62 @@ public class WaffleEngineTests
     }
 
     [Fact]
-    public void TextWaffle()
+    public void TextWaffleSingle()
     {
         var random = new Random(0);
         var waffleEngine = new WaffleEngine(random);
         var builder = new StringBuilder();
-        waffleEngine.TextWaffle(1,true,builder);
+        waffleEngine.TextWaffle(1, true, builder);
         Approvals.Verify(builder.ToString());
     }
 
     [Fact]
-    public void HtmlWaffle()
+    public void HtmlWaffleSingle()
     {
         var random = new Random(0);
         var waffleEngine = new WaffleEngine(random);
         var builder = new StringBuilder();
-        waffleEngine.HtmlWaffle(1,true,builder);
+        waffleEngine.HtmlWaffle(1, true, builder);
+        Approvals.Verify(builder.ToString());
+    }
+
+    [Fact]
+    public void TextWaffleMultiple()
+    {
+        var random = new Random(0);
+        var waffleEngine = new WaffleEngine(random);
+        var builder = new StringBuilder();
+        waffleEngine.TextWaffle(11, true, builder);
+        Approvals.Verify(builder.ToString());
+    }
+
+    [Fact]
+    public void HtmlWaffleMultiple()
+    {
+        var random = new Random(0);
+        var waffleEngine = new WaffleEngine(random);
+        var builder = new StringBuilder();
+        waffleEngine.HtmlWaffle(11, true, builder);
+        Approvals.Verify(builder.ToString());
+    }
+
+    [Fact]
+    public void TextWaffleNoHeading()
+    {
+        var random = new Random(0);
+        var waffleEngine = new WaffleEngine(random);
+        var builder = new StringBuilder();
+        waffleEngine.TextWaffle(1, false, builder);
+        Approvals.Verify(builder.ToString());
+    }
+
+    [Fact]
+    public void HtmlWaffleNoHeading()
+    {
+        var random = new Random(0);
+        var waffleEngine = new WaffleEngine(random);
+        var builder = new StringBuilder();
+        waffleEngine.HtmlWaffle(1, true, builder);
         Approvals.Verify(builder.ToString());
     }
 }
