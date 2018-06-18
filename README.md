@@ -35,23 +35,17 @@ https://nuget.org/packages/WaffleGenerator/
 The `WaffleEngine` can be used to produce Html or text:
 
 ```csharp
-var waffleEngine = new WaffleEngine();
-var builder = new StringBuilder();
-waffleEngine.HtmlWaffle(
+var html = WaffleEngine.Html(
     paragraphs: 1,
-    includeHeading: true,
-    builder);
-Debug.WriteLine(builder.ToString());
+    includeHeading: true);
+Debug.WriteLine(html);
 ```
 
 ```csharp
-var waffleEngine = new WaffleEngine();
-var builder = new StringBuilder();
-waffleEngine.TextWaffle(
+var text = WaffleEngine.Text(
     paragraphs: 1,
-    includeHeading: true,
-    builder);
-Debug.WriteLine(builder.ToString());
+    includeHeading: true);
+Debug.WriteLine(text);
 ```
 
 ## WaffleGenerator.Bogus [![NuGet Status](http://img.shields.io/nuget/v/WaffleGenerator.Bogus.svg?style=flat)](https://www.nuget.org/packages/WaffleGenerator.Bogus/)
