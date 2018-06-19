@@ -14,6 +14,11 @@ namespace Bogus
             return WaffleEngine.Text(RandomNumber, paragraphs, includeHeading);
         }
 
+        public string Title()
+        {
+            return WaffleEngine.Title(RandomNumber);
+        }
+
         int RandomNumber(int i)
         {
             return Random.Number(i - 1);

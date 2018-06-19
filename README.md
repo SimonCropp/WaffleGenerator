@@ -63,12 +63,14 @@ The entry extension method is `WaffleHtml()` or `WaffleText()`:
 
 ```csharp
 var faker = new Faker<Target>()
+    .RuleFor(u => u.Title, (f, u) => f.WaffleTitle())
     .RuleFor(u => u.Property1, (f, u) => f.WaffleHtml())
     .RuleFor(u => u.Property2, (f, u) => f.WaffleHtml(paragraphs: 4, includeHeading: true))
     .RuleFor(u => u.Property3, (f, u) => f.WaffleText())
     .RuleFor(u => u.Property4, (f, u) => f.WaffleText(paragraphs: 4, includeHeading: false));
 
 var target = faker.Generate();
+Debug.WriteLine(target.Title);
 Debug.WriteLine(target.Property1);
 Debug.WriteLine(target.Property2);
 Debug.WriteLine(target.Property3);

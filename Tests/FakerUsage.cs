@@ -17,12 +17,14 @@ public class FakerUsage
     public void Sample()
     {
         var faker = new Faker<Target>()
+            .RuleFor(u => u.Title, (f, u) => f.WaffleTitle())
             .RuleFor(u => u.Property1, (f, u) => f.WaffleHtml())
             .RuleFor(u => u.Property2, (f, u) => f.WaffleHtml(paragraphs: 4, includeHeading: true))
             .RuleFor(u => u.Property3, (f, u) => f.WaffleText())
             .RuleFor(u => u.Property4, (f, u) => f.WaffleText(paragraphs: 4, includeHeading: false));
 
         var target = faker.Generate();
+        Debug.WriteLine(target.Title);
         Debug.WriteLine(target.Property1);
         Debug.WriteLine(target.Property2);
         Debug.WriteLine(target.Property3);
@@ -33,12 +35,16 @@ public class FakerUsage
     public void Run()
     {
         var faker = new Faker<Target>()
+            .RuleFor(u => u.Title, (f, u) => f.WaffleTitle())
             .RuleFor(u => u.Property1, (f, u) => f.WaffleHtml())
             .RuleFor(u => u.Property2, (f, u) => f.WaffleText());
 
         var target = faker.Generate();
+        output.WriteLine(target.Title);
         output.WriteLine(target.Property1);
         output.WriteLine(target.Property2);
+        Assert.NotNull(target.Title);
+        Assert.NotEmpty(target.Title);
         Assert.NotNull(target.Property1);
         Assert.NotEmpty(target.Property1);
         Assert.NotNull(target.Property2);
@@ -51,5 +57,6 @@ public class FakerUsage
         public string Property2 { get; set; }
         public string Property3 { get; set; }
         public string Property4 { get; set; }
+        public string Title { get; set; }
     }
 }
