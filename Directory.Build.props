@@ -8,7 +8,7 @@
     <AssemblyVersion>2.0</AssemblyVersion>
     <AssemblyInformationalVersion>$(Version)</AssemblyInformationalVersion>
     <Authors>Simon Cropp</Authors>
-    <PackageLicenseUrl>http://www.opensource.org/licenses/mit-license.php</PackageLicenseUrl>
+    <PackageLicenseUrl>https://github.com/SimonCropp/WaffleGenerator/blob/master/license.txt</PackageLicenseUrl>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Copyright>Copyright $([System.DateTime]::UtcNow.ToString(yyyy)) Simon Cropp. All rights reserved</Copyright>
     <PackageTags>WaffleGenerator, Bogus</PackageTags>
