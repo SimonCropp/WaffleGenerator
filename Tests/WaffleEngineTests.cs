@@ -41,6 +41,14 @@ public class WaffleEngineTests
     }
 
     [Fact]
+    public void Title()
+    {
+        var random = new Random(0);
+        var title = WaffleEngine.Title(random);
+        Approvals.Verify(title);
+    }
+
+    [Fact]
     public void HtmlWaffleSingle()
     {
         var random = new Random(0);
