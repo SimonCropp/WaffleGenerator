@@ -102,9 +102,6 @@ class InnerEngine
                     case 't':
                         escape.Append(title);
                         break;
-                    case 'n':
-                        escape.Append("\n");
-                        break;
                 }
 
                 if (titleCase)
