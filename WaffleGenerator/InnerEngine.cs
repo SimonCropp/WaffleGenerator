@@ -180,7 +180,7 @@ class InnerEngine
             }
 
             var bodyBuilder = new StringBuilder();
-            EvaluatePhrase("|A |B |C |D.  ", bodyBuilder);
+            EvaluatePhrase("|A |B |C |D.", bodyBuilder);
             paragraph.Body = bodyBuilder.ToString();
             paragraphs.Add(paragraph);
         }
