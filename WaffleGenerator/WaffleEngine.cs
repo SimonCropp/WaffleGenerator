@@ -54,7 +54,7 @@ namespace WaffleGenerator
             }
 
             builder.AppendLine("</body>");
-            builder.AppendLine("</html>");
+            builder.Append("</html>");
             return builder.ToString();
         }
 
