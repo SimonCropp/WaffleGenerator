@@ -98,11 +98,13 @@ namespace WaffleGenerator
                 builder.AppendLine($" - {waffleContent.Heading.Cite}");
                 builder.AppendLine();
                 builder.AppendLine(waffleContent.Heading.Buzz);
+                builder.AppendLine();
             }
 
-            foreach (var paragraph in waffleContent.Paragraphs)
+            var lastIndex = waffleContent.Paragraphs.Count - 1;
+            for (var index = 0; index < waffleContent.Paragraphs.Count; index++)
             {
-                builder.AppendLine();
+                var paragraph = waffleContent.Paragraphs[index];
                 if (paragraph.Heading != null)
                 {
                     builder.AppendLine(paragraph.Heading);
@@ -110,6 +112,10 @@ namespace WaffleGenerator
                 }
 
                 builder.AppendLine(paragraph.Body);
+                if (index != lastIndex)
+                {
+                    builder.AppendLine();
+                }
             }
 
             return builder.ToString();
