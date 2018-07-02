@@ -1,6 +1,6 @@
 # WaffleGenerator
 
-The Waffle Generator produces of text which, on first glance, looks like real, ponderous, prose; replete with clichés. For example:
+Produces text which, on first glance, looks like real, ponderous, prose; replete with clichés. For example:
 
 
 ```
