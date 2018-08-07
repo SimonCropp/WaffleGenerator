@@ -52,7 +52,7 @@ class InnerEngine
                         EvaluateOrdinalSequence(escape);
                         break;
                     case 'c':
-                        EvaluateRandomPhrase(Constants.buzzphrases, escape);
+                        EvaluateRandomPhrase(Constants.buzzPhrases, escape);
                         break;
                     case 'd':
                         EvaluateRandomPhrase(Constants.verbs, escape);

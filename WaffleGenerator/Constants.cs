@@ -1,3 +1,4 @@
+// ReSharper disable StringLiteralTypo
 class Constants
 {
     public static string[] preamblePhrases =
@@ -588,7 +589,7 @@ class Constants
         "Anne", "Meander", "Dean", "Dirk", "Desmond", "Akiko"
     };
 
-    public static string[] buzzphrases =
+    public static string[] buzzPhrases =
     {
         "|1 |2 |3",
         "|1 |2 |3",
