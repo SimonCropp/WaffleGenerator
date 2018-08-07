@@ -43,6 +43,7 @@ class InnerEngine
                     i++;
                 }
 
+
                 switch (phrase[i])
                 {
                     case 'a':
@@ -111,9 +112,23 @@ class InnerEngine
             }
             else
             {
-                result.Append(phrase[i]);
+                if (i == 0 && HasSentenceEnded(result))
+                {
+                    result.Append(char.ToUpper(phrase[i]));
+                }
+                else
+                {
+                    result.Append(phrase[i]);
+                }
             }
         }
+    }
+
+    static bool HasSentenceEnded(StringBuilder result)
+    {
+        //TODO: should only evaluate last to chars to avoid the ToString
+        var s = result.ToString().TrimEnd();
+        return s.EndsWith(".") || s.EndsWith(">");
     }
 
     void EvaluateCardinalSequence(StringBuilder output)
@@ -191,7 +206,7 @@ class InnerEngine
         };
         if (includeHeading)
         {
-            content.Heading = new Heading()
+            content.Heading = new Heading
             {
                 Title = title,
                 Buzz = buzz,
