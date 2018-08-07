@@ -59,66 +59,66 @@ class InnerEngine
         }
     }
 
-    private void EvaluateChar(char c, StringBuilder escape)
+    private void EvaluateChar(char c, StringBuilder builder)
     {
         switch (c)
         {
             case 'a':
-                EvaluateCardinalSequence(escape);
+                EvaluateCardinalSequence(builder);
                 break;
             case 'b':
-                EvaluateOrdinalSequence(escape);
+                EvaluateOrdinalSequence(builder);
                 break;
             case 'c':
-                EvaluateRandomPhrase(Constants.buzzPhrases, escape);
+                EvaluateRandomPhrase(Constants.buzzPhrases, builder);
                 break;
             case 'd':
-                EvaluateRandomPhrase(Constants.verbs, escape);
+                EvaluateRandomPhrase(Constants.verbs, builder);
                 break;
             case 'e':
-                EvaluateRandomPhrase(Constants.adverbs, escape);
+                EvaluateRandomPhrase(Constants.adverbs, builder);
                 break;
             case 'f':
-                EvaluateRandomPhrase(Constants.forenames, escape);
+                EvaluateRandomPhrase(Constants.forenames, builder);
                 break;
             case 's':
-                EvaluateRandomPhrase(Constants.surnames, escape);
+                EvaluateRandomPhrase(Constants.surnames, builder);
                 break;
             case 'o':
-                EvaluateRandomPhrase(Constants.artyNouns, escape);
+                EvaluateRandomPhrase(Constants.artyNouns, builder);
                 break;
             case 'y':
-                RandomDate(escape);
+                RandomDate(builder);
                 break;
             case 'h':
-                EvaluateRandomPhrase(Constants.prefixes, escape);
+                EvaluateRandomPhrase(Constants.prefixes, builder);
                 break;
             case 'A':
-                EvaluateRandomPhrase(Constants.preamblePhrases, escape);
+                EvaluateRandomPhrase(Constants.preamblePhrases, builder);
                 break;
             case 'B':
-                EvaluateRandomPhrase(Constants.subjectPhrases, escape);
+                EvaluateRandomPhrase(Constants.subjectPhrases, builder);
                 break;
             case 'C':
-                EvaluateRandomPhrase(Constants.verbPhrases, escape);
+                EvaluateRandomPhrase(Constants.verbPhrases, builder);
                 break;
             case 'D':
-                EvaluateRandomPhrase(Constants.objectPhrases, escape);
+                EvaluateRandomPhrase(Constants.objectPhrases, builder);
                 break;
             case '1':
-                EvaluateRandomPhrase(Constants.firstAdjectivePhrases, escape);
+                EvaluateRandomPhrase(Constants.firstAdjectivePhrases, builder);
                 break;
             case '2':
-                EvaluateRandomPhrase(Constants.secondAdjectivePhrases, escape);
+                EvaluateRandomPhrase(Constants.secondAdjectivePhrases, builder);
                 break;
             case '3':
-                EvaluateRandomPhrase(Constants.nounPhrases, escape);
+                EvaluateRandomPhrase(Constants.nounPhrases, builder);
                 break;
             case '4':
-                EvaluateRandomPhrase(Constants.cliches, escape);
+                EvaluateRandomPhrase(Constants.cliches, builder);
                 break;
             case 't':
-                escape.Append(title);
+                builder.Append(title);
                 break;
         }
     }
