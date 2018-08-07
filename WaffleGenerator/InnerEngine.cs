@@ -33,81 +33,16 @@ class InnerEngine
             {
                 i++;
 
-                var escape = result;
-                var titleCase = false;
-
                 if (phrase[i] == 'u' && i + 1 < phrase.Length)
                 {
-                    escape = new StringBuilder();
-                    titleCase = true;
+                    var escape = new StringBuilder();
                     i++;
-                }
-
-
-                switch (phrase[i])
-                {
-                    case 'a':
-                        EvaluateCardinalSequence(escape);
-                        break;
-                    case 'b':
-                        EvaluateOrdinalSequence(escape);
-                        break;
-                    case 'c':
-                        EvaluateRandomPhrase(Constants.buzzPhrases, escape);
-                        break;
-                    case 'd':
-                        EvaluateRandomPhrase(Constants.verbs, escape);
-                        break;
-                    case 'e':
-                        EvaluateRandomPhrase(Constants.adverbs, escape);
-                        break;
-                    case 'f':
-                        EvaluateRandomPhrase(Constants.forenames, escape);
-                        break;
-                    case 's':
-                        EvaluateRandomPhrase(Constants.surnames, escape);
-                        break;
-                    case 'o':
-                        EvaluateRandomPhrase(Constants.artyNouns, escape);
-                        break;
-                    case 'y':
-                        RandomDate(escape);
-                        break;
-                    case 'h':
-                        EvaluateRandomPhrase(Constants.prefixes, escape);
-                        break;
-                    case 'A':
-                        EvaluateRandomPhrase(Constants.preamblePhrases, escape);
-                        break;
-                    case 'B':
-                        EvaluateRandomPhrase(Constants.subjectPhrases, escape);
-                        break;
-                    case 'C':
-                        EvaluateRandomPhrase(Constants.verbPhrases, escape);
-                        break;
-                    case 'D':
-                        EvaluateRandomPhrase(Constants.objectPhrases, escape);
-                        break;
-                    case '1':
-                        EvaluateRandomPhrase(Constants.firstAdjectivePhrases, escape);
-                        break;
-                    case '2':
-                        EvaluateRandomPhrase(Constants.secondAdjectivePhrases, escape);
-                        break;
-                    case '3':
-                        EvaluateRandomPhrase(Constants.nounPhrases, escape);
-                        break;
-                    case '4':
-                        EvaluateRandomPhrase(Constants.cliches, escape);
-                        break;
-                    case 't':
-                        escape.Append(title);
-                        break;
-                }
-
-                if (titleCase)
-                {
+                    EvaluateChar(phrase[i], escape);
                     result.Append(TitleCaseWords(escape.ToString()));
+                }
+                else
+                {
+                    EvaluateChar(phrase[i], result);
                 }
             }
             else
@@ -121,6 +56,70 @@ class InnerEngine
                     result.Append(phrase[i]);
                 }
             }
+        }
+    }
+
+    private void EvaluateChar(char c, StringBuilder escape)
+    {
+        switch (c)
+        {
+            case 'a':
+                EvaluateCardinalSequence(escape);
+                break;
+            case 'b':
+                EvaluateOrdinalSequence(escape);
+                break;
+            case 'c':
+                EvaluateRandomPhrase(Constants.buzzPhrases, escape);
+                break;
+            case 'd':
+                EvaluateRandomPhrase(Constants.verbs, escape);
+                break;
+            case 'e':
+                EvaluateRandomPhrase(Constants.adverbs, escape);
+                break;
+            case 'f':
+                EvaluateRandomPhrase(Constants.forenames, escape);
+                break;
+            case 's':
+                EvaluateRandomPhrase(Constants.surnames, escape);
+                break;
+            case 'o':
+                EvaluateRandomPhrase(Constants.artyNouns, escape);
+                break;
+            case 'y':
+                RandomDate(escape);
+                break;
+            case 'h':
+                EvaluateRandomPhrase(Constants.prefixes, escape);
+                break;
+            case 'A':
+                EvaluateRandomPhrase(Constants.preamblePhrases, escape);
+                break;
+            case 'B':
+                EvaluateRandomPhrase(Constants.subjectPhrases, escape);
+                break;
+            case 'C':
+                EvaluateRandomPhrase(Constants.verbPhrases, escape);
+                break;
+            case 'D':
+                EvaluateRandomPhrase(Constants.objectPhrases, escape);
+                break;
+            case '1':
+                EvaluateRandomPhrase(Constants.firstAdjectivePhrases, escape);
+                break;
+            case '2':
+                EvaluateRandomPhrase(Constants.secondAdjectivePhrases, escape);
+                break;
+            case '3':
+                EvaluateRandomPhrase(Constants.nounPhrases, escape);
+                break;
+            case '4':
+                EvaluateRandomPhrase(Constants.cliches, escape);
+                break;
+            case 't':
+                escape.Append(title);
+                break;
         }
     }
 
