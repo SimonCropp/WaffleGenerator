@@ -4,9 +4,9 @@ namespace Bogus
 {
     public class Waffle : DataSet
     {
-        public string Html(int paragraphs = 1, bool includeHeading = true)
+        public string Html(int paragraphs = 1, bool includeHeading = true, bool includeHeadAndBody = true)
         {
-            return WaffleEngine.Html(RandomNumber, paragraphs, includeHeading);
+            return WaffleEngine.Html(RandomNumber, paragraphs, includeHeading, includeHeadAndBody);
         }
 
         public string Text(int paragraphs = 1, bool includeHeading = true)

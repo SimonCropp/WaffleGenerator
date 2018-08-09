@@ -27,8 +27,9 @@ public class WaffleEngineTests
     public void HtmlWaffleSample()
     {
         var text = WaffleEngine.Html(
-            paragraphs: 1,
-            includeHeading: true);
+            paragraphs: 2,
+            includeHeading: true,
+            includeHeadAndBody:true);
         Debug.WriteLine(text);
     }
 
@@ -52,7 +53,14 @@ public class WaffleEngineTests
     public void HtmlWaffleSingle()
     {
         var random = new Random(0);
-        var html = WaffleEngine.Html(random, 1, true);
+        var html = WaffleEngine.Html(random, 1, true, false);
+        Approvals.Verify(html);
+    }
+    [Fact]
+    public void HtmlWaffleSingleWithHeadAndBody()
+    {
+        var random = new Random(0);
+        var html = WaffleEngine.Html(random, 1, true,true);
         Approvals.Verify(html);
     }
 
@@ -68,7 +76,14 @@ public class WaffleEngineTests
     public void HtmlWaffleMultiple()
     {
         var random = new Random(0);
-        var html = WaffleEngine.Html(random, 11, true);
+        var html = WaffleEngine.Html(random, 11, true, false);
+        Approvals.Verify(html);
+    }
+    [Fact]
+    public void HtmlWaffleMultipleWithHeadAndBody()
+    {
+        var random = new Random(0);
+        var html = WaffleEngine.Html(random, 11, true, true);
         Approvals.Verify(html);
     }
 
@@ -84,7 +99,15 @@ public class WaffleEngineTests
     public void HtmlWaffleNoHeading()
     {
         var random = new Random(0);
-        var html = WaffleEngine.Html(random, 1, true);
+        var html = WaffleEngine.Html(random, 1, true, false);
+        Approvals.Verify(html);
+    }
+
+    [Fact]
+    public void HtmlWaffleNoHeadingWithHeadAndBody()
+    {
+        var random = new Random(0);
+        var html = WaffleEngine.Html(random, 1, true, true);
         Approvals.Verify(html);
     }
 }

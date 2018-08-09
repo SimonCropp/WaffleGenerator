@@ -8,17 +8,17 @@ namespace WaffleGenerator
 {
     public static class WaffleEngine
     {
-        public static string Html(int paragraphs, bool includeHeading)
+        public static string Html(int paragraphs, bool includeHeading, bool includeHeadAndBody)
         {
-            return Html(new Random(), paragraphs, includeHeading);
+            return Html(new Random(), paragraphs, includeHeading, includeHeadAndBody);
         }
 
-        public static string Html(Random random, int paragraphs, bool includeHeading)
+        public static string Html(Random random, int paragraphs, bool includeHeading, bool includeHeadAndBody)
         {
-            return Html(x => random.Next(0, x), paragraphs, includeHeading);
+            return Html(x => random.Next(0, x), paragraphs, includeHeading, includeHeadAndBody);
         }
 
-        public static string Html(Func<int, int> random, int paragraphs, bool includeHeading)
+        public static string Html(Func<int, int> random, int paragraphs, bool includeHeading, bool includeHeadAndBody)
         {
             var builder = new StringBuilder();
             var innerEngine = new InnerEngine(random);
@@ -26,12 +26,16 @@ namespace WaffleGenerator
 
             if (includeHeading)
             {
-                builder.AppendLine("<html>");
-                builder.AppendLine("<head>");
-                builder.AppendFormat("<title>{0}</title>", waffleContent.Heading.Title);
-                builder.AppendLine();
-                builder.AppendLine("</head>");
-                builder.AppendLine("<body>");
+                if (includeHeadAndBody)
+                {
+                    builder.AppendLine("<html>");
+                    builder.AppendLine("<head>");
+                    builder.AppendFormat("<title>{0}</title>", waffleContent.Heading.Title);
+                    builder.AppendLine();
+                    builder.AppendLine("</head>");
+                    builder.AppendLine("<body>");
+                }
+
                 builder.AppendFormat(@"<h1>{0}</h1>", waffleContent.Heading.Title);
                 builder.AppendLine();
                 builder.AppendLine($"<blockquote>\"{waffleContent.Heading.Quote}\"<br>");
@@ -51,8 +55,12 @@ namespace WaffleGenerator
                 builder.AppendLine("</p>");
             }
 
-            builder.AppendLine("</body>");
-            builder.Append("</html>");
+            if (includeHeadAndBody)
+            {
+                builder.AppendLine("</body>");
+                builder.Append("</html>");
+            }
+
             return builder.ToString();
         }
 

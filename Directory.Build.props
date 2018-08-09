@@ -4,8 +4,8 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <LangVersion>latest</LangVersion>
     <NoWarn>CS1591</NoWarn>
-    <Version>2.1.2</Version>
-    <AssemblyVersion>2.0</AssemblyVersion>
+    <Version>3.0.0</Version>
+    <AssemblyVersion>3.0</AssemblyVersion>
     <AssemblyInformationalVersion>$(Version)</AssemblyInformationalVersion>
     <Authors>Simon Cropp</Authors>
     <PackageLicenseUrl>https://github.com/SimonCropp/WaffleGenerator/blob/master/license.txt</PackageLicenseUrl>
