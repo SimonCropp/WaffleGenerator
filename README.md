@@ -19,8 +19,15 @@ This trend may dissipate due to the mensurable proficiency.
 This output can be used in similar way to [Lorem ipsum](https://en.wikipedia.org/wiki/Lorem_ipsum) content, in that it is useful for producing text for build software and producing design mockups.
 
 Based on the awesome work by [Andrew Clarke](https://www.red-gate.com/simple-talk/author/andrew-clarke/) outlined in [The Waffle Generator](https://www.red-gate.com/simple-talk/dotnet/net-tools/the-waffle-generator/).
- 
+
 Code based on [SDGGenerators - Red Gate SQL Data Generator Community Generators](https://archive.codeplex.com/?p=sdggenerators).
+
+## Blazor App
+
+The [Blazing Waffles](http://wafflegen.azurewebsites.net/) app allows the generation of waffle text online.
+
+ * Azure Website: http://wafflegen.azurewebsites.net/
+ * Source: https://github.com/gbiellem/BlazingWaffles
 
 
 ## Main Package - WaffleGenerator [![NuGet Status](http://img.shields.io/nuget/v/WaffleGenerator.svg?style=flat)](https://www.nuget.org/packages/WaffleGenerator/)
