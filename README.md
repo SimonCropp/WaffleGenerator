@@ -1,7 +1,10 @@
 # WaffleGenerator
 
-Produces text which, on first glance, looks like real, ponderous, prose; replete with clichés. For example:
+Produces text which, on first glance, looks like real, ponderous, prose; replete with clichés.
 
+**This project is supported by the community via [Patreon sponsorship](https://www.patreon.com/join/simoncropp). If you are using this project to deliver business value or build commercial software it is expected that you will provide support [via Patreon](https://www.patreon.com/join/simoncropp). If you do not feel this project is worth supporting, to ensure its long term existence, perhaps you should find an alternative tool or build the functionality yourself.**
+
+Example content:
 
 ```
 The Aesthetic Of Economico-Social Disposition
@@ -88,4 +91,3 @@ Debug.WriteLine(target.Property4);
 ## Icon
 
 <a href="https://thenounproject.com/term/waffle/836862/" target="_blank">Waffle</a> designed by Made by Made from The Noun Project
-
