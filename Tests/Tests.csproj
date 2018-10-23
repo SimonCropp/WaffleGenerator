@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ApprovalTests" Version="3.0.15" />
+    <PackageReference Include="ApprovalTests" Version="3.0.18" />
     <PackageReference Include="Xunit" Version="2.4.0" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
     <PackageReference Include="ObjectApproval" Version="2.3.0" />
