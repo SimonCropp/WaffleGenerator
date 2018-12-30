@@ -8,7 +8,6 @@
     <AssemblyVersion>3.0</AssemblyVersion>
     <AssemblyInformationalVersion>$(Version)</AssemblyInformationalVersion>
     <PackageLicenseUrl>https://github.com/SimonCropp/WaffleGenerator/blob/master/license.txt</PackageLicenseUrl>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <Copyright>Copyright $([System.DateTime]::UtcNow.ToString(yyyy)). All rights reserved</Copyright>
     <PackageTags>WaffleGenerator, Bogus</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/SimonCropp/WaffleGenerator/master/icon.png</PackageIconUrl>
