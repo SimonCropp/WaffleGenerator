@@ -36,7 +36,7 @@ namespace WaffleGenerator
                     builder.AppendLine("<body>");
                 }
 
-                builder.AppendFormat(@"<h1>{0}</h1>", waffleContent.Heading.Title);
+                builder.AppendFormat("<h1>{0}</h1>", waffleContent.Heading.Title);
                 builder.AppendLine();
                 builder.AppendLine($"<blockquote>\"{waffleContent.Heading.Quote}\"<br>");
                 builder.AppendLine($"<cite>{waffleContent.Heading.Cite}</cite></blockquote>");
