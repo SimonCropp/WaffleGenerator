@@ -25,6 +25,7 @@ Based on the awesome work by [Andrew Clarke](https://www.red-gate.com/simple-tal
 
 Code based on [SDGGenerators - Red Gate SQL Data Generator Community Generators](https://archive.codeplex.com/?p=sdggenerators).
 
+
 ## Blazor App
 
 The [Blazing Waffles](http://wafflegen.azurewebsites.net/) app allows the generation of waffle text online.
@@ -57,6 +58,7 @@ var text = WaffleEngine.Text(
     includeHeading: true);
 Debug.WriteLine(text);
 ```
+
 
 ## WaffleGenerator.Bogus [![NuGet Status](http://img.shields.io/nuget/v/WaffleGenerator.Bogus.svg?style=flat)](https://www.nuget.org/packages/WaffleGenerator.Bogus/)
 
