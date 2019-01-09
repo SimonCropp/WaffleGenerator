@@ -4,9 +4,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <LangVersion>latest</LangVersion>
     <NoWarn>CS1591</NoWarn>
-    <Version>3.0.0</Version>
-    <AssemblyVersion>3.0</AssemblyVersion>
-    <AssemblyInformationalVersion>$(Version)</AssemblyInformationalVersion>
+    <Version>3.1.0</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Copyright>Copyright $([System.DateTime]::UtcNow.ToString(yyyy)). All rights reserved</Copyright>
     <PackageTags>WaffleGenerator, Bogus</PackageTags>
