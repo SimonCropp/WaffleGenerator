@@ -4,11 +4,11 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <LangVersion>latest</LangVersion>
     <NoWarn>CS1591</NoWarn>
-    <Version>4.0.0</Version>
+    <Version>4.0.1</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Copyright>Copyright $([System.DateTime]::UtcNow.ToString(yyyy)). All rights reserved</Copyright>
     <PackageTags>WaffleGenerator, Bogus</PackageTags>
-    <PackageIconUrl>https://raw.githubusercontent.com/SimonCropp/WaffleGenerator/master/icon.png</PackageIconUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/SimonCropp/WaffleGenerator/master/src/icon.png</PackageIconUrl>
     <PackageProjectUrl>http://github.com/SimonCropp/WaffleGenerator</PackageProjectUrl>
     <PackageOutputPath>..\..\nugets</PackageOutputPath>
     <DebugType>embedded</DebugType>
