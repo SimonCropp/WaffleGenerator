@@ -48,7 +48,8 @@ The `WaffleEngine` can be used to produce Html or text:
 ```csharp
 var html = WaffleEngine.Html(
     paragraphs: 1,
-    includeHeading: true);
+    includeHeading: true,
+    includeHeadAndBody: false);
 Debug.WriteLine(html);
 ```
 
