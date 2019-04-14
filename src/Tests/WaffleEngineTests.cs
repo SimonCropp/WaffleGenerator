@@ -18,10 +18,12 @@ public class WaffleEngineTests
     public void TextWaffleSample()
     {
         #region textUsage
+
         var text = WaffleEngine.Text(
             paragraphs: 1,
             includeHeading: true);
         Debug.WriteLine(text);
+
         #endregion
     }
 
@@ -33,7 +35,7 @@ public class WaffleEngineTests
         var text = WaffleEngine.Html(
             paragraphs: 2,
             includeHeading: true,
-            includeHeadAndBody:true);
+            includeHeadAndBody: true);
         Debug.WriteLine(text);
 
         #endregion
@@ -62,11 +64,12 @@ public class WaffleEngineTests
         var html = WaffleEngine.Html(random, 1, true, false);
         Approvals.Verify(html);
     }
+
     [Fact]
     public void HtmlWaffleSingleWithHeadAndBody()
     {
         var random = new Random(0);
-        var html = WaffleEngine.Html(random, 1, true,true);
+        var html = WaffleEngine.Html(random, 1, true, true);
         Approvals.Verify(html);
     }
 
@@ -85,6 +88,7 @@ public class WaffleEngineTests
         var html = WaffleEngine.Html(random, 11, true, false);
         Approvals.Verify(html);
     }
+
     [Fact]
     public void HtmlWaffleMultipleWithHeadAndBody()
     {
