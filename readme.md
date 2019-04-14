@@ -53,10 +53,10 @@ The `WaffleEngine` can be used to produce Html or text:
 var text = WaffleEngine.Html(
     paragraphs: 2,
     includeHeading: true,
-    includeHeadAndBody:true);
+    includeHeadAndBody: true);
 Debug.WriteLine(text);
 ```
-<sup>[snippet source](/src/Tests/WaffleEngineTests.cs#L31-L39)</sup>
+<sup>[snippet source](/src/Tests/WaffleEngineTests.cs#L33-L41)</sup>
 <!-- endsnippet -->
 
 <!-- snippet: textUsage -->
@@ -66,7 +66,7 @@ var text = WaffleEngine.Text(
     includeHeading: true);
 Debug.WriteLine(text);
 ```
-<sup>[snippet source](/src/Tests/WaffleEngineTests.cs#L20-L25)</sup>
+<sup>[snippet source](/src/Tests/WaffleEngineTests.cs#L20-L27)</sup>
 <!-- endsnippet -->
 
 
