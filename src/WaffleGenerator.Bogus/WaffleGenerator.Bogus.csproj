@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
-    <GeneratePackageOnBuild Condition="'$(Configuration)'=='Release'">true</GeneratePackageOnBuild>
-    <GenerateDocumentationFile Condition="'$(Configuration)'=='Release'">true</GenerateDocumentationFile>
+    <GeneratePackageOnBuild Condition="$(Configuration)=='Release'">true</GeneratePackageOnBuild>
+    <GenerateDocumentationFile Condition="$(Configuration)=='Release'">true</GenerateDocumentationFile>
     <Description>Produces Bogus (https://github.com/bchavez/Bogus) text which, on first glance, looks like real, ponderous, prose; replete with clichés.</Description>
   </PropertyGroup>
 
@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <PackageReference Include="Bogus" Version="26.0.2" />
+    <PackageReference Condition="$(Configuration)=='Release'" Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta2-18618-05" PrivateAssets="All" />
   </ItemGroup>
 
 </Project>
