@@ -2,9 +2,6 @@ using System;
 using System.Text;
 
 namespace WaffleGenerator
-#if Bogus
-.Bogus
-#endif
 {
     public static class WaffleEngine
     {

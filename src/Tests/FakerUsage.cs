@@ -16,6 +16,7 @@ public class FakerUsage
     [Fact]
     public void Sample()
     {
+        #region BogusUsage
         var faker = new Faker<Target>()
             .RuleFor(u => u.Title, (f, u) => f.WaffleTitle())
             .RuleFor(u => u.Property1, (f, u) => f.WaffleHtml())
@@ -29,6 +30,7 @@ public class FakerUsage
         Debug.WriteLine(target.Property2);
         Debug.WriteLine(target.Property3);
         Debug.WriteLine(target.Property4);
+        #endregion
     }
 
     [Fact]

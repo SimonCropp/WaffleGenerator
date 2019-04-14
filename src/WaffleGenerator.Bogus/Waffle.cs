@@ -1,4 +1,5 @@
-﻿using WaffleGenerator.Bogus;
+﻿
+using WaffleGenerator;
 
 namespace Bogus
 {

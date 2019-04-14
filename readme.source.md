@@ -1,8 +1,3 @@
-<!--
-This file was generate by MarkdownSnippets.
-Source File: /readme.source.md
-To change this file edit the source file and then re-run the generation using either the dotnet global tool (https://github.com/SimonCropp/MarkdownSnippets#githubmarkdownsnippets) or using the api (https://github.com/SimonCropp/MarkdownSnippets#running-as-a-unit-test).
--->
 # WaffleGenerator
 
 Produces text which, on first glance, looks like real, ponderous, prose; replete with clichés.
@@ -48,26 +43,9 @@ https://nuget.org/packages/WaffleGenerator/
 
 The `WaffleEngine` can be used to produce Html or text:
 
-<!-- snippet: htmlUsage -->
-```cs
-var text = WaffleEngine.Html(
-    paragraphs: 2,
-    includeHeading: true,
-    includeHeadAndBody:true);
-Debug.WriteLine(text);
-```
-<sup>[snippet source](/src/Tests/WaffleEngineTests.cs#L31-L39)</sup>
-<!-- endsnippet -->
+snippet: htmlUsage
 
-<!-- snippet: textUsage -->
-```cs
-var text = WaffleEngine.Text(
-    paragraphs: 1,
-    includeHeading: true);
-Debug.WriteLine(text);
-```
-<sup>[snippet source](/src/Tests/WaffleEngineTests.cs#L20-L25)</sup>
-<!-- endsnippet -->
+snippet: textUsage
 
 
 ## WaffleGenerator.Bogus [![NuGet Status](http://img.shields.io/nuget/v/WaffleGenerator.Bogus.svg?style=flat)](https://www.nuget.org/packages/WaffleGenerator.Bogus/)
@@ -83,24 +61,7 @@ https://nuget.org/packages/WaffleGenerator.Bogus/
 
 The entry extension method is `WaffleHtml()` or `WaffleText()`:
 
-<!-- snippet: BogusUsage -->
-```cs
-var faker = new Faker<Target>()
-    .RuleFor(u => u.Title, (f, u) => f.WaffleTitle())
-    .RuleFor(u => u.Property1, (f, u) => f.WaffleHtml())
-    .RuleFor(u => u.Property2, (f, u) => f.WaffleHtml(paragraphs: 4, includeHeading: true))
-    .RuleFor(u => u.Property3, (f, u) => f.WaffleText())
-    .RuleFor(u => u.Property4, (f, u) => f.WaffleText(paragraphs: 4, includeHeading: false));
-
-var target = faker.Generate();
-Debug.WriteLine(target.Title);
-Debug.WriteLine(target.Property1);
-Debug.WriteLine(target.Property2);
-Debug.WriteLine(target.Property3);
-Debug.WriteLine(target.Property4);
-```
-<sup>[snippet source](/src/Tests/FakerUsage.cs#L19-L33)</sup>
-<!-- endsnippet -->
+snippet: BogusUsage
 
 
 ## Icon

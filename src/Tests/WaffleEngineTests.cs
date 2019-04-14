@@ -17,20 +17,26 @@ public class WaffleEngineTests
     [Fact]
     public void TextWaffleSample()
     {
+        #region textUsage
         var text = WaffleEngine.Text(
             paragraphs: 1,
             includeHeading: true);
         Debug.WriteLine(text);
+        #endregion
     }
 
     [Fact]
     public void HtmlWaffleSample()
     {
+        #region htmlUsage
+
         var text = WaffleEngine.Html(
             paragraphs: 2,
             includeHeading: true,
             includeHeadAndBody:true);
         Debug.WriteLine(text);
+
+        #endregion
     }
 
     [Fact]
