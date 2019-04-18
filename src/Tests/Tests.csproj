@@ -12,7 +12,7 @@
     <PackageReference Include="MarkdownSnippets" Version="9.2.0" />
     <PackageReference Include="Xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
-    <PackageReference Include="ObjectApproval" Version="8.0.3" />
+    <PackageReference Include="ObjectApproval" Version="8.2.0" />
   </ItemGroup>
 
   <ItemGroup>
