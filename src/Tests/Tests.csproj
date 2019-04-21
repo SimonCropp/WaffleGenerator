@@ -9,13 +9,10 @@
 
   <ItemGroup>
     <PackageReference Include="ApprovalTests" Version="3.0.22" />
-    <PackageReference Include="MarkdownSnippets" Version="9.2.0" />
+    <PackageReference Include="MarkdownSnippets" Version="10.0.0" />
     <PackageReference Include="Xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
     <PackageReference Include="ObjectApproval" Version="8.2.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\WaffleGenerator.Bogus\WaffleGenerator.Bogus.csproj" />
     <ProjectReference Include="..\WaffleGenerator\WaffleGenerator.csproj" />
   </ItemGroup>

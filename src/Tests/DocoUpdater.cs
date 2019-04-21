@@ -6,6 +6,6 @@ public class DocoUpdater
     [Fact]
     public void Run()
     {
-        GitHubMarkdownProcessor.RunForFilePath();
+        DirectoryMarkdownProcessor.RunForFilePath();
     }
 }
