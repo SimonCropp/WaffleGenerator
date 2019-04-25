@@ -9,7 +9,7 @@
     <Copyright>Copyright $([System.DateTime]::UtcNow.ToString(yyyy)). All rights reserved</Copyright>
     <PackageTags>WaffleGenerator, Bogus</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/SimonCropp/WaffleGenerator/master/src/icon.png</PackageIconUrl>
-    <PackageProjectUrl>http://github.com/SimonCropp/WaffleGenerator</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/SimonCropp/WaffleGenerator</PackageProjectUrl>
     <PackageOutputPath>..\..\nugets</PackageOutputPath>
     <DebugType>embedded</DebugType>
     <DebugSymbols>true</DebugSymbols>
