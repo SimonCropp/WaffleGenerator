@@ -10,6 +10,7 @@
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.1.1" />
     <PackageReference Include="ObjectApproval" Version="9.1.0" />
+    <PackageReference Include="XunitLogger" Version="2.1.0" />
     <ProjectReference Include="..\WaffleGenerator.Bogus\WaffleGenerator.Bogus.csproj" />
     <ProjectReference Include="..\WaffleGenerator\WaffleGenerator.csproj" />
   </ItemGroup>

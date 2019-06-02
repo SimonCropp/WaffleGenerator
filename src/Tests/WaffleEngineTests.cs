@@ -5,15 +5,9 @@ using WaffleGenerator;
 using Xunit;
 using Xunit.Abstractions;
 
-public class WaffleEngineTests
+public class WaffleEngineTests :
+    XunitLoggingBase
 {
-    ITestOutputHelper output;
-
-    public WaffleEngineTests(ITestOutputHelper output)
-    {
-        this.output = output;
-    }
-
     [Fact]
     public void TextWaffleSample()
     {
@@ -119,5 +113,10 @@ public class WaffleEngineTests
         var random = new Random(0);
         var html = WaffleEngine.Html(random, 1, true, true);
         Approvals.Verify(html);
+    }
+
+    public WaffleEngineTests(ITestOutputHelper output) :
+        base(output)
+    {
     }
 }
