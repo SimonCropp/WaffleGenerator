@@ -36,8 +36,6 @@ The [Blazing Waffles](http://wafflegen.azurewebsites.net/) app allows the genera
 
 https://nuget.org/packages/WaffleGenerator/
 
-    PM> Install-Package WaffleGenerator
-
 
 ### Usage
 
@@ -54,8 +52,6 @@ Extends [Bogus](https://github.com/bchavez/Bogus) to use WaffleGenerator.
 
 https://nuget.org/packages/WaffleGenerator.Bogus/
 
-    PM> Install-Package WaffleGenerator.Bogus
-
 
 ### Usage
 
@@ -66,4 +62,4 @@ snippet: BogusUsage
 
 ## Icon
 
-<a href="https://thenounproject.com/term/waffle/836862/" target="_blank">Waffle</a> designed by Made by Made from The Noun Project
+<a href="https://thenounproject.com/term/waffle/836862/">Waffle</a> designed by Made by Made from The Noun Project
