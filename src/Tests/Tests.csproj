@@ -4,11 +4,11 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ApprovalTests" Version="4.0.0" />
-    <PackageReference Include="MarkdownSnippets.MsBuild" Version="16.0.0" />
+    <PackageReference Include="MarkdownSnippets.MsBuild" Version="16.1.1" />
     <PackageReference Include="Xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
-    <PackageReference Include="ObjectApproval" Version="9.2.0" />
+    <PackageReference Include="ObjectApproval" Version="10.0.0" />
     <PackageReference Include="XunitLogger" Version="2.4.0" />
     <ProjectReference Include="..\WaffleGenerator.Bogus\WaffleGenerator.Bogus.csproj" />
     <ProjectReference Include="..\WaffleGenerator\WaffleGenerator.csproj" />
