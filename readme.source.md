@@ -62,4 +62,4 @@ snippet: BogusUsage
 
 ## Icon
 
-<a href="https://thenounproject.com/term/waffle/836862/">Waffle</a> designed by Made by Made from The Noun Project
+[Waffle](https://thenounproject.com/term/waffle/836862/) designed by Made by Made from [The Noun Project](https://thenounproject.com/)
