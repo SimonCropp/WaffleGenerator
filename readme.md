@@ -49,6 +49,7 @@ https://nuget.org/packages/WaffleGenerator/
 The `WaffleEngine` can be used to produce Html or text:
 
 <!-- snippet: htmlUsage -->
+<a id='snippet-htmlusage'/></a>
 ```cs
 var text = WaffleEngine.Html(
     paragraphs: 2,
@@ -56,17 +57,18 @@ var text = WaffleEngine.Html(
     includeHeadAndBody: true);
 Debug.WriteLine(text);
 ```
-<sup>[snippet source](/src/Tests/WaffleEngineTests.cs#L27-L35)</sup>
+<sup>[snippet source](/src/Tests/WaffleEngineTests.cs#L27-L35) / [anchor](#snippet-htmlusage)</sup>
 <!-- endsnippet -->
 
 <!-- snippet: textUsage -->
+<a id='snippet-textusage'/></a>
 ```cs
 var text = WaffleEngine.Text(
     paragraphs: 1,
     includeHeading: true);
 Debug.WriteLine(text);
 ```
-<sup>[snippet source](/src/Tests/WaffleEngineTests.cs#L14-L21)</sup>
+<sup>[snippet source](/src/Tests/WaffleEngineTests.cs#L14-L21) / [anchor](#snippet-textusage)</sup>
 <!-- endsnippet -->
 
 
@@ -82,6 +84,7 @@ https://nuget.org/packages/WaffleGenerator.Bogus/
 The entry extension method is `WaffleHtml()` or `WaffleText()`:
 
 <!-- snippet: BogusUsage -->
+<a id='snippet-bogususage'/></a>
 ```cs
 var faker = new Faker<Target>()
     .RuleFor(u => u.Title, (f, u) => f.WaffleTitle())
@@ -97,7 +100,7 @@ Debug.WriteLine(target.Property2);
 Debug.WriteLine(target.Property3);
 Debug.WriteLine(target.Property4);
 ```
-<sup>[snippet source](/src/Tests/FakerUsage.cs#L19-L33)</sup>
+<sup>[snippet source](/src/Tests/FakerUsage.cs#L19-L33) / [anchor](#snippet-bogususage)</sup>
 <!-- endsnippet -->
 
 
