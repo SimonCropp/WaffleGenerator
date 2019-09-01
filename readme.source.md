@@ -1,5 +1,9 @@
 # WaffleGenerator
 
+[![Build status](https://ci.appveyor.com/api/projects/status/bv3erhc4d2pegpba/branch/master?svg=true)](https://ci.appveyor.com/project/SimonCropp/WaffleGenerator)
+[![NuGet Status](https://img.shields.io/nuget/v/WaffleGenerator.svg?label=WaffleGenerator&cacheSeconds=86400)](https://www.nuget.org/packages/WaffleGenerator/)
+[![NuGet Status](https://img.shields.io/nuget/v/WaffleGenerator.Bogus.svg?label=WaffleGenerator.Bogus&cacheSeconds=86400)](https://www.nuget.org/packages/WaffleGenerator.Bogus/)
+
 Produces text which, on first glance, looks like real, ponderous, prose; replete with clichés.
 
 Example content:
@@ -23,6 +27,8 @@ Based on the awesome work by [Andrew Clarke](https://www.red-gate.com/simple-tal
 
 Code based on [SDGGenerators - Red Gate SQL Data Generator Community Generators](https://archive.codeplex.com/?p=sdggenerators).
 
+toc
+
 
 ## Blazor App
 
@@ -32,7 +38,7 @@ The [Blazing Waffles](http://wafflegen.azurewebsites.net/) app allows the genera
  * Source: https://github.com/gbiellem/BlazingWaffles
 
 
-## Main Package - WaffleGenerator [![NuGet Status](http://img.shields.io/nuget/v/WaffleGenerator.svg?style=flat)](https://www.nuget.org/packages/WaffleGenerator/)
+## Main Package - WaffleGenerator
 
 https://nuget.org/packages/WaffleGenerator/
 
@@ -46,7 +52,7 @@ snippet: htmlUsage
 snippet: textUsage
 
 
-## WaffleGenerator.Bogus [![NuGet Status](http://img.shields.io/nuget/v/WaffleGenerator.Bogus.svg?style=flat)](https://www.nuget.org/packages/WaffleGenerator.Bogus/)
+## WaffleGenerator.Bogus
 
 Extends [Bogus](https://github.com/bchavez/Bogus) to use WaffleGenerator.
 
@@ -58,6 +64,11 @@ https://nuget.org/packages/WaffleGenerator.Bogus/
 The entry extension method is `WaffleHtml()` or `WaffleText()`:
 
 snippet: BogusUsage
+
+
+## Release Notes
+
+See [closed milestones](../../milestones?state=closed).
 
 
 ## Icon

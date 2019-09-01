@@ -7,6 +7,10 @@ To change this file edit the source file and then run MarkdownSnippets.
 
 # WaffleGenerator
 
+[![Build status](https://ci.appveyor.com/api/projects/status/bv3erhc4d2pegpba/branch/master?svg=true)](https://ci.appveyor.com/project/SimonCropp/WaffleGenerator)
+[![NuGet Status](https://img.shields.io/nuget/v/WaffleGenerator.svg?label=WaffleGenerator&cacheSeconds=86400)](https://www.nuget.org/packages/WaffleGenerator/)
+[![NuGet Status](https://img.shields.io/nuget/v/WaffleGenerator.Bogus.svg?label=WaffleGenerator.Bogus&cacheSeconds=86400)](https://www.nuget.org/packages/WaffleGenerator.Bogus/)
+
 Produces text which, on first glance, looks like real, ponderous, prose; replete with clichés.
 
 Example content:
@@ -30,6 +34,17 @@ Based on the awesome work by [Andrew Clarke](https://www.red-gate.com/simple-tal
 
 Code based on [SDGGenerators - Red Gate SQL Data Generator Community Generators](https://archive.codeplex.com/?p=sdggenerators).
 
+<!-- toc -->
+## Contents
+
+  * [Blazor App](#blazor-app)
+  * [Main Package - WaffleGenerator](#main-package---wafflegenerator)
+    * [Usage](#usage)
+  * [WaffleGenerator.Bogus](#wafflegeneratorbogus)
+    * [Usage](#usage-1)
+<!-- endtoc -->
+
+
 
 ## Blazor App
 
@@ -39,7 +54,7 @@ The [Blazing Waffles](http://wafflegen.azurewebsites.net/) app allows the genera
  * Source: https://github.com/gbiellem/BlazingWaffles
 
 
-## Main Package - WaffleGenerator [![NuGet Status](http://img.shields.io/nuget/v/WaffleGenerator.svg?style=flat)](https://www.nuget.org/packages/WaffleGenerator/)
+## Main Package - WaffleGenerator
 
 https://nuget.org/packages/WaffleGenerator/
 
@@ -72,7 +87,7 @@ Debug.WriteLine(text);
 <!-- endsnippet -->
 
 
-## WaffleGenerator.Bogus [![NuGet Status](http://img.shields.io/nuget/v/WaffleGenerator.Bogus.svg?style=flat)](https://www.nuget.org/packages/WaffleGenerator.Bogus/)
+## WaffleGenerator.Bogus
 
 Extends [Bogus](https://github.com/bchavez/Bogus) to use WaffleGenerator.
 
@@ -102,6 +117,11 @@ Debug.WriteLine(target.Property4);
 ```
 <sup>[snippet source](/src/Tests/FakerUsage.cs#L19-L33) / [anchor](#snippet-bogususage)</sup>
 <!-- endsnippet -->
+
+
+## Release Notes
+
+See [closed milestones](../../milestones?state=closed).
 
 
 ## Icon
