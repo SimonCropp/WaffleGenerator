@@ -6,7 +6,7 @@ using Xunit;
 using Xunit.Abstractions;
 
 public class WaffleEngineTests :
-    XunitLoggingBase
+    XunitApprovalBase
 {
     [Fact]
     public void TextWaffleSample()
