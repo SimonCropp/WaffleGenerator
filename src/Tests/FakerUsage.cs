@@ -55,10 +55,10 @@ public class FakerUsage
 
     public class Target
     {
-        public string Property1 { get; set; }
-        public string Property2 { get; set; }
-        public string Property3 { get; set; }
-        public string Property4 { get; set; }
-        public string Title { get; set; }
+        public string? Property1 { get; set; }
+        public string? Property2 { get; set; }
+        public string? Property3 { get; set; }
+        public string? Property4 { get; set; }
+        public string? Title { get; set; }
     }
 }

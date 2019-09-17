@@ -21,7 +21,7 @@ namespace WaffleGenerator
             var innerEngine = new InnerEngine(random);
             var waffleContent = innerEngine.GetContent(paragraphs, includeHeading);
 
-            if (includeHeading)
+            if (waffleContent.Heading != null)
             {
                 if (includeHeadAndBody)
                 {
@@ -92,7 +92,7 @@ namespace WaffleGenerator
             var builder = new StringBuilder();
             var innerEngine = new InnerEngine(random);
             var waffleContent = innerEngine.GetContent(paragraphs, includeHeading);
-            if (includeHeading)
+            if (waffleContent.Heading != null)
             {
                 builder.AppendLine(waffleContent.Heading.Title);
                 builder.AppendLine();

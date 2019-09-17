@@ -4,5 +4,6 @@
     <NoWarn>CS1591</NoWarn>
     <Version>4.0.2</Version>
     <PackageTags>WaffleGenerator, Bogus</PackageTags>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 </Project>

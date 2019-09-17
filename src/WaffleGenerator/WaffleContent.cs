@@ -2,6 +2,11 @@
 
 class WaffleContent
 {
-    public Heading Heading { get; set; }
-    public List<Paragraph> Paragraphs { get; set; } = new List<Paragraph>();
+    public WaffleContent(Heading? heading, List<Paragraph> paragraphs)
+    {
+        Heading = heading;
+        Paragraphs = paragraphs;
+    }
+    public Heading? Heading { get; }
+    public List<Paragraph> Paragraphs { get; }
 }

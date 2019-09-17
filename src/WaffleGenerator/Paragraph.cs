@@ -1,5 +1,10 @@
 ﻿class Paragraph
 {
-    public string Heading { get; set; }
-    public string Body { get; set; }
+    public Paragraph(string? heading, string body)
+    {
+        Heading = heading;
+        Body = body;
+    }
+    public string? Heading { get; }
+    public string Body { get; }
 }

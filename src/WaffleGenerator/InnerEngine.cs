@@ -8,11 +8,11 @@ class InnerEngine
     Func<int, int> random;
     int cardinalSequence;
     int ordinalSequence;
-    string title;
-    string quote;
+    string? title;
+    string? quote;
+    string? cite;
+    string? buzz;
     List<Paragraph> paragraphs = new List<Paragraph>();
-    string cite;
-    string buzz;
 
     public InnerEngine(Func<int, int> random)
     {
@@ -164,6 +164,7 @@ class InnerEngine
     {
         cardinalSequence = 0;
         ordinalSequence = 0;
+        Heading? heading = null;
         if (includeHeading)
         {
             title = BuildTitle();
@@ -176,45 +177,31 @@ class InnerEngine
             var buzzBuilder = new StringBuilder();
             EvaluatePhrase("|c.", buzzBuilder);
             buzz = buzzBuilder.ToString();
+            heading = new Heading(quote, cite, buzz, title);
         }
 
         for (var i = 0; i < paragraphsCount; i++)
         {
-            var paragraph = new Paragraph();
-
+            string? paragraphHeading = null;
             if (i != 0)
             {
                 var headingBuilder = new StringBuilder();
                 EvaluateRandomPhrase(Constants.maybeHeading, headingBuilder);
-                var paragraphHeading = headingBuilder.ToString();
-                if (!string.IsNullOrEmpty(paragraphHeading))
+                paragraphHeading = headingBuilder.ToString();
+                if (string.IsNullOrWhiteSpace(paragraphHeading))
                 {
-                    paragraph.Heading = paragraphHeading;
+                    paragraphHeading = null;
                 }
             }
 
             var bodyBuilder = new StringBuilder();
             EvaluatePhrase("|A |B |C |D.", bodyBuilder);
-            paragraph.Body = bodyBuilder.ToString();
+            var paragraph = new Paragraph(paragraphHeading, bodyBuilder.ToString());
             paragraphs.Add(paragraph);
         }
 
-        var content = new WaffleContent
-        {
-            Paragraphs = paragraphs
-        };
-        if (includeHeading)
-        {
-            content.Heading = new Heading
-            {
-                Title = title,
-                Buzz = buzz,
-                Cite = cite,
-                Quote = quote
-            };
-        }
 
-        return content;
+        return new WaffleContent(heading, paragraphs);
     }
 
     public string BuildTitle()
