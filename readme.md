@@ -72,7 +72,7 @@ var text = WaffleEngine.Html(
     includeHeadAndBody: true);
 Debug.WriteLine(text);
 ```
-<sup>[snippet source](/src/Tests/WaffleEngineTests.cs#L27-L35) / [anchor](#snippet-htmlusage)</sup>
+<sup>[snippet source](/src/Tests/WaffleEngineTests.cs#L28-L36) / [anchor](#snippet-htmlusage)</sup>
 <!-- endsnippet -->
 
 <!-- snippet: textUsage -->
@@ -83,7 +83,7 @@ var text = WaffleEngine.Text(
     includeHeading: true);
 Debug.WriteLine(text);
 ```
-<sup>[snippet source](/src/Tests/WaffleEngineTests.cs#L14-L21) / [anchor](#snippet-textusage)</sup>
+<sup>[snippet source](/src/Tests/WaffleEngineTests.cs#L15-L22) / [anchor](#snippet-textusage)</sup>
 <!-- endsnippet -->
 
 

@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Diagnostics;
-using ApprovalTests;
+using System.Threading.Tasks;
+using VerifyXunit;
 using WaffleGenerator;
 using Xunit;
 using Xunit.Abstractions;
 
 public class WaffleEngineTests :
-    XunitApprovalBase
+    VerifyBase
 {
     [Fact]
     public void TextWaffleSample()
@@ -36,83 +37,83 @@ public class WaffleEngineTests :
     }
 
     [Fact]
-    public void TextWaffleSingle()
+    public Task TextWaffleSingle()
     {
         var random = new Random(0);
         var text = WaffleEngine.Text(random, 1, true);
-        Approvals.Verify(text);
+        return Verify(text);
     }
 
     [Fact]
-    public void Title()
+    public Task Title()
     {
         var random = new Random(0);
         var title = WaffleEngine.Title(random);
-        Approvals.Verify(title);
+        return Verify(title);
     }
 
     [Fact]
-    public void HtmlWaffleSingle()
+    public Task HtmlWaffleSingle()
     {
         var random = new Random(0);
         var html = WaffleEngine.Html(random, 1, true, false);
-        Approvals.Verify(html);
+        return Verify(html);
     }
 
     [Fact]
-    public void HtmlWaffleSingleWithHeadAndBody()
+    public Task HtmlWaffleSingleWithHeadAndBody()
     {
         var random = new Random(0);
         var html = WaffleEngine.Html(random, 1, true, true);
-        Approvals.Verify(html);
+        return Verify(html);
     }
 
     [Fact]
-    public void TextWaffleMultiple()
+    public Task TextWaffleMultiple()
     {
         var random = new Random(0);
         var text = WaffleEngine.Text(random, 11, true);
-        Approvals.Verify(text);
+        return Verify(text);
     }
 
     [Fact]
-    public void HtmlWaffleMultiple()
+    public Task HtmlWaffleMultiple()
     {
         var random = new Random(0);
         var html = WaffleEngine.Html(random, 11, true, false);
-        Approvals.Verify(html);
+        return Verify(html);
     }
 
     [Fact]
-    public void HtmlWaffleMultipleWithHeadAndBody()
+    public Task HtmlWaffleMultipleWithHeadAndBody()
     {
         var random = new Random(0);
         var html = WaffleEngine.Html(random, 11, true, true);
-        Approvals.Verify(html);
+        return Verify(html);
     }
 
     [Fact]
-    public void TextWaffleNoHeading()
+    public Task TextWaffleNoHeading()
     {
         var random = new Random(0);
         var text = WaffleEngine.Text(random, 1, false);
-        Approvals.Verify(text);
+        return Verify(text);
     }
 
     [Fact]
-    public void HtmlWaffleNoHeading()
+    public Task HtmlWaffleNoHeading()
     {
         var random = new Random(0);
         var html = WaffleEngine.Html(random, 1, true, false);
-        Approvals.Verify(html);
+        return Verify(html);
     }
 
     [Fact]
-    public void HtmlWaffleNoHeadingWithHeadAndBody()
+    public Task HtmlWaffleNoHeadingWithHeadAndBody()
     {
         var random = new Random(0);
         var html = WaffleEngine.Html(random, 1, true, true);
-        Approvals.Verify(html);
+        return Verify(html);
     }
 
     public WaffleEngineTests(ITestOutputHelper output) :
