@@ -41,9 +41,7 @@ Code based on [SDGGenerators - Red Gate SQL Data Generator Community Generators]
   * [Main Package - WaffleGenerator](#main-package---wafflegenerator)
     * [Usage](#usage)
   * [WaffleGenerator.Bogus](#wafflegeneratorbogus)
-    * [Usage](#usage-1)
-<!-- endtoc -->
-
+    * [Usage](#usage-1)<!-- endtoc -->
 
 
 ## Blazor App
@@ -72,7 +70,7 @@ var text = WaffleEngine.Html(
     includeHeadAndBody: true);
 Debug.WriteLine(text);
 ```
-<sup>[snippet source](/src/Tests/WaffleEngineTests.cs#L28-L36) / [anchor](#snippet-htmlusage)</sup>
+<sup><a href='/src/Tests/WaffleEngineTests.cs#L28-L36' title='File snippet `htmlusage` was extracted from'>snippet source</a> | <a href='#snippet-htmlusage' title='Navigate to start of snippet `htmlusage`'>anchor</a></sup>
 <!-- endsnippet -->
 
 <!-- snippet: textUsage -->
@@ -83,7 +81,7 @@ var text = WaffleEngine.Text(
     includeHeading: true);
 Debug.WriteLine(text);
 ```
-<sup>[snippet source](/src/Tests/WaffleEngineTests.cs#L15-L22) / [anchor](#snippet-textusage)</sup>
+<sup><a href='/src/Tests/WaffleEngineTests.cs#L15-L22' title='File snippet `textusage` was extracted from'>snippet source</a> | <a href='#snippet-textusage' title='Navigate to start of snippet `textusage`'>anchor</a></sup>
 <!-- endsnippet -->
 
 
@@ -102,11 +100,25 @@ The entry extension method is `WaffleHtml()` or `WaffleText()`:
 <a id='snippet-bogususage'/></a>
 ```cs
 var faker = new Faker<Target>()
-    .RuleFor(u => u.Title, (f, u) => f.WaffleTitle())
-    .RuleFor(u => u.Property1, (f, u) => f.WaffleHtml())
-    .RuleFor(u => u.Property2, (f, u) => f.WaffleHtml(paragraphs: 4, includeHeading: true))
-    .RuleFor(u => u.Property3, (f, u) => f.WaffleText())
-    .RuleFor(u => u.Property4, (f, u) => f.WaffleText(paragraphs: 4, includeHeading: false));
+    .RuleFor(
+        property: u => u.Title,
+        setter: (f, u) => f.WaffleTitle())
+    .RuleFor(
+        property: u => u.Property1,
+        setter: (f, u) => f.WaffleHtml())
+    .RuleFor(
+        property: u => u.Property2,
+        setter: (f, u) => f.WaffleHtml(
+            paragraphs: 4,
+            includeHeading: true))
+    .RuleFor(
+        property: u => u.Property3,
+        setter: (f, u) => f.WaffleText())
+    .RuleFor(
+        property: u => u.Property4,
+        setter: (f, u) => f.WaffleText(
+            paragraphs: 4,
+            includeHeading: false));
 
 var target = faker.Generate();
 Debug.WriteLine(target.Title);
@@ -115,7 +127,7 @@ Debug.WriteLine(target.Property2);
 Debug.WriteLine(target.Property3);
 Debug.WriteLine(target.Property4);
 ```
-<sup>[snippet source](/src/Tests/FakerUsage.cs#L19-L33) / [anchor](#snippet-bogususage)</sup>
+<sup><a href='/src/Tests/FakerUsage.cs#L19-L47' title='File snippet `bogususage` was extracted from'>snippet source</a> | <a href='#snippet-bogususage' title='Navigate to start of snippet `bogususage`'>anchor</a></sup>
 <!-- endsnippet -->
 
 
