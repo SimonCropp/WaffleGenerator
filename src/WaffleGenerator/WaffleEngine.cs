@@ -123,5 +123,15 @@ namespace WaffleGenerator
 
             return builder.ToString();
         }
+
+        public static string Link(bool? countryTopLevel, int? pathLength = null)
+        {
+            if (pathLength != null && pathLength.Value < 0) throw new ArgumentException(nameof(pathLength));
+
+            if (pathLength == null) {
+                return new UrlEngine().Build(countryTopLevel, new Random().Next(0, 3));
+            }
+            return new UrlEngine().Build(countryTopLevel, pathLength.Value);
+        }
     }
 }
