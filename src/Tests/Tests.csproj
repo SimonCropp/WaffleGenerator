@@ -11,6 +11,6 @@
     <PackageReference Include="Verify.Xunit" Version="1.5.3" />
     <ProjectReference Include="..\WaffleGenerator.Bogus\WaffleGenerator.Bogus.csproj" />
     <ProjectReference Include="..\WaffleGenerator\WaffleGenerator.csproj" />
-    <PackageReference Include="ProjectDefaults" Version="1.0.37" PrivateAssets="All" />
+    <PackageReference Include="ProjectDefaults" Version="1.0.39" PrivateAssets="All" />
   </ItemGroup>
 </Project>
