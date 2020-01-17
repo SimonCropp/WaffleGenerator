@@ -41,7 +41,8 @@ Code based on [SDGGenerators - Red Gate SQL Data Generator Community Generators]
   * [Main Package - WaffleGenerator](#main-package---wafflegenerator)
     * [Usage](#usage)
   * [WaffleGenerator.Bogus](#wafflegeneratorbogus)
-    * [Usage](#usage-1)<!-- endtoc -->
+    * [Usage](#usage-1)
+  * [Security contact information](#security-contact-information)<!-- endtoc -->
 
 
 ## Blazor App
@@ -129,6 +130,11 @@ Debug.WriteLine(target.Property4);
 ```
 <sup><a href='/src/Tests/FakerUsage.cs#L19-L47' title='File snippet `bogususage` was extracted from'>snippet source</a> | <a href='#snippet-bogususage' title='Navigate to start of snippet `bogususage`'>anchor</a></sup>
 <!-- endsnippet -->
+
+
+## Security contact information
+
+To report a security vulnerability, please use the [Tidelift security contact](https://tidelift.com/security). Tidelift will coordinate the fix and disclosure.
 
 
 ## Release Notes
