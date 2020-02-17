@@ -34,6 +34,8 @@ Based on the awesome work by [Andrew Clarke](https://www.red-gate.com/simple-tal
 
 Code based on [SDGGenerators - Red Gate SQL Data Generator Community Generators](https://archive.codeplex.com/?p=sdggenerators).
 
+Support is available via a [Tidelift Subscription](https://tidelift.com/subscription/pkg/nuget-wafflegenerator?utm_source=nuget-wafflegenerator&utm_medium=referral&utm_campaign=enterprise).
+
 <!-- toc -->
 ## Contents
 
