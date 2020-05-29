@@ -73,7 +73,7 @@ var text = WaffleEngine.Html(
     includeHeadAndBody: true);
 Debug.WriteLine(text);
 ```
-<sup><a href='/src/Tests/WaffleEngineTests.cs#L28-L36' title='File snippet `htmlusage` was extracted from'>snippet source</a> | <a href='#snippet-htmlusage' title='Navigate to start of snippet `htmlusage`'>anchor</a></sup>
+<sup><a href='/src/Tests/WaffleEngineTests.cs#L42-L50' title='File snippet `htmlusage` was extracted from'>snippet source</a> | <a href='#snippet-htmlusage' title='Navigate to start of snippet `htmlusage`'>anchor</a></sup>
 <!-- endsnippet -->
 
 <!-- snippet: textUsage -->
@@ -84,7 +84,18 @@ var text = WaffleEngine.Text(
     includeHeading: true);
 Debug.WriteLine(text);
 ```
-<sup><a href='/src/Tests/WaffleEngineTests.cs#L15-L22' title='File snippet `textusage` was extracted from'>snippet source</a> | <a href='#snippet-textusage' title='Navigate to start of snippet `textusage`'>anchor</a></sup>
+<sup><a href='/src/Tests/WaffleEngineTests.cs#L16-L23' title='File snippet `textusage` was extracted from'>snippet source</a> | <a href='#snippet-textusage' title='Navigate to start of snippet `textusage`'>anchor</a></sup>
+<!-- endsnippet -->
+
+<!-- snippet: markdownUsage -->
+<a id='snippet-markdownusage'/></a>
+```cs
+var markdown = WaffleEngine.Markdown(
+    paragraphs: 1,
+    includeHeading: true);
+Debug.WriteLine(markdown);
+```
+<sup><a href='/src/Tests/WaffleEngineTests.cs#L29-L36' title='File snippet `markdownusage` was extracted from'>snippet source</a> | <a href='#snippet-markdownusage' title='Navigate to start of snippet `markdownusage`'>anchor</a></sup>
 <!-- endsnippet -->
 
 
@@ -97,7 +108,7 @@ https://nuget.org/packages/WaffleGenerator.Bogus/
 
 ### Usage
 
-The entry extension method is `WaffleHtml()` or `WaffleText()`:
+The entry extension method is `WaffleHtml()` or `WaffleText()` or `WaffleMarkdown()`:
 
 <!-- snippet: BogusUsage -->
 <a id='snippet-bogususage'/></a>

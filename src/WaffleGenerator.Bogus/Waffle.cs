@@ -1,5 +1,4 @@
-﻿
-using WaffleGenerator;
+﻿using WaffleGenerator;
 
 namespace Bogus
 {
@@ -13,6 +12,11 @@ namespace Bogus
         public string Text(int paragraphs = 1, bool includeHeading = true)
         {
             return WaffleEngine.Text(RandomNumber, paragraphs, includeHeading);
+        }
+
+        public string Markdown(int paragraphs = 1, bool includeHeading = true)
+        {
+            return WaffleEngine.Markdown(RandomNumber, paragraphs, includeHeading);
         }
 
         public string Title()

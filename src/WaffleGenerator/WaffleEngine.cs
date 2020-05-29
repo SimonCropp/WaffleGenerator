@@ -75,6 +75,50 @@ namespace WaffleGenerator
             return innerEngine.BuildTitle();
         }
 
+        public static string Markdown(int paragraphs, bool includeHeading)
+        {
+            return Markdown(new Random(), paragraphs, includeHeading);
+        }
+
+        public static string Markdown(Random random, int paragraphs, bool includeHeading)
+        {
+            return Markdown(x => random.Next(0, x), paragraphs, includeHeading);
+        }
+
+        public static string Markdown(Func<int, int> random, int paragraphs, bool includeHeading)
+        {
+            var builder = new StringBuilder();
+            var innerEngine = new InnerEngine(random);
+            var waffleContent = innerEngine.GetContent(paragraphs, includeHeading);
+
+            if (waffleContent.Heading != null)
+            {
+                builder.AppendLine(@$"# {waffleContent.Heading.Title}
+
+ > {waffleContent.Heading.Quote}
+
+ * {waffleContent.Heading.Cite}
+
+## {waffleContent.Heading.Buzz}
+");
+            }
+
+            foreach (var paragraph in waffleContent.Paragraphs)
+            {
+                builder.AppendLine("");
+                if (paragraph.Heading != null)
+                {
+                    builder.AppendLine($"## {paragraph.Heading}");;
+                    builder.AppendLine("");
+                }
+
+                builder.AppendLine(paragraph.Body);
+                builder.AppendLine("");
+            }
+
+            return builder.ToString();
+        }
+
         public static string Text(int paragraphs, bool includeHeading)
         {
             return Text(new Random(), paragraphs, includeHeading);

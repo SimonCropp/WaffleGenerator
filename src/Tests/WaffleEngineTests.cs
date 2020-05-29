@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using Verify;
 using VerifyXunit;
 using WaffleGenerator;
 using Xunit;
@@ -18,6 +19,19 @@ public class WaffleEngineTests :
             paragraphs: 1,
             includeHeading: true);
         Debug.WriteLine(text);
+
+        #endregion
+    }
+
+    [Fact]
+    public void MarkdownWaffleSample()
+    {
+        #region markdownUsage
+
+        var markdown = WaffleEngine.Markdown(
+            paragraphs: 1,
+            includeHeading: true);
+        Debug.WriteLine(markdown);
 
         #endregion
     }
@@ -42,6 +56,16 @@ public class WaffleEngineTests :
         var random = new Random(0);
         var text = WaffleEngine.Text(random, 1, true);
         return Verify(text);
+    }
+
+    [Fact]
+    public Task MarkdownWaffleSingle()
+    {
+        var random = new Random(0);
+        var text = WaffleEngine.Markdown(random, 1, true);
+        var settings = new VerifySettings();
+        settings.UseExtension("md");
+        return Verify(text, settings);
     }
 
     [Fact]
@@ -77,6 +101,16 @@ public class WaffleEngineTests :
     }
 
     [Fact]
+    public Task MarkdownWaffleMultiple()
+    {
+        var random = new Random(0);
+        var text = WaffleEngine.Markdown(random, 11, true);
+        var settings = new VerifySettings();
+        settings.UseExtension("md");
+        return Verify(text, settings);
+    }
+
+    [Fact]
     public Task HtmlWaffleMultiple()
     {
         var random = new Random(0);
@@ -98,6 +132,16 @@ public class WaffleEngineTests :
         var random = new Random(0);
         var text = WaffleEngine.Text(random, 1, false);
         return Verify(text);
+    }
+
+    [Fact]
+    public Task MarkdownWaffleNoHeading()
+    {
+        var random = new Random(0);
+        var text = WaffleEngine.Markdown(random, 1, false);
+        var settings = new VerifySettings();
+        settings.UseExtension("md");
+        return Verify(text, settings);
     }
 
     [Fact]

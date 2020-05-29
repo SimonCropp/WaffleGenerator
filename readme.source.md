@@ -53,6 +53,8 @@ snippet: htmlUsage
 
 snippet: textUsage
 
+snippet: markdownUsage
+
 
 ## WaffleGenerator.Bogus
 
@@ -63,7 +65,7 @@ https://nuget.org/packages/WaffleGenerator.Bogus/
 
 ### Usage
 
-The entry extension method is `WaffleHtml()` or `WaffleText()`:
+The entry extension method is `WaffleHtml()` or `WaffleText()` or `WaffleMarkdown()`:
 
 snippet: BogusUsage
 
