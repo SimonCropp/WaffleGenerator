@@ -105,7 +105,6 @@ namespace WaffleGenerator
 
             foreach (var paragraph in waffleContent.Paragraphs)
             {
-                builder.AppendLine("");
                 if (paragraph.Heading != null)
                 {
                     builder.AppendLine($"## {paragraph.Heading}");;

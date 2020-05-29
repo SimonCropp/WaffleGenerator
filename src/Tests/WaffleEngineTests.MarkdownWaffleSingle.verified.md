@@ -6,6 +6,5 @@
 
 ## causation of milieu.
 
-
 On any rational basis, a particular factor, such as the functional baseline, the analogy of object, the strategic requirements or the principal overriding programming provides an interesting insight into the complementary functional derivation. This trend may dissipate due to the mensurable proficiency.
 
