@@ -25,19 +25,17 @@ namespace WaffleGenerator
             {
                 if (includeHeadAndBody)
                 {
-                    builder.AppendLine("<html>");
-                    builder.AppendLine("<head>");
-                    builder.AppendFormat("<title>{0}</title>", waffleContent.Heading.Title);
-                    builder.AppendLine();
-                    builder.AppendLine("</head>");
-                    builder.AppendLine("<body>");
+                    builder.AppendLine(@$"<html>
+<head>
+<title>{waffleContent.Heading.Title}</title>
+</head>
+<body>");
                 }
 
-                builder.AppendFormat("<h1>{0}</h1>", waffleContent.Heading.Title);
-                builder.AppendLine();
-                builder.AppendLine($"<blockquote>\"{waffleContent.Heading.Quote}\"<br>");
-                builder.AppendLine($"<cite>{waffleContent.Heading.Cite}</cite></blockquote>");
-                builder.AppendLine($"<h2>{waffleContent.Heading.Buzz}</h2>");
+                builder.AppendLine(@$"<h1>{waffleContent.Heading.Title}</h1>
+<blockquote>'{waffleContent.Heading.Quote}'<br>
+<cite>{waffleContent.Heading.Cite}</cite></blockquote>
+<h2>{waffleContent.Heading.Buzz}</h2>");
             }
 
             foreach (var paragraph in waffleContent.Paragraphs)
@@ -94,14 +92,14 @@ namespace WaffleGenerator
             var waffleContent = innerEngine.GetContent(paragraphs, includeHeading);
             if (waffleContent.Heading != null)
             {
-                builder.AppendLine(waffleContent.Heading.Title);
-                builder.AppendLine();
-                builder.AppendLine($"\"{waffleContent.Heading.Quote}\"");
-                builder.AppendLine();
-                builder.AppendLine($" - {waffleContent.Heading.Cite}");
-                builder.AppendLine();
-                builder.AppendLine(waffleContent.Heading.Buzz);
-                builder.AppendLine();
+                builder.AppendLine($@"{waffleContent.Heading.Title}
+
+'{waffleContent.Heading.Quote}'
+
+ - {waffleContent.Heading.Cite}
+
+{waffleContent.Heading.Buzz}
+");
             }
 
             var lastIndex = waffleContent.Paragraphs.Count - 1;
