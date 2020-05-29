@@ -23,5 +23,10 @@ namespace Bogus
         {
             return faker.Waffle().Text(paragraphs, includeHeading);
         }
+
+        public static string WaffleMarkdown(this Faker faker, int paragraphs = 1, bool includeHeading = true)
+        {
+            return faker.Waffle().Markdown(paragraphs, includeHeading);
+        }
     }
 }
