@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using NUnit.Framework;
 using Verify;
-using VerifyXunit;
+using VerifyNUnit;
 using WaffleGenerator;
-using Xunit;
-using Xunit.Abstractions;
 
-public class WaffleEngineTests :
-    VerifyBase
+[TestFixture]
+public class WaffleEngineTests
 {
-    [Fact]
+    [Test]
     public void TextWaffleSample()
     {
         #region textUsage
@@ -23,7 +22,7 @@ public class WaffleEngineTests :
         #endregion
     }
 
-    [Fact]
+    [Test]
     public void MarkdownWaffleSample()
     {
         #region markdownUsage
@@ -36,7 +35,7 @@ public class WaffleEngineTests :
         #endregion
     }
 
-    [Fact]
+    [Test]
     public void HtmlWaffleSample()
     {
         #region htmlUsage
@@ -50,118 +49,113 @@ public class WaffleEngineTests :
         #endregion
     }
 
-    [Fact]
+    [Test]
     public Task TextWaffleSingle()
     {
         var random = new Random(0);
         var text = WaffleEngine.Text(random, 1, true);
-        return Verify(text);
+        return Verifier.Verify(text);
     }
 
-    [Fact]
+    [Test]
     public Task MarkdownWaffleSingle()
     {
         var random = new Random(0);
         var text = WaffleEngine.Markdown(random, 1, true);
         var settings = new VerifySettings();
         settings.UseExtension("md");
-        return Verify(text, settings);
+        return Verifier.Verify(text, settings);
     }
 
-    [Fact]
+    [Test]
     public Task Title()
     {
         var random = new Random(0);
         var title = WaffleEngine.Title(random);
-        return Verify(title);
+        return Verifier.Verify(title);
     }
 
-    [Fact]
+    [Test]
     public Task HtmlWaffleSingle()
     {
         var random = new Random(0);
         var html = WaffleEngine.Html(random, 1, true, false);
-        return Verify(html);
+        return Verifier.Verify(html);
     }
 
-    [Fact]
+    [Test]
     public Task HtmlWaffleSingleWithHeadAndBody()
     {
         var random = new Random(0);
         var html = WaffleEngine.Html(random, 1, true, true);
-        return Verify(html);
+        return Verifier.Verify(html);
     }
 
-    [Fact]
+    [Test]
     public Task TextWaffleMultiple()
     {
         var random = new Random(0);
         var text = WaffleEngine.Text(random, 11, true);
-        return Verify(text);
+        return Verifier.Verify(text);
     }
 
-    [Fact]
+    [Test]
     public Task MarkdownWaffleMultiple()
     {
         var random = new Random(0);
         var text = WaffleEngine.Markdown(random, 11, true);
         var settings = new VerifySettings();
         settings.UseExtension("md");
-        return Verify(text, settings);
+        return Verifier.Verify(text, settings);
     }
 
-    [Fact]
+    [Test]
     public Task HtmlWaffleMultiple()
     {
         var random = new Random(0);
         var html = WaffleEngine.Html(random, 11, true, false);
-        return Verify(html);
+        return Verifier.Verify(html);
     }
 
-    [Fact]
+    [Test]
     public Task HtmlWaffleMultipleWithHeadAndBody()
     {
         var random = new Random(0);
         var html = WaffleEngine.Html(random, 11, true, true);
-        return Verify(html);
+        return Verifier.Verify(html);
     }
 
-    [Fact]
+    [Test]
     public Task TextWaffleNoHeading()
     {
         var random = new Random(0);
         var text = WaffleEngine.Text(random, 1, false);
-        return Verify(text);
+        return Verifier.Verify(text);
     }
 
-    [Fact]
+    [Test]
     public Task MarkdownWaffleNoHeading()
     {
         var random = new Random(0);
         var text = WaffleEngine.Markdown(random, 1, false);
         var settings = new VerifySettings();
         settings.UseExtension("md");
-        return Verify(text, settings);
+        return Verifier.Verify(text, settings);
     }
 
-    [Fact]
+    [Test]
     public Task HtmlWaffleNoHeading()
     {
         var random = new Random(0);
         var html = WaffleEngine.Html(random, 1, true, false);
-        return Verify(html);
+        return Verifier.Verify(html);
     }
 
-    [Fact]
+    [Test]
     public Task HtmlWaffleNoHeadingWithHeadAndBody()
     {
         var random = new Random(0);
         var html = WaffleEngine.Html(random, 1, true, true);
-        return Verify(html);
-    }
-
-    public WaffleEngineTests(ITestOutputHelper output) :
-        base(output)
-    {
+        return Verifier.Verify(html);
     }
 }

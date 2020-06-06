@@ -1,19 +1,12 @@
 ﻿using System.Diagnostics;
 using Bogus;
-using Xunit;
-using Xunit.Abstractions;
+using NUnit.Framework;
 // ReSharper disable RedundantArgumentDefaultValue
 
+[TestFixture]
 public class FakerUsage
 {
-    ITestOutputHelper output;
-
-    public FakerUsage(ITestOutputHelper output)
-    {
-        this.output = output;
-    }
-
-    [Fact]
+    [Test]
     public void Sample()
     {
         #region BogusUsage
@@ -47,7 +40,7 @@ public class FakerUsage
         #endregion
     }
 
-    [Fact]
+    [Test]
     public void Run()
     {
         var faker = new Faker<Target>()
@@ -56,15 +49,15 @@ public class FakerUsage
             .RuleFor(u => u.Property2, (f, u) => f.WaffleText());
 
         var target = faker.Generate();
-        output.WriteLine(target.Title);
-        output.WriteLine(target.Property1);
-        output.WriteLine(target.Property2);
+        Trace.WriteLine(target.Title);
+        Trace.WriteLine(target.Property1);
+        Trace.WriteLine(target.Property2);
         Assert.NotNull(target.Title);
-        Assert.NotEmpty(target.Title);
+        Assert.IsNotEmpty(target.Title);
         Assert.NotNull(target.Property1);
-        Assert.NotEmpty(target.Property1);
+        Assert.IsNotEmpty(target.Property1);
         Assert.NotNull(target.Property2);
-        Assert.NotEmpty(target.Property2);
+        Assert.IsNotEmpty(target.Property2);
     }
 
     public class Target
