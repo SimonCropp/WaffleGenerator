@@ -3,10 +3,10 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="MarkdownSnippets.MsBuild" Version="19.0.0" PrivateAssets="all" />
-    <PackageReference Include="NUnit" Version="3.13.0-dev-06803" />
-    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0-dev-01429" />
-    <PackageReference Include="Verify.NUnit" Version="4.3.1" />
+    <PackageReference Include="MarkdownSnippets.MsBuild" Version="19.0.1" PrivateAssets="all" />
+    <PackageReference Include="NUnit" Version="3.13.0-dev-06819" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.17.0-dev-01449" />
+    <PackageReference Include="Verify.NUnit" Version="5.0.4" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
     <ProjectReference Include="..\WaffleGenerator.Bogus\WaffleGenerator.Bogus.csproj" />
     <ProjectReference Include="..\WaffleGenerator\WaffleGenerator.csproj" />

@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using Verify;
+using VerifyTests;
 using VerifyNUnit;
 using WaffleGenerator;
 
