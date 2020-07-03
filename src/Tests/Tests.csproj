@@ -6,7 +6,7 @@
     <PackageReference Include="MarkdownSnippets.MsBuild" Version="19.0.1" PrivateAssets="all" />
     <PackageReference Include="NUnit" Version="3.13.0-dev-06819" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.17.0-dev-01449" />
-    <PackageReference Include="Verify.NUnit" Version="6.2.0" />
+    <PackageReference Include="Verify.NUnit" Version="6.3.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.6.1" />
     <ProjectReference Include="..\WaffleGenerator.Bogus\WaffleGenerator.Bogus.csproj" />
     <ProjectReference Include="..\WaffleGenerator\WaffleGenerator.csproj" />
