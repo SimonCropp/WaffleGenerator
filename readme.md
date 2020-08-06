@@ -65,7 +65,7 @@ https://nuget.org/packages/WaffleGenerator/
 The `WaffleEngine` can be used to produce Html or text:
 
 <!-- snippet: htmlUsage -->
-<a id='snippet-htmlusage'/></a>
+<a id='snippet-htmlusage'></a>
 ```cs
 var text = WaffleEngine.Html(
     paragraphs: 2,
@@ -77,7 +77,7 @@ Debug.WriteLine(text);
 <!-- endsnippet -->
 
 <!-- snippet: textUsage -->
-<a id='snippet-textusage'/></a>
+<a id='snippet-textusage'></a>
 ```cs
 var text = WaffleEngine.Text(
     paragraphs: 1,
@@ -88,7 +88,7 @@ Debug.WriteLine(text);
 <!-- endsnippet -->
 
 <!-- snippet: markdownUsage -->
-<a id='snippet-markdownusage'/></a>
+<a id='snippet-markdownusage'></a>
 ```cs
 var markdown = WaffleEngine.Markdown(
     paragraphs: 1,
@@ -111,7 +111,7 @@ https://nuget.org/packages/WaffleGenerator.Bogus/
 The entry extension method is `WaffleHtml()` or `WaffleText()` or `WaffleMarkdown()`:
 
 <!-- snippet: BogusUsage -->
-<a id='snippet-bogususage'/></a>
+<a id='snippet-bogususage'></a>
 ```cs
 var faker = new Faker<Target>()
     .RuleFor(
