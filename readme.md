@@ -44,7 +44,7 @@ Support is available via a [Tidelift Subscription](https://tidelift.com/subscrip
     * [Usage](#usage)
   * [WaffleGenerator.Bogus](#wafflegeneratorbogus)
     * [Usage](#usage-1)
-  * [Security contact information](#security-contact-information)<!-- endtoc -->
+  * [Security contact information](#security-contact-information)<!-- endToc -->
 
 
 ## Blazor App
@@ -74,7 +74,7 @@ var text = WaffleEngine.Html(
 Debug.WriteLine(text);
 ```
 <sup><a href='/src/Tests/WaffleEngineTests.cs#L41-L49' title='File snippet `htmlusage` was extracted from'>snippet source</a> | <a href='#snippet-htmlusage' title='Navigate to start of snippet `htmlusage`'>anchor</a></sup>
-<!-- endsnippet -->
+<!-- endSnippet -->
 
 <!-- snippet: textUsage -->
 <a id='snippet-textusage'></a>
@@ -85,7 +85,7 @@ var text = WaffleEngine.Text(
 Debug.WriteLine(text);
 ```
 <sup><a href='/src/Tests/WaffleEngineTests.cs#L15-L22' title='File snippet `textusage` was extracted from'>snippet source</a> | <a href='#snippet-textusage' title='Navigate to start of snippet `textusage`'>anchor</a></sup>
-<!-- endsnippet -->
+<!-- endSnippet -->
 
 <!-- snippet: markdownUsage -->
 <a id='snippet-markdownusage'></a>
@@ -96,7 +96,7 @@ var markdown = WaffleEngine.Markdown(
 Debug.WriteLine(markdown);
 ```
 <sup><a href='/src/Tests/WaffleEngineTests.cs#L28-L35' title='File snippet `markdownusage` was extracted from'>snippet source</a> | <a href='#snippet-markdownusage' title='Navigate to start of snippet `markdownusage`'>anchor</a></sup>
-<!-- endsnippet -->
+<!-- endSnippet -->
 
 
 ## WaffleGenerator.Bogus
@@ -142,7 +142,7 @@ Debug.WriteLine(target.Property3);
 Debug.WriteLine(target.Property4);
 ```
 <sup><a href='/src/Tests/FakerUsage.cs#L12-L40' title='File snippet `bogususage` was extracted from'>snippet source</a> | <a href='#snippet-bogususage' title='Navigate to start of snippet `bogususage`'>anchor</a></sup>
-<!-- endsnippet -->
+<!-- endSnippet -->
 
 
 ## Security contact information
