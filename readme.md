@@ -73,7 +73,7 @@ var text = WaffleEngine.Html(
     includeHeadAndBody: true);
 Debug.WriteLine(text);
 ```
-<sup><a href='/src/Tests/WaffleEngineTests.cs#L41-L49' title='File snippet `htmlusage` was extracted from'>snippet source</a> | <a href='#snippet-htmlusage' title='Navigate to start of snippet `htmlusage`'>anchor</a></sup>
+<sup><a href='/src/Tests/WaffleEngineTests.cs#L41-L49' title='Snippet source file'>snippet source</a> | <a href='#snippet-htmlusage' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 <!-- snippet: textUsage -->
@@ -84,7 +84,7 @@ var text = WaffleEngine.Text(
     includeHeading: true);
 Debug.WriteLine(text);
 ```
-<sup><a href='/src/Tests/WaffleEngineTests.cs#L15-L22' title='File snippet `textusage` was extracted from'>snippet source</a> | <a href='#snippet-textusage' title='Navigate to start of snippet `textusage`'>anchor</a></sup>
+<sup><a href='/src/Tests/WaffleEngineTests.cs#L15-L22' title='Snippet source file'>snippet source</a> | <a href='#snippet-textusage' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 <!-- snippet: markdownUsage -->
@@ -95,7 +95,7 @@ var markdown = WaffleEngine.Markdown(
     includeHeading: true);
 Debug.WriteLine(markdown);
 ```
-<sup><a href='/src/Tests/WaffleEngineTests.cs#L28-L35' title='File snippet `markdownusage` was extracted from'>snippet source</a> | <a href='#snippet-markdownusage' title='Navigate to start of snippet `markdownusage`'>anchor</a></sup>
+<sup><a href='/src/Tests/WaffleEngineTests.cs#L28-L35' title='Snippet source file'>snippet source</a> | <a href='#snippet-markdownusage' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -141,7 +141,7 @@ Debug.WriteLine(target.Property2);
 Debug.WriteLine(target.Property3);
 Debug.WriteLine(target.Property4);
 ```
-<sup><a href='/src/Tests/FakerUsage.cs#L12-L40' title='File snippet `bogususage` was extracted from'>snippet source</a> | <a href='#snippet-bogususage' title='Navigate to start of snippet `bogususage`'>anchor</a></sup>
+<sup><a href='/src/Tests/FakerUsage.cs#L12-L40' title='Snippet source file'>snippet source</a> | <a href='#snippet-bogususage' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
