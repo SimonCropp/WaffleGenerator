@@ -65,7 +65,7 @@ https://nuget.org/packages/WaffleGenerator/
 The `WaffleEngine` can be used to produce Html or text:
 
 <!-- snippet: htmlUsage -->
-<a id='snippet-htmlusage'></a>
+<a id='97ca649a'></a>
 ```cs
 var text = WaffleEngine.Html(
     paragraphs: 2,
@@ -73,29 +73,29 @@ var text = WaffleEngine.Html(
     includeHeadAndBody: true);
 Debug.WriteLine(text);
 ```
-<sup><a href='/src/Tests/WaffleEngineTests.cs#L41-L49' title='File snippet `htmlusage` was extracted from'>snippet source</a> | <a href='#snippet-htmlusage' title='Navigate to start of snippet `htmlusage`'>anchor</a></sup>
+<sup><a href='/src/Tests/WaffleEngineTests.cs#L41-L49' title='Snippet source file'>snippet source</a> | <a href='#97ca649a' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 <!-- snippet: textUsage -->
-<a id='snippet-textusage'></a>
+<a id='208a3ff6'></a>
 ```cs
 var text = WaffleEngine.Text(
     paragraphs: 1,
     includeHeading: true);
 Debug.WriteLine(text);
 ```
-<sup><a href='/src/Tests/WaffleEngineTests.cs#L15-L22' title='File snippet `textusage` was extracted from'>snippet source</a> | <a href='#snippet-textusage' title='Navigate to start of snippet `textusage`'>anchor</a></sup>
+<sup><a href='/src/Tests/WaffleEngineTests.cs#L15-L22' title='Snippet source file'>snippet source</a> | <a href='#208a3ff6' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 <!-- snippet: markdownUsage -->
-<a id='snippet-markdownusage'></a>
+<a id='a7737406'></a>
 ```cs
 var markdown = WaffleEngine.Markdown(
     paragraphs: 1,
     includeHeading: true);
 Debug.WriteLine(markdown);
 ```
-<sup><a href='/src/Tests/WaffleEngineTests.cs#L28-L35' title='File snippet `markdownusage` was extracted from'>snippet source</a> | <a href='#snippet-markdownusage' title='Navigate to start of snippet `markdownusage`'>anchor</a></sup>
+<sup><a href='/src/Tests/WaffleEngineTests.cs#L28-L35' title='Snippet source file'>snippet source</a> | <a href='#a7737406' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -111,7 +111,7 @@ https://nuget.org/packages/WaffleGenerator.Bogus/
 The entry extension method is `WaffleHtml()` or `WaffleText()` or `WaffleMarkdown()`:
 
 <!-- snippet: BogusUsage -->
-<a id='snippet-bogususage'></a>
+<a id='2b412073'></a>
 ```cs
 var faker = new Faker<Target>()
     .RuleFor(
@@ -141,7 +141,7 @@ Debug.WriteLine(target.Property2);
 Debug.WriteLine(target.Property3);
 Debug.WriteLine(target.Property4);
 ```
-<sup><a href='/src/Tests/FakerUsage.cs#L12-L40' title='File snippet `bogususage` was extracted from'>snippet source</a> | <a href='#snippet-bogususage' title='Navigate to start of snippet `bogususage`'>anchor</a></sup>
+<sup><a href='/src/Tests/FakerUsage.cs#L12-L40' title='Snippet source file'>snippet source</a> | <a href='#2b412073' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
