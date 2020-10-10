@@ -65,7 +65,7 @@ https://nuget.org/packages/WaffleGenerator/
 The `WaffleEngine` can be used to produce Html or text:
 
 <!-- snippet: htmlUsage -->
-<a id='htmlusage'></a>
+<a id='snippet-htmlusage'></a>
 ```cs
 var text = WaffleEngine.Html(
     paragraphs: 2,
@@ -73,29 +73,29 @@ var text = WaffleEngine.Html(
     includeHeadAndBody: true);
 Debug.WriteLine(text);
 ```
-<sup><a href='/src/Tests/WaffleEngineTests.cs#L41-L49' title='Snippet source file'>snippet source</a> | <a href='#htmlusage' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/WaffleEngineTests.cs#L41-L49' title='Snippet source file'>snippet source</a> | <a href='#snippet-htmlusage' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 <!-- snippet: textUsage -->
-<a id='textusage'></a>
+<a id='snippet-textusage'></a>
 ```cs
 var text = WaffleEngine.Text(
     paragraphs: 1,
     includeHeading: true);
 Debug.WriteLine(text);
 ```
-<sup><a href='/src/Tests/WaffleEngineTests.cs#L15-L22' title='Snippet source file'>snippet source</a> | <a href='#textusage' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/WaffleEngineTests.cs#L15-L22' title='Snippet source file'>snippet source</a> | <a href='#snippet-textusage' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 <!-- snippet: markdownUsage -->
-<a id='markdownusage'></a>
+<a id='snippet-markdownusage'></a>
 ```cs
 var markdown = WaffleEngine.Markdown(
     paragraphs: 1,
     includeHeading: true);
 Debug.WriteLine(markdown);
 ```
-<sup><a href='/src/Tests/WaffleEngineTests.cs#L28-L35' title='Snippet source file'>snippet source</a> | <a href='#markdownusage' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/WaffleEngineTests.cs#L28-L35' title='Snippet source file'>snippet source</a> | <a href='#snippet-markdownusage' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -111,7 +111,7 @@ https://nuget.org/packages/WaffleGenerator.Bogus/
 The entry extension method is `WaffleHtml()` or `WaffleText()` or `WaffleMarkdown()`:
 
 <!-- snippet: BogusUsage -->
-<a id='bogususage'></a>
+<a id='snippet-bogususage'></a>
 ```cs
 var faker = new Faker<Target>()
     .RuleFor(
@@ -141,7 +141,7 @@ Debug.WriteLine(target.Property2);
 Debug.WriteLine(target.Property3);
 Debug.WriteLine(target.Property4);
 ```
-<sup><a href='/src/Tests/FakerUsage.cs#L12-L40' title='Snippet source file'>snippet source</a> | <a href='#bogususage' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/FakerUsage.cs#L12-L40' title='Snippet source file'>snippet source</a> | <a href='#snippet-bogususage' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
