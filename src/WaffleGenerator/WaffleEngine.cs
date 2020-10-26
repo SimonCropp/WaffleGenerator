@@ -5,6 +5,11 @@ namespace WaffleGenerator
 {
     public static class WaffleEngine
     {
+        public static string Html(int seed, int paragraphs, bool includeHeading, bool includeHeadAndBody)
+        {
+            return Html(new Random(seed), paragraphs, includeHeading, includeHeadAndBody);
+        }
+
         public static string Html(int paragraphs, bool includeHeading, bool includeHeadAndBody)
         {
             return Html(new Random(), paragraphs, includeHeading, includeHeadAndBody);
@@ -64,6 +69,11 @@ namespace WaffleGenerator
             return Title(new Random());
         }
 
+        public static string Title(int seed)
+        {
+            return Title(new Random(seed));
+        }
+
         public static string Title(Random random)
         {
             return Title(x => random.Next(0, x));
@@ -73,6 +83,11 @@ namespace WaffleGenerator
         {
             var innerEngine = new InnerEngine(random);
             return innerEngine.BuildTitle();
+        }
+
+        public static string Markdown(int seed,int paragraphs, bool includeHeading)
+        {
+            return Markdown(new Random(seed), paragraphs, includeHeading);
         }
 
         public static string Markdown(int paragraphs, bool includeHeading)
@@ -116,6 +131,11 @@ namespace WaffleGenerator
             }
 
             return builder.ToString();
+        }
+
+        public static string Text(int seed, int paragraphs, bool includeHeading)
+        {
+            return Text(new Random(seed), paragraphs, includeHeading);
         }
 
         public static string Text(int paragraphs, bool includeHeading)

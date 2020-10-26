@@ -58,6 +58,30 @@ public class WaffleEngineTests
     }
 
     [Test]
+    public void MultiTextShouldNotDuplicate()
+    {
+        var text1 = WaffleEngine.Text(1, true);
+        var text2 = WaffleEngine.Text(1, true);
+        Assert.AreNotEqual(text1, text2);
+    }
+
+    [Test]
+    public void MultiHtmlShouldNotDuplicate()
+    {
+        var text1 = WaffleEngine.Html(1, true, true);
+        var text2 = WaffleEngine.Html(1, true, true);
+        Assert.AreNotEqual(text1, text2);
+    }
+
+    [Test]
+    public void MultiMarkdownShouldNotDuplicate()
+    {
+        var text1 = WaffleEngine.Markdown(1, true);
+        var text2 = WaffleEngine.Markdown(1, true);
+        Assert.AreNotEqual(text1, text2);
+    }
+
+    [Test]
     public Task MarkdownWaffleSingle()
     {
         var random = new Random(0);
