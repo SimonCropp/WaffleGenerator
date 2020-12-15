@@ -12,7 +12,7 @@ class InnerEngine
     string? quote;
     string? cite;
     string? buzz;
-    List<Paragraph> paragraphs = new List<Paragraph>();
+    List<Paragraph> paragraphs = new();
 
     public InnerEngine(Func<int, int> random)
     {

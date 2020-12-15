@@ -2,6 +2,7 @@
 using Bogus;
 using NUnit.Framework;
 // ReSharper disable RedundantArgumentDefaultValue
+// ReSharper disable UnusedParameter.Local
 
 [TestFixture]
 public class FakerUsage
