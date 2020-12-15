@@ -158,7 +158,8 @@ public class WaffleEngineTests
     {
         var random = new Random(0);
         var text = WaffleEngine.Markdown(random, 1, false);
-        return Verifier.Verify(text).UseExtension("md";
+        return Verifier.Verify(text)
+            .UseExtension("md");
     }
 
     [Test]
