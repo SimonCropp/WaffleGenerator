@@ -86,9 +86,7 @@ public class WaffleEngineTests
     {
         var random = new Random(0);
         var text = WaffleEngine.Markdown(random, 1, true);
-        var settings = new VerifySettings();
-        settings.UseExtension("md");
-        return Verifier.Verify(text, settings);
+        return Verifier.Verify(text).UseExtension("md");
     }
 
     [Test]
@@ -128,9 +126,7 @@ public class WaffleEngineTests
     {
         var random = new Random(0);
         var text = WaffleEngine.Markdown(random, 11, true);
-        var settings = new VerifySettings();
-        settings.UseExtension("md");
-        return Verifier.Verify(text, settings);
+        return Verifier.Verify(text).UseExtension("md");
     }
 
     [Test]
@@ -162,9 +158,7 @@ public class WaffleEngineTests
     {
         var random = new Random(0);
         var text = WaffleEngine.Markdown(random, 1, false);
-        var settings = new VerifySettings();
-        settings.UseExtension("md");
-        return Verifier.Verify(text, settings);
+        return Verifier.Verify(text).UseExtension("md";
     }
 
     [Test]
