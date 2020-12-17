@@ -7,7 +7,7 @@
     <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.8.3" />
-    <PackageReference Include="Verify.NUnit" Version="8.12.3" />
+    <PackageReference Include="Verify.NUnit" Version="8.12.4" />
     <ProjectReference Include="..\WaffleGenerator.Bogus\WaffleGenerator.Bogus.csproj" />
     <ProjectReference Include="..\WaffleGenerator\WaffleGenerator.csproj" />
     <PackageReference Include="ProjectDefaults" Version="1.0.50" PrivateAssets="All" />
