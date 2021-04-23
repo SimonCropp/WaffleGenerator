@@ -35,7 +35,7 @@ class InnerEngine
 
                 if (phrase[i] == 'u' && i + 1 < phrase.Length)
                 {
-                    var escape = new StringBuilder();
+                    StringBuilder escape = new();
                     i++;
                     EvaluateChar(phrase[i], escape);
                     result.Append(TitleCaseWords(escape.ToString()));
@@ -166,16 +166,16 @@ class InnerEngine
         if (includeHeading)
         {
             title = BuildTitle();
-            var quoteBuilder = new StringBuilder();
+            StringBuilder quoteBuilder = new();
             EvaluatePhrase("|A |B |C |t", quoteBuilder);
             quote = quoteBuilder.ToString();
-            var citeBuilder = new StringBuilder();
+            StringBuilder citeBuilder = new();
             EvaluatePhrase("|f |s in The Journal of the |uc (|uy)", citeBuilder);
             cite = citeBuilder.ToString();
-            var buzzBuilder = new StringBuilder();
+            StringBuilder buzzBuilder = new();
             EvaluatePhrase("|c.", buzzBuilder);
             buzz = buzzBuilder.ToString();
-            heading = new Heading(quote, cite, buzz, title);
+            heading = new(quote, cite, buzz, title);
         }
 
         for (var i = 0; i < paragraphsCount; i++)
@@ -183,7 +183,7 @@ class InnerEngine
             string? paragraphHeading = null;
             if (i != 0)
             {
-                var headingBuilder = new StringBuilder();
+                StringBuilder headingBuilder = new();
                 EvaluateRandomPhrase(Constants.maybeHeading, headingBuilder);
                 paragraphHeading = headingBuilder.ToString();
                 if (string.IsNullOrWhiteSpace(paragraphHeading))
@@ -192,19 +192,18 @@ class InnerEngine
                 }
             }
 
-            var bodyBuilder = new StringBuilder();
+            StringBuilder bodyBuilder = new();
             EvaluatePhrase("|A |B |C |D.", bodyBuilder);
-            var paragraph = new Paragraph(paragraphHeading, bodyBuilder.ToString());
+            Paragraph paragraph = new(paragraphHeading, bodyBuilder.ToString());
             paragraphs.Add(paragraph);
         }
 
-
-        return new WaffleContent(heading, paragraphs);
+        return new(heading, paragraphs);
     }
 
     public string BuildTitle()
     {
-        var builder = new StringBuilder();
+        StringBuilder builder = new();
         EvaluatePhrase("the |o of |2 |o", builder);
 
         return TitleCaseWords(builder.ToString());

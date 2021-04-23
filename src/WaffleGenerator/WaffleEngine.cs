@@ -22,8 +22,8 @@ namespace WaffleGenerator
 
         public static string Html(Func<int, int> random, int paragraphs, bool includeHeading, bool includeHeadAndBody)
         {
-            var builder = new StringBuilder();
-            var innerEngine = new InnerEngine(random);
+            StringBuilder builder = new();
+            InnerEngine innerEngine = new(random);
             var waffleContent = innerEngine.GetContent(paragraphs, includeHeading);
 
             if (waffleContent.Heading != null)
@@ -81,11 +81,11 @@ namespace WaffleGenerator
 
         public static string Title(Func<int, int> random)
         {
-            var innerEngine = new InnerEngine(random);
+            InnerEngine innerEngine = new(random);
             return innerEngine.BuildTitle();
         }
 
-        public static string Markdown(int seed,int paragraphs, bool includeHeading)
+        public static string Markdown(int seed, int paragraphs, bool includeHeading)
         {
             return Markdown(new Random(seed), paragraphs, includeHeading);
         }
@@ -102,8 +102,8 @@ namespace WaffleGenerator
 
         public static string Markdown(Func<int, int> random, int paragraphs, bool includeHeading)
         {
-            var builder = new StringBuilder();
-            var innerEngine = new InnerEngine(random);
+            StringBuilder builder = new();
+            InnerEngine innerEngine = new(random);
             var waffleContent = innerEngine.GetContent(paragraphs, includeHeading);
 
             if (waffleContent.Heading != null)
@@ -122,7 +122,7 @@ namespace WaffleGenerator
             {
                 if (paragraph.Heading != null)
                 {
-                    builder.AppendLine($"## {paragraph.Heading}");;
+                    builder.AppendLine($"## {paragraph.Heading}");
                     builder.AppendLine("");
                 }
 
@@ -150,8 +150,8 @@ namespace WaffleGenerator
 
         public static string Text(Func<int, int> random, int paragraphs, bool includeHeading)
         {
-            var builder = new StringBuilder();
-            var innerEngine = new InnerEngine(random);
+            StringBuilder builder = new();
+            InnerEngine innerEngine = new(random);
             var waffleContent = innerEngine.GetContent(paragraphs, includeHeading);
             if (waffleContent.Heading != null)
             {

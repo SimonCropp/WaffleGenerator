@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using VerifyNUnit;
@@ -51,7 +52,7 @@ public class WaffleEngineTests
     [Test]
     public Task TextWaffleSingle()
     {
-        var random = new Random(0);
+        Random random = new(0);
         var text = WaffleEngine.Text(random, 1, true);
         return Verifier.Verify(text);
     }
@@ -111,7 +112,7 @@ public class WaffleEngineTests
     [Test]
     public Task MarkdownWaffleSingle()
     {
-        var random = new Random(0);
+        Random random = new(0);
         var text = WaffleEngine.Markdown(random, 1, true);
         return Verifier.Verify(text).UseExtension("md");
     }
@@ -119,7 +120,7 @@ public class WaffleEngineTests
     [Test]
     public Task Title()
     {
-        var random = new Random(0);
+        Random random = new(0);
         var title = WaffleEngine.Title(random);
         return Verifier.Verify(title);
     }
@@ -127,7 +128,7 @@ public class WaffleEngineTests
     [Test]
     public Task HtmlWaffleSingle()
     {
-        var random = new Random(0);
+        Random random = new(0);
         var html = WaffleEngine.Html(random, 1, true, false);
         return Verifier.Verify(html);
     }
@@ -135,7 +136,7 @@ public class WaffleEngineTests
     [Test]
     public Task HtmlWaffleSingleWithHeadAndBody()
     {
-        var random = new Random(0);
+        Random random = new(0);
         var html = WaffleEngine.Html(random, 1, true, true);
         return Verifier.Verify(html);
     }
@@ -143,7 +144,7 @@ public class WaffleEngineTests
     [Test]
     public Task TextWaffleMultiple()
     {
-        var random = new Random(0);
+        Random random = new(0);
         var text = WaffleEngine.Text(random, 11, true);
         return Verifier.Verify(text);
     }
@@ -151,7 +152,7 @@ public class WaffleEngineTests
     [Test]
     public Task MarkdownWaffleMultiple()
     {
-        var random = new Random(0);
+        Random random = new(0);
         var text = WaffleEngine.Markdown(random, 11, true);
         return Verifier.Verify(text).UseExtension("md");
     }
@@ -159,7 +160,7 @@ public class WaffleEngineTests
     [Test]
     public Task HtmlWaffleMultiple()
     {
-        var random = new Random(0);
+        Random random = new(0);
         var html = WaffleEngine.Html(random, 11, true, false);
         return Verifier.Verify(html);
     }
@@ -167,7 +168,7 @@ public class WaffleEngineTests
     [Test]
     public Task HtmlWaffleMultipleWithHeadAndBody()
     {
-        var random = new Random(0);
+        Random random = new(0);
         var html = WaffleEngine.Html(random, 11, true, true);
         return Verifier.Verify(html);
     }
@@ -175,7 +176,7 @@ public class WaffleEngineTests
     [Test]
     public Task TextWaffleNoHeading()
     {
-        var random = new Random(0);
+        Random random = new(0);
         var text = WaffleEngine.Text(random, 1, false);
         return Verifier.Verify(text);
     }
@@ -183,7 +184,7 @@ public class WaffleEngineTests
     [Test]
     public Task MarkdownWaffleNoHeading()
     {
-        var random = new Random(0);
+        Random random = new(0);
         var text = WaffleEngine.Markdown(random, 1, false);
         return Verifier.Verify(text)
             .UseExtension("md");
@@ -192,7 +193,7 @@ public class WaffleEngineTests
     [Test]
     public Task HtmlWaffleNoHeading()
     {
-        var random = new Random(0);
+        Random random = new(0);
         var html = WaffleEngine.Html(random, 1, true, false);
         return Verifier.Verify(html);
     }
@@ -200,7 +201,7 @@ public class WaffleEngineTests
     [Test]
     public Task HtmlWaffleNoHeadingWithHeadAndBody()
     {
-        var random = new Random(0);
+        Random random = new(0);
         var html = WaffleEngine.Html(random, 1, true, true);
         return Verifier.Verify(html);
     }
