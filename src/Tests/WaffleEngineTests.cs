@@ -57,6 +57,34 @@ public class WaffleEngineTests
     }
 
     [Test]
+    public void EndsWith()
+    {
+        Assert.True(new StringBuilder("a").EndsWith('a'));
+        Assert.True(new StringBuilder("ba").EndsWith('a'));
+        Assert.True(new StringBuilder("ba").EndsWith('b', 'a'));
+        Assert.True(new StringBuilder("a ").EndsWith('a'));
+        Assert.True(new StringBuilder("ba ").EndsWith('a'));
+        Assert.True(new StringBuilder("ba ").EndsWith('b', 'a'));
+        Assert.True(new StringBuilder("a	").EndsWith('a'));
+        Assert.True(new StringBuilder("ba	").EndsWith('a'));
+        Assert.True(new StringBuilder("ba	").EndsWith('b', 'a'));
+
+        Assert.False(new StringBuilder("a").EndsWith('c'));
+        Assert.False(new StringBuilder("ba").EndsWith('c'));
+        Assert.False(new StringBuilder("ba").EndsWith('c', 'd'));
+        Assert.False(new StringBuilder("a ").EndsWith('c'));
+        Assert.False(new StringBuilder("ba ").EndsWith('c'));
+        Assert.False(new StringBuilder("ba ").EndsWith('c', 'd'));
+        Assert.False(new StringBuilder("a	").EndsWith('c'));
+        Assert.False(new StringBuilder("ba	").EndsWith('c'));
+        Assert.False(new StringBuilder("ba	").EndsWith('c', 'd'));
+        Assert.False(new StringBuilder(" ").EndsWith('c'));
+        Assert.False(new StringBuilder("	").EndsWith('c'));
+        Assert.False(new StringBuilder("").EndsWith('c'));
+        Assert.False(new StringBuilder("").EndsWith('c'));
+    }
+
+    [Test]
     public void MultiTextShouldNotDuplicate()
     {
         var text1 = WaffleEngine.Text(1, true);

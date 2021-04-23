@@ -125,9 +125,7 @@ class InnerEngine
 
     static bool HasSentenceEnded(StringBuilder result)
     {
-        //TODO: should only evaluate last to chars to avoid the ToString
-        var s = result.ToString().TrimEnd();
-        return s.EndsWith(".") || s.EndsWith(">");
+        return result.EndsWith('.', '>');
     }
 
     void EvaluateCardinalSequence(StringBuilder output)
