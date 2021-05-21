@@ -27,18 +27,6 @@ Based on the awesome work by [Andrew Clarke](https://www.red-gate.com/simple-tal
 
 Code based on [SDGGenerators - Red Gate SQL Data Generator Community Generators](https://archive.codeplex.com/?p=sdggenerators).
 
-Support is available via a [Tidelift Subscription](https://tidelift.com/subscription/pkg/nuget-wafflegenerator?utm_source=nuget-wafflegenerator&utm_medium=referral&utm_campaign=enterprise).
-
-<!-- toc -->
-## Contents
-
-  * [Blazor App](#blazor-app)
-  * [Main Package - WaffleGenerator](#main-package---wafflegenerator)
-    * [Usage](#usage)
-  * [WaffleGenerator.Bogus](#wafflegeneratorbogus)
-    * [Usage](#usage-1)
-  * [Security contact information](#security-contact-information)<!-- endToc -->
-
 
 ## Blazor App
 
@@ -146,10 +134,6 @@ Debug.WriteLine(target.Property4);
 <sup><a href='/src/Tests/FakerUsage.cs#L13-L41' title='Snippet source file'>snippet source</a> | <a href='#snippet-bogususage' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
-
-## Security contact information
-
-To report a security vulnerability, use the [Tidelift security contact](https://tidelift.com/security). Tidelift will coordinate the fix and disclosure.
 
 
 ## Icon
