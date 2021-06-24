@@ -10,6 +10,6 @@
     <PackageReference Include="Verify.NUnit" Version="11.19.1" />
     <ProjectReference Include="..\WaffleGenerator.Bogus\WaffleGenerator.Bogus.csproj" />
     <ProjectReference Include="..\WaffleGenerator\WaffleGenerator.csproj" />
-    <PackageReference Include="ProjectDefaults" Version="1.0.54" PrivateAssets="All" />
+    <PackageReference Include="ProjectDefaults" Version="1.0.56" PrivateAssets="All" />
   </ItemGroup>
 </Project>
