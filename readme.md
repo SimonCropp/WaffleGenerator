@@ -135,7 +135,6 @@ Debug.WriteLine(target.Property4);
 <!-- endSnippet -->
 
 
-
 ## Icon
 
 [Waffle](https://thenounproject.com/term/waffle/836862/) designed by Made by Made from [The Noun Project](https://thenounproject.com/)
