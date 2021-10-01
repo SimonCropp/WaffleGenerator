@@ -1,5 +1,3 @@
-using System.Text;
-
 static class Extensions
 {
     public static bool EndsWith(this StringBuilder builder, params char[] chars)

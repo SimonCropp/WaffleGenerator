@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-class WaffleContent
+﻿class WaffleContent
 {
     public WaffleContent(Heading? heading, List<Paragraph> paragraphs)
     {

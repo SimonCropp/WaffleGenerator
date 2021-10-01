@@ -1,32 +1,31 @@
 ﻿using Bogus.Premium;
 
-namespace Bogus
+namespace Bogus;
+
+public static class WaffleExtensions
 {
-    public static class WaffleExtensions
+    public static Waffle Waffle(this Faker faker)
     {
-        public static Waffle Waffle(this Faker faker)
-        {
-            return ContextHelper.GetOrSet(faker, () => new Waffle());
-        }
+        return ContextHelper.GetOrSet(faker, () => new Waffle());
+    }
 
-        public static string WaffleHtml(this Faker faker, int paragraphs = 1, bool includeHeading = true)
-        {
-            return faker.Waffle().Html(paragraphs, includeHeading);
-        }
+    public static string WaffleHtml(this Faker faker, int paragraphs = 1, bool includeHeading = true)
+    {
+        return faker.Waffle().Html(paragraphs, includeHeading);
+    }
 
-        public static string WaffleTitle(this Faker faker)
-        {
-            return faker.Waffle().Title();
-        }
+    public static string WaffleTitle(this Faker faker)
+    {
+        return faker.Waffle().Title();
+    }
 
-        public static string WaffleText(this Faker faker, int paragraphs = 1, bool includeHeading = true)
-        {
-            return faker.Waffle().Text(paragraphs, includeHeading);
-        }
+    public static string WaffleText(this Faker faker, int paragraphs = 1, bool includeHeading = true)
+    {
+        return faker.Waffle().Text(paragraphs, includeHeading);
+    }
 
-        public static string WaffleMarkdown(this Faker faker, int paragraphs = 1, bool includeHeading = true)
-        {
-            return faker.Waffle().Markdown(paragraphs, includeHeading);
-        }
+    public static string WaffleMarkdown(this Faker faker, int paragraphs = 1, bool includeHeading = true)
+    {
+        return faker.Waffle().Markdown(paragraphs, includeHeading);
     }
 }

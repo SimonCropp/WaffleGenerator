@@ -1,8 +1,4 @@
-﻿using System;
-using System.Diagnostics;
-using System.Text;
-using System.Threading.Tasks;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using VerifyNUnit;
 using WaffleGenerator;
 

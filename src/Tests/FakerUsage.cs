@@ -1,5 +1,4 @@
-﻿using System.Diagnostics;
-using Bogus;
+﻿using Bogus;
 using NUnit.Framework;
 // ReSharper disable RedundantArgumentDefaultValue
 // ReSharper disable UnusedParameter.Local
