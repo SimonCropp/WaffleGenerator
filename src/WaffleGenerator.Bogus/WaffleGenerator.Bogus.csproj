@@ -5,7 +5,7 @@
     <DefineConstants>$(DefineConstants);Bogus</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Bogus" Version="33.1.1" />
+    <PackageReference Include="Bogus" Version="34.0.1" />
     <ProjectReference Include="..\WaffleGenerator\WaffleGenerator.csproj" />
     <PackageReference Include="ProjectDefaults" Version="1.0.61" PrivateAssets="All" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" Condition="$(Configuration) == 'Release'" />
