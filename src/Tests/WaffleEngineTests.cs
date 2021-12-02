@@ -1,6 +1,4 @@
-﻿using NUnit.Framework;
-using VerifyNUnit;
-using WaffleGenerator;
+﻿using WaffleGenerator;
 
 [TestFixture]
 public class WaffleEngineTests

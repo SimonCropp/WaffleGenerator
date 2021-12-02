@@ -6,5 +6,6 @@
     <AssemblyVersion>1.0.0</AssemblyVersion>
     <PackageTags>WaffleGenerator, Bogus</PackageTags>
     <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 </Project>
