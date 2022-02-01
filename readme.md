@@ -1,6 +1,6 @@
 # <img src="/src/icon.png" height="30px"> WaffleGenerator
 
-[![Build status](https://ci.appveyor.com/api/projects/status/bv3erhc4d2pegpba/branch/master?svg=true)](https://ci.appveyor.com/project/SimonCropp/WaffleGenerator)
+[![Build status](https://ci.appveyor.com/api/projects/status/bv3erhc4d2pegpba/branch/main?svg=true)](https://ci.appveyor.com/project/SimonCropp/WaffleGenerator)
 [![NuGet Status](https://img.shields.io/nuget/v/WaffleGenerator.svg?label=WaffleGenerator&cacheSeconds=86400)](https://www.nuget.org/packages/WaffleGenerator/)
 [![NuGet Status](https://img.shields.io/nuget/v/WaffleGenerator.Bogus.svg?label=WaffleGenerator.Bogus&cacheSeconds=86400)](https://www.nuget.org/packages/WaffleGenerator.Bogus/)
 
