@@ -1,5 +1,5 @@
 *.png binary
-*.ico binary
 *.snk binary
+*.json -text
 .editorconfig -text
 *.sln.DotSettings -text
