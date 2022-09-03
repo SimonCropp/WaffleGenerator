@@ -11,10 +11,8 @@ class InnerEngine
     string? buzz;
     List<Paragraph> paragraphs = new();
 
-    public InnerEngine(Func<int, int> random)
-    {
+    public InnerEngine(Func<int, int> random) =>
         this.random = random;
-    }
 
     void EvaluateRandomPhrase(string[] phrases, StringBuilder output)
     {
@@ -120,10 +118,8 @@ class InnerEngine
         }
     }
 
-    static bool HasSentenceEnded(StringBuilder result)
-    {
-        return result.EndsWith('.', '>');
-    }
+    static bool HasSentenceEnded(StringBuilder result) =>
+        result.EndsWith('.', '>');
 
     void EvaluateCardinalSequence(StringBuilder output)
     {
@@ -145,15 +141,11 @@ class InnerEngine
         output.Append(Constants.ordinalSequences[ordinalSequence++]);
     }
 
-    void RandomDate(StringBuilder output)
-    {
+    void RandomDate(StringBuilder output) =>
         output.AppendFormat("{0:04u}", DateTime.Now.Year - random(31));
-    }
 
-    static string TitleCaseWords(string input)
-    {
-        return CultureInfo.CurrentCulture.TextInfo.ToTitleCase(input);
-    }
+    static string TitleCaseWords(string input) =>
+        CultureInfo.CurrentCulture.TextInfo.ToTitleCase(input);
 
     public WaffleContent GetContent(int paragraphsCount, bool includeHeading)
     {

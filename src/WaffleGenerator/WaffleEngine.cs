@@ -2,20 +2,14 @@ namespace WaffleGenerator;
 
 public static class WaffleEngine
 {
-    public static string Html(int seed, int paragraphs, bool includeHeading, bool includeHeadAndBody)
-    {
-        return Html(new Random(seed), paragraphs, includeHeading, includeHeadAndBody);
-    }
+    public static string Html(int seed, int paragraphs, bool includeHeading, bool includeHeadAndBody) =>
+        Html(new Random(seed), paragraphs, includeHeading, includeHeadAndBody);
 
-    public static string Html(int paragraphs, bool includeHeading, bool includeHeadAndBody)
-    {
-        return Html(new Random(), paragraphs, includeHeading, includeHeadAndBody);
-    }
+    public static string Html(int paragraphs, bool includeHeading, bool includeHeadAndBody) =>
+        Html(new Random(), paragraphs, includeHeading, includeHeadAndBody);
 
-    public static string Html(Random random, int paragraphs, bool includeHeading, bool includeHeadAndBody)
-    {
-        return Html(x => random.Next(0, x), paragraphs, includeHeading, includeHeadAndBody);
-    }
+    public static string Html(Random random, int paragraphs, bool includeHeading, bool includeHeadAndBody) =>
+        Html(x => random.Next(0, x), paragraphs, includeHeading, includeHeadAndBody);
 
     public static string Html(Func<int, int> random, int paragraphs, bool includeHeading, bool includeHeadAndBody)
     {
@@ -61,20 +55,14 @@ public static class WaffleEngine
         return builder.ToString();
     }
 
-    public static string Title()
-    {
-        return Title(new Random());
-    }
+    public static string Title() =>
+        Title(new Random());
 
-    public static string Title(int seed)
-    {
-        return Title(new Random(seed));
-    }
+    public static string Title(int seed) =>
+        Title(new Random(seed));
 
-    public static string Title(Random random)
-    {
-        return Title(x => random.Next(0, x));
-    }
+    public static string Title(Random random) =>
+        Title(x => random.Next(0, x));
 
     public static string Title(Func<int, int> random)
     {
@@ -82,20 +70,14 @@ public static class WaffleEngine
         return innerEngine.BuildTitle();
     }
 
-    public static string Markdown(int seed, int paragraphs, bool includeHeading)
-    {
-        return Markdown(new Random(seed), paragraphs, includeHeading);
-    }
+    public static string Markdown(int seed, int paragraphs, bool includeHeading) =>
+        Markdown(new Random(seed), paragraphs, includeHeading);
 
-    public static string Markdown(int paragraphs, bool includeHeading)
-    {
-        return Markdown(new Random(), paragraphs, includeHeading);
-    }
+    public static string Markdown(int paragraphs, bool includeHeading) =>
+        Markdown(new Random(), paragraphs, includeHeading);
 
-    public static string Markdown(Random random, int paragraphs, bool includeHeading)
-    {
-        return Markdown(x => random.Next(0, x), paragraphs, includeHeading);
-    }
+    public static string Markdown(Random random, int paragraphs, bool includeHeading) =>
+        Markdown(x => random.Next(0, x), paragraphs, includeHeading);
 
     public static string Markdown(Func<int, int> random, int paragraphs, bool includeHeading)
     {
@@ -130,20 +112,14 @@ public static class WaffleEngine
         return builder.ToString();
     }
 
-    public static string Text(int seed, int paragraphs, bool includeHeading)
-    {
-        return Text(new Random(seed), paragraphs, includeHeading);
-    }
+    public static string Text(int seed, int paragraphs, bool includeHeading) =>
+        Text(new Random(seed), paragraphs, includeHeading);
 
-    public static string Text(int paragraphs, bool includeHeading)
-    {
-        return Text(new Random(), paragraphs, includeHeading);
-    }
+    public static string Text(int paragraphs, bool includeHeading) =>
+        Text(new Random(), paragraphs, includeHeading);
 
-    public static string Text(Random random, int paragraphs, bool includeHeading)
-    {
-        return Text(x => random.Next(0, x), paragraphs, includeHeading);
-    }
+    public static string Text(Random random, int paragraphs, bool includeHeading) =>
+        Text(x => random.Next(0, x), paragraphs, includeHeading);
 
     public static string Text(Func<int, int> random, int paragraphs, bool includeHeading)
     {
