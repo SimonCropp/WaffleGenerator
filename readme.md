@@ -32,7 +32,6 @@ Code based on [SDGGenerators - Red Gate SQL Data Generator Community Generators]
 
 The [Blazing Waffles](http://wafflegen.azurewebsites.net/) app allows the generation of waffle text online.
 
- * Azure Website: http://wafflegen.azurewebsites.net/
  * Source: https://github.com/gbiellem/BlazingWaffles
 
 
