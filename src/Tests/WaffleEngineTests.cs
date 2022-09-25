@@ -108,7 +108,7 @@ public class WaffleEngineTests
     {
         Random random = new(0);
         var text = WaffleEngine.Markdown(random, 1, true);
-        return Verify(text).UseExtension("md");
+        return Verify(text, "md");
     }
 
     [Test]
@@ -148,7 +148,7 @@ public class WaffleEngineTests
     {
         Random random = new(0);
         var text = WaffleEngine.Markdown(random, 11, true);
-        return Verify(text).UseExtension("md");
+        return Verify(text, "md");
     }
 
     [Test]
@@ -180,8 +180,7 @@ public class WaffleEngineTests
     {
         Random random = new(0);
         var text = WaffleEngine.Markdown(random, 1, false);
-        return Verify(text)
-            .UseExtension("md");
+        return Verify(text, "md");
     }
 
     [Test]
