@@ -13,8 +13,8 @@ public static class WaffleEngine
 
     public static string Html(Func<int, int> random, int paragraphs, bool includeHeading, bool includeHeadAndBody)
     {
-        StringBuilder builder = new();
-        InnerEngine innerEngine = new(random);
+        var builder = new StringBuilder();
+        var innerEngine = new InnerEngine(random);
         var waffleContent = innerEngine.GetContent(paragraphs, includeHeading);
 
         if (waffleContent.Heading != null)
@@ -66,7 +66,7 @@ public static class WaffleEngine
 
     public static string Title(Func<int, int> random)
     {
-        InnerEngine innerEngine = new(random);
+        var innerEngine = new InnerEngine(random);
         return innerEngine.BuildTitle();
     }
 
@@ -81,8 +81,8 @@ public static class WaffleEngine
 
     public static string Markdown(Func<int, int> random, int paragraphs, bool includeHeading)
     {
-        StringBuilder builder = new();
-        InnerEngine innerEngine = new(random);
+        var builder = new StringBuilder();
+        var innerEngine = new InnerEngine(random);
         var waffleContent = innerEngine.GetContent(paragraphs, includeHeading);
 
         if (waffleContent.Heading != null)
@@ -123,8 +123,8 @@ public static class WaffleEngine
 
     public static string Text(Func<int, int> random, int paragraphs, bool includeHeading)
     {
-        StringBuilder builder = new();
-        InnerEngine innerEngine = new(random);
+        var builder = new StringBuilder();
+        var innerEngine = new InnerEngine(random);
         var waffleContent = innerEngine.GetContent(paragraphs, includeHeading);
         if (waffleContent.Heading != null)
         {

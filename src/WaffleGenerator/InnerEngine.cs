@@ -30,7 +30,7 @@ class InnerEngine
 
                 if (phrase[i] == 'u' && i + 1 < phrase.Length)
                 {
-                    StringBuilder escape = new();
+                    var escape = new StringBuilder();
                     i++;
                     EvaluateChar(phrase[i], escape);
                     result.Append(TitleCaseWords(escape.ToString()));
@@ -155,13 +155,13 @@ class InnerEngine
         if (includeHeading)
         {
             title = BuildTitle();
-            StringBuilder quoteBuilder = new();
+            var quoteBuilder = new StringBuilder();
             EvaluatePhrase("|A |B |C |t", quoteBuilder);
             quote = quoteBuilder.ToString();
-            StringBuilder citeBuilder = new();
+            var citeBuilder = new StringBuilder();
             EvaluatePhrase("|f |s in The Journal of the |uc (|uy)", citeBuilder);
             cite = citeBuilder.ToString();
-            StringBuilder buzzBuilder = new();
+            var buzzBuilder = new StringBuilder();
             EvaluatePhrase("|c.", buzzBuilder);
             buzz = buzzBuilder.ToString();
             heading = new(quote, cite, buzz, title);
@@ -172,7 +172,7 @@ class InnerEngine
             string? paragraphHeading = null;
             if (i != 0)
             {
-                StringBuilder headingBuilder = new();
+                var headingBuilder = new StringBuilder();
                 EvaluateRandomPhrase(Constants.maybeHeading, headingBuilder);
                 paragraphHeading = headingBuilder.ToString();
                 if (string.IsNullOrWhiteSpace(paragraphHeading))
@@ -181,9 +181,9 @@ class InnerEngine
                 }
             }
 
-            StringBuilder bodyBuilder = new();
+            var bodyBuilder = new StringBuilder();
             EvaluatePhrase("|A |B |C |D.", bodyBuilder);
-            Paragraph paragraph = new(paragraphHeading, bodyBuilder.ToString());
+            var paragraph = new Paragraph(paragraphHeading, bodyBuilder.ToString());
             paragraphs.Add(paragraph);
         }
 
@@ -192,7 +192,7 @@ class InnerEngine
 
     public string BuildTitle()
     {
-        StringBuilder builder = new();
+        var builder = new StringBuilder();
         EvaluatePhrase("the |o of |2 |o", builder);
 
         return TitleCaseWords(builder.ToString());
