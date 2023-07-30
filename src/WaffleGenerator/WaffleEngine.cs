@@ -21,17 +21,23 @@ public static class WaffleEngine
         {
             if (includeHeadAndBody)
             {
-                builder.AppendLine(@$"<html>
-<head>
-<title>{waffleContent.Heading.Title}</title>
-</head>
-<body>");
+                builder.AppendLine(
+                    $"""
+                     <html>
+                     <head>
+                     <title>{waffleContent.Heading.Title}</title>
+                     </head>
+                     <body>
+                     """);
             }
 
-            builder.AppendLine(@$"<h1>{waffleContent.Heading.Title}</h1>
-<blockquote>'{waffleContent.Heading.Quote}'<br>
-<cite>{waffleContent.Heading.Cite}</cite></blockquote>
-<h2>{waffleContent.Heading.Buzz}</h2>");
+            builder.AppendLine(
+                $"""
+                 <h1>{waffleContent.Heading.Title}</h1>
+                 <blockquote>'{waffleContent.Heading.Quote}'<br>
+                 <cite>{waffleContent.Heading.Cite}</cite></blockquote>
+                 <h2>{waffleContent.Heading.Buzz}</h2>
+                 """);
         }
 
         foreach (var paragraph in waffleContent.Paragraphs)
@@ -87,14 +93,17 @@ public static class WaffleEngine
 
         if (waffleContent.Heading != null)
         {
-            builder.AppendLine(@$"# {waffleContent.Heading.Title}
+            builder.AppendLine(
+                $"""
+                 # {waffleContent.Heading.Title}
+                 
+                  > {waffleContent.Heading.Quote}
+                 
+                  * {waffleContent.Heading.Cite}
 
- > {waffleContent.Heading.Quote}
+                 ## {waffleContent.Heading.Buzz}
 
- * {waffleContent.Heading.Cite}
-
-## {waffleContent.Heading.Buzz}
-");
+                 """);
         }
 
         foreach (var paragraph in waffleContent.Paragraphs)
@@ -128,14 +137,17 @@ public static class WaffleEngine
         var waffleContent = innerEngine.GetContent(paragraphs, includeHeading);
         if (waffleContent.Heading != null)
         {
-            builder.AppendLine($@"{waffleContent.Heading.Title}
+            builder.AppendLine(
+                $"""
+                 {waffleContent.Heading.Title}
 
-'{waffleContent.Heading.Quote}'
+                 '{waffleContent.Heading.Quote}'
+                 
+                  - {waffleContent.Heading.Cite}
 
- - {waffleContent.Heading.Cite}
+                 {waffleContent.Heading.Buzz}
 
-{waffleContent.Heading.Buzz}
-");
+                 """);
         }
 
         var lastIndex = waffleContent.Paragraphs.Count - 1;

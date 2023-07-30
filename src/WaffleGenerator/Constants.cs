@@ -3,49 +3,59 @@ class Constants
 {
     public static string[] preamblePhrases =
     {
-        @"In broad terms, we can define the main issues with |t. There are :-
-  * The |o of |o: |B |C |D.
-  * The |o of |o: |B |C |D.
-  * The |o of |o: |B |C |D.
-  * The |o of |o: |B |C |D.
+        """
+        In broad terms, we can define the main issues with |t. There are :-
+          * The |o of |o: |B |C |D.
+          * The |o of |o: |B |C |D.
+          * The |o of |o: |B |C |D.
+          * The |o of |o: |B |C |D.
 
-",
-        @"The following points should be appreciated about |t;
-  1. |B |C |D.
-  2. |B |C |D.
-  3. |B |C |D.
-  4. |B |C |D.
-  5. |B |C |D.
-  6. |B |C |D.
 
-",
-        @"Note that:-
+        """,
+        """
+        The following points should be appreciated about |t;
+          1. |B |C |D.
+          2. |B |C |D.
+          3. |B |C |D.
+          4. |B |C |D.
+          5. |B |C |D.
+          6. |B |C |D.
 
-  1. |B |C |D..
-  2. |B |C |D..
-  3. |B |C |D.
-  4. |B |C |D.
-  5. |B |C |D.
-  6. |B |C |D.
 
-",
-        @"Essentially;
+        """,
+        """
+        Note that:-
+        
+          1. |B |C |D..
+          2. |B |C |D..
+          3. |B |C |D.
+          4. |B |C |D.
+          5. |B |C |D.
+          6. |B |C |D.
 
-  * |B |C |D.
-  * |B |C |D.
-  * |B |C |D.
-  * |B |C |D.
-  * |B |C |D.
-  * |B |C |D.
 
-",
-        @"To make the main points more explicit, it is fair to say that;
-  * |B |C |D.
-  * |B |C |D.
-  * |B |C |D.
-  * |B |C |D.
+        """,
+        """
+        Essentially;
+        
+          * |B |C |D.
+          * |B |C |D.
+          * |B |C |D.
+          * |B |C |D.
+          * |B |C |D.
+          * |B |C |D.
 
-",
+
+        """,
+        """
+        To make the main points more explicit, it is fair to say that;
+          * |B |C |D.
+          * |B |C |D.
+          * |B |C |D.
+          * |B |C |D.
+
+
+        """,
         "We have heard it said, tongue-in-cheek, that",
         "To be quite frank,",
         "Focussing on the agreed facts, we can say that",
