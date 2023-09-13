@@ -1,15 +1,7 @@
-﻿class Heading
+﻿class Heading(string quote, string cite, string buzz, string title)
 {
-    public Heading(string quote, string cite, string buzz, string title)
-    {
-        Quote = quote;
-        Cite = cite;
-        Buzz = buzz;
-        Title = title;
-    }
-
-    public string Quote { get; }
-    public string Cite { get; }
-    public string Buzz { get; }
-    public string Title { get; }
+    public string Quote { get; } = quote;
+    public string Cite { get; } = cite;
+    public string Buzz { get; } = buzz;
+    public string Title { get; } = title;
 }

@@ -17,7 +17,8 @@ public static class WaffleEngine
         var innerEngine = new InnerEngine(random);
         var waffleContent = innerEngine.GetContent(paragraphs, includeHeading);
 
-        if (waffleContent.Heading != null)
+        var heading = waffleContent.Heading;
+        if (heading != null)
         {
             if (includeHeadAndBody)
             {
@@ -25,7 +26,7 @@ public static class WaffleEngine
                     $"""
                      <html>
                      <head>
-                     <title>{waffleContent.Heading.Title}</title>
+                     <title>{heading.Title}</title>
                      </head>
                      <body>
                      """);
@@ -33,10 +34,10 @@ public static class WaffleEngine
 
             builder.AppendLine(
                 $"""
-                 <h1>{waffleContent.Heading.Title}</h1>
-                 <blockquote>'{waffleContent.Heading.Quote}'<br>
-                 <cite>{waffleContent.Heading.Cite}</cite></blockquote>
-                 <h2>{waffleContent.Heading.Buzz}</h2>
+                 <h1>{heading.Title}</h1>
+                 <blockquote>'{heading.Quote}'<br>
+                 <cite>{heading.Cite}</cite></blockquote>
+                 <h2>{heading.Buzz}</h2>
                  """);
         }
 
@@ -96,9 +97,9 @@ public static class WaffleEngine
             builder.AppendLine(
                 $"""
                  # {waffleContent.Heading.Title}
-                 
+
                   > {waffleContent.Heading.Quote}
-                 
+
                   * {waffleContent.Heading.Cite}
 
                  ## {waffleContent.Heading.Buzz}
@@ -142,7 +143,7 @@ public static class WaffleEngine
                  {waffleContent.Heading.Title}
 
                  '{waffleContent.Heading.Quote}'
-                 
+
                   - {waffleContent.Heading.Cite}
 
                  {waffleContent.Heading.Buzz}
