@@ -6,6 +6,8 @@
 
 Produces text which, on first glance, looks like real, ponderous, prose; replete with clichés.
 
+**See [Milestones](../../milestones?state=closed) for release notes.**
+
 Example content:
 
 ```
