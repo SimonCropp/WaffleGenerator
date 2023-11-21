@@ -69,7 +69,7 @@ public static class WaffleEngine
         Title(new Random(seed));
 
     public static string Title(Random random) =>
-        Title(x => random.Next(0, x));
+        Title(_ => random.Next(0, _));
 
     public static string Title(Func<int, int> random)
     {
@@ -84,7 +84,7 @@ public static class WaffleEngine
         Markdown(new Random(), paragraphs, includeHeading);
 
     public static string Markdown(Random random, int paragraphs, bool includeHeading) =>
-        Markdown(x => random.Next(0, x), paragraphs, includeHeading);
+        Markdown(_ => random.Next(0, _), paragraphs, includeHeading);
 
     public static string Markdown(Func<int, int> random, int paragraphs, bool includeHeading)
     {
@@ -129,7 +129,7 @@ public static class WaffleEngine
         Text(new Random(), paragraphs, includeHeading);
 
     public static string Text(Random random, int paragraphs, bool includeHeading) =>
-        Text(x => random.Next(0, x), paragraphs, includeHeading);
+        Text(_ => random.Next(0, _), paragraphs, includeHeading);
 
     public static string Text(Func<int, int> random, int paragraphs, bool includeHeading)
     {
