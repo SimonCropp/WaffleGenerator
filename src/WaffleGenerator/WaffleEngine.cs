@@ -9,7 +9,7 @@ public static class WaffleEngine
         Html(new Random(), paragraphs, includeHeading, includeHeadAndBody);
 
     public static string Html(Random random, int paragraphs, bool includeHeading, bool includeHeadAndBody) =>
-        Html(x => random.Next(0, x), paragraphs, includeHeading, includeHeadAndBody);
+        Html(_ => random.Next(0, _), paragraphs, includeHeading, includeHeadAndBody);
 
     public static string Html(Func<int, int> random, int paragraphs, bool includeHeading, bool includeHeadAndBody)
     {
