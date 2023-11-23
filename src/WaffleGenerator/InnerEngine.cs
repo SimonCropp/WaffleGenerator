@@ -9,7 +9,7 @@ class InnerEngine
     string? quote;
     string? cite;
     string? buzz;
-    List<Paragraph> paragraphs = new();
+    List<Paragraph> paragraphs = [];
 
     public InnerEngine(Func<int, int> random) =>
         this.random = random;
