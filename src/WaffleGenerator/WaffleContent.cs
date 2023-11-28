@@ -1,10 +1,5 @@
-﻿class WaffleContent
+﻿class WaffleContent(Heading? heading, List<Paragraph> paragraphs)
 {
-    public WaffleContent(Heading? heading, List<Paragraph> paragraphs)
-    {
-        Heading = heading;
-        Paragraphs = paragraphs;
-    }
-    public Heading? Heading { get; }
-    public List<Paragraph> Paragraphs { get; }
+    public Heading? Heading { get; } = heading;
+    public List<Paragraph> Paragraphs { get; } = paragraphs;
 }

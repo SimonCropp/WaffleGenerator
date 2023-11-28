@@ -1,8 +1,7 @@
 using System.Globalization;
 
-class InnerEngine
+class InnerEngine(Func<int, int> random)
 {
-    Func<int, int> random;
     int cardinalSequence;
     int ordinalSequence;
     string? title;
@@ -10,9 +9,6 @@ class InnerEngine
     string? cite;
     string? buzz;
     List<Paragraph> paragraphs = [];
-
-    public InnerEngine(Func<int, int> random) =>
-        this.random = random;
 
     void EvaluateRandomPhrase(string[] phrases, StringBuilder output)
     {

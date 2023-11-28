@@ -54,29 +54,29 @@ public class WaffleEngineTests
     [Test]
     public void EndsWith()
     {
-        Assert.True(new StringBuilder("a").EndsWith('a'));
-        Assert.True(new StringBuilder("ba").EndsWith('a'));
-        Assert.True(new StringBuilder("ba").EndsWith('b', 'a'));
-        Assert.True(new StringBuilder("a ").EndsWith('a'));
-        Assert.True(new StringBuilder("ba ").EndsWith('a'));
-        Assert.True(new StringBuilder("ba ").EndsWith('b', 'a'));
-        Assert.True(new StringBuilder("a	").EndsWith('a'));
-        Assert.True(new StringBuilder("ba	").EndsWith('a'));
-        Assert.True(new StringBuilder("ba	").EndsWith('b', 'a'));
+        True(new StringBuilder("a").EndsWith('a'));
+        True(new StringBuilder("ba").EndsWith('a'));
+        True(new StringBuilder("ba").EndsWith('b', 'a'));
+        True(new StringBuilder("a ").EndsWith('a'));
+        True(new StringBuilder("ba ").EndsWith('a'));
+        True(new StringBuilder("ba ").EndsWith('b', 'a'));
+        True(new StringBuilder("a	").EndsWith('a'));
+        True(new StringBuilder("ba	").EndsWith('a'));
+        True(new StringBuilder("ba	").EndsWith('b', 'a'));
 
-        Assert.False(new StringBuilder("a").EndsWith('c'));
-        Assert.False(new StringBuilder("ba").EndsWith('c'));
-        Assert.False(new StringBuilder("ba").EndsWith('c', 'd'));
-        Assert.False(new StringBuilder("a ").EndsWith('c'));
-        Assert.False(new StringBuilder("ba ").EndsWith('c'));
-        Assert.False(new StringBuilder("ba ").EndsWith('c', 'd'));
-        Assert.False(new StringBuilder("a	").EndsWith('c'));
-        Assert.False(new StringBuilder("ba	").EndsWith('c'));
-        Assert.False(new StringBuilder("ba	").EndsWith('c', 'd'));
-        Assert.False(new StringBuilder(" ").EndsWith('c'));
-        Assert.False(new StringBuilder("	").EndsWith('c'));
-        Assert.False(new StringBuilder("").EndsWith('c'));
-        Assert.False(new StringBuilder("").EndsWith('c'));
+        False(new StringBuilder("a").EndsWith('c'));
+        False(new StringBuilder("ba").EndsWith('c'));
+        False(new StringBuilder("ba").EndsWith('c', 'd'));
+        False(new StringBuilder("a ").EndsWith('c'));
+        False(new StringBuilder("ba ").EndsWith('c'));
+        False(new StringBuilder("ba ").EndsWith('c', 'd'));
+        False(new StringBuilder("a	").EndsWith('c'));
+        False(new StringBuilder("ba	").EndsWith('c'));
+        False(new StringBuilder("ba	").EndsWith('c', 'd'));
+        False(new StringBuilder(" ").EndsWith('c'));
+        False(new StringBuilder("	").EndsWith('c'));
+        False(new StringBuilder("").EndsWith('c'));
+        False(new StringBuilder("").EndsWith('c'));
     }
 
     [Test]
@@ -84,7 +84,7 @@ public class WaffleEngineTests
     {
         var text1 = WaffleEngine.Text(1, true);
         var text2 = WaffleEngine.Text(1, true);
-        Assert.AreNotEqual(text1, text2);
+        AreNotEqual(text1, text2);
     }
 
     [Test]
@@ -92,7 +92,7 @@ public class WaffleEngineTests
     {
         var text1 = WaffleEngine.Html(1, true, true);
         var text2 = WaffleEngine.Html(1, true, true);
-        Assert.AreNotEqual(text1, text2);
+        AreNotEqual(text1, text2);
     }
 
     [Test]
@@ -100,7 +100,7 @@ public class WaffleEngineTests
     {
         var text1 = WaffleEngine.Markdown(1, true);
         var text2 = WaffleEngine.Markdown(1, true);
-        Assert.AreNotEqual(text1, text2);
+        AreNotEqual(text1, text2);
     }
 
     [Test]

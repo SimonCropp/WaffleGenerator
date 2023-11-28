@@ -11,5 +11,7 @@
     <ProjectReference Include="..\WaffleGenerator.Bogus\WaffleGenerator.Bogus.csproj" />
     <ProjectReference Include="..\WaffleGenerator\WaffleGenerator.csproj" />
     <PackageReference Include="ProjectDefaults" Version="1.0.102" PrivateAssets="all" />
+    <Using Include="NUnit.Framework.Legacy.ClassicAssert" Static="True" />
+    <Using Include="NUnit.Framework.Assert" Static="True" />
   </ItemGroup>
 </Project>

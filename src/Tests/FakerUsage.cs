@@ -51,12 +51,12 @@ public class FakerUsage
         Trace.WriteLine(target.Title);
         Trace.WriteLine(target.Property1);
         Trace.WriteLine(target.Property2);
-        Assert.NotNull(target.Title);
-        Assert.IsNotEmpty(target.Title);
-        Assert.NotNull(target.Property1);
-        Assert.IsNotEmpty(target.Property1);
-        Assert.NotNull(target.Property2);
-        Assert.IsNotEmpty(target.Property2);
+        NotNull(target.Title);
+        IsNotEmpty(target.Title);
+        NotNull(target.Property1);
+        IsNotEmpty(target.Property1);
+        NotNull(target.Property2);
+        IsNotEmpty(target.Property2);
     }
 
     public class Target
