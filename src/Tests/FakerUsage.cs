@@ -1,4 +1,5 @@
 ﻿using Bogus;
+
 // ReSharper disable RedundantArgumentDefaultValue
 // ReSharper disable UnusedParameter.Local
 
@@ -9,6 +10,7 @@ public class FakerUsage
     public void Sample()
     {
         #region BogusUsage
+
         var faker = new Faker<Target>()
             .RuleFor(
                 property: u => u.Title,
@@ -36,6 +38,7 @@ public class FakerUsage
         Debug.WriteLine(target.Property2);
         Debug.WriteLine(target.Property3);
         Debug.WriteLine(target.Property4);
+
         #endregion
     }
 

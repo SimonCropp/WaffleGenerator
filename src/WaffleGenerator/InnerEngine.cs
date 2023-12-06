@@ -50,7 +50,7 @@ class InnerEngine(Func<int, int> random)
         }
     }
 
-    private void EvaluateChar(char c, StringBuilder builder)
+    void EvaluateChar(char c, StringBuilder builder)
     {
         switch (c)
         {
