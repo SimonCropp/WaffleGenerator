@@ -1,8 +1,8 @@
-# The Aesthetic Of Economico-Social Disposition
+﻿# The Aesthetic Of Economico-Social Disposition
 
  > In this regard, the underlying surrealism of the take home message should not divert attention from The Aesthetic Of Economico-Social Disposition
 
- * Humphrey Yokomoto in The Journal of the Total Entative Item (20094U)
+ * Humphrey Yokomoto in The Journal of the Total Entative Item (20104U)
 
 ## causation of milieu.
 
