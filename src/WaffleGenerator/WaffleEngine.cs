@@ -92,17 +92,18 @@ public static class WaffleEngine
         var innerEngine = new InnerEngine(random);
         var waffleContent = innerEngine.GetContent(paragraphs, includeHeading);
 
-        if (waffleContent.Heading != null)
+        var heading = waffleContent.Heading;
+        if (heading != null)
         {
             builder.AppendLine(
                 $"""
-                 # {waffleContent.Heading.Title}
+                 # {heading.Title}
 
-                  > {waffleContent.Heading.Quote}
+                  > {heading.Quote}
 
-                  * {waffleContent.Heading.Cite}
+                  * {heading.Cite}
 
-                 ## {waffleContent.Heading.Buzz}
+                 ## {heading.Buzz}
 
                  """);
         }
@@ -136,17 +137,18 @@ public static class WaffleEngine
         var builder = new StringBuilder();
         var innerEngine = new InnerEngine(random);
         var waffleContent = innerEngine.GetContent(paragraphs, includeHeading);
-        if (waffleContent.Heading != null)
+        var heading = waffleContent.Heading;
+        if (heading != null)
         {
             builder.AppendLine(
                 $"""
-                 {waffleContent.Heading.Title}
+                 {heading.Title}
 
-                 '{waffleContent.Heading.Quote}'
+                 '{heading.Quote}'
 
-                  - {waffleContent.Heading.Cite}
+                  - {heading.Cite}
 
-                 {waffleContent.Heading.Buzz}
+                 {heading.Buzz}
 
                  """);
         }
