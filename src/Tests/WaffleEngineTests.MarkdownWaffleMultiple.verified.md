@@ -1,4 +1,4 @@
-﻿# The Aesthetic Of Economico-Social Disposition
+# The Aesthetic Of Economico-Social Disposition
 
  > In this regard, the underlying surrealism of the take home message should not divert attention from The Aesthetic Of Economico-Social Disposition
 
