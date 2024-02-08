@@ -3,7 +3,7 @@
 class Constants
 {
     public static string[] preamblePhrases =
-    {
+    [
         """
         In broad terms, we can define the main issues with |t. There are :-
           * The |o of |o: |B |C |D.
@@ -172,10 +172,10 @@ class Constants
         "On one hand |B |C |D, but on the other hand",
         "One hears it stated that |B |C |D, but it is more likely that",
         "Whilst it may be true that |B |C |D, one must not lose sight of the fact that"
-    };
+    ];
 
     public static string[] subjectPhrases =
-    {
+    [
         "|h strategic goals",
         "|h gap analysis",
         "|h hardball",
@@ -235,10 +235,10 @@ class Constants
         "an unambiguous concept of the |c",
         "a metonymic reconstruction of the |c",
         "a primary interrelationship between system and/or subsystem technologies"
-    };
+    ];
 
     public static string[] verbPhrases =
-    {
+    [
         "|d the overall efficiency of",
         "|d the |4 and |C",
         "can fully utilize",
@@ -340,10 +340,10 @@ class Constants
         "recognizes deficiencies in",
         "needs to be factored into the equation alongside the",
         "needs to be addressed along with the"
-    };
+    ];
 
     public static string[] objectPhrases =
-    {
+    [
         "the overall game-plan",
         "the slippery slope",
         "the strategic fit",
@@ -380,10 +380,10 @@ class Constants
         "the |c. This may |e flounder on the |c",
         "the |c. This may explain why the |c |e |d |D",
         "the |c. This trend may dissipate due to the |c"
-    };
+    ];
 
     public static string[] adverbs =
-    {
+    [
         "substantively",
         "intuitively",
         "uniquely",
@@ -422,10 +422,10 @@ class Constants
         "globally",
         "clearly",
         "disconcertingly"
-    };
+    ];
 
     public static string[] verbs =
-    {
+    [
         "stimulates",
         "spreads",
         "improves",
@@ -521,10 +521,10 @@ class Constants
         "amends",
         "translates",
         "specifies"
-    };
+    ];
 
     public static string[] firstAdjectivePhrases =
-    {
+    [
         "comprehensive",
         "targeted",
         "realigned",
@@ -632,10 +632,10 @@ class Constants
         "mechanism-independent",
         "synergistic",
         "high-level"
-    };
+    ];
 
     public static string[] secondAdjectivePhrases =
-    {
+    [
         "fast-track",
         "transparent",
         "results-driven",
@@ -870,10 +870,10 @@ class Constants
         "expressionistic",
         "resonant",
         "vibrant"
-    };
+    ];
 
     public static string[] nounPhrases =
-    {
+    [
         "|o",
         "|o",
         "|o",
@@ -991,10 +991,10 @@ class Constants
         "delivery",
         "funding",
         "resources"
-    };
+    ];
 
     public static string[] cliches =
-    {
+    [
         "|o of |o",
         "|o of |o",
         "|o of |o",
@@ -1129,10 +1129,10 @@ class Constants
         "large portion of the co-ordination of communication",
         "corporate procedure",
         "proposed scenario"
-    };
+    ];
 
     public static string[] prefixes =
-    {
+    [
         "the",
         "the",
         "the",
@@ -1179,10 +1179,10 @@ class Constants
         "a unique facet of",
         "the consolidation of the",
         "a preponderance of the"
-    };
+    ];
 
     public static string[] artyNouns =
-    {
+    [
         "discordance",
         "legitimisation",
         "principle",
@@ -1281,10 +1281,10 @@ class Constants
         "provenance",
         "discord",
         "milieu"
-    };
+    ];
 
     public static string[] surnames =
-    {
+    [
         "Bennet",
         "Blotchet-Halls",
         "Carson",
@@ -1309,10 +1309,10 @@ class Constants
         "Stringer",
         "White",
         "Yokomoto"
-    };
+    ];
 
     public static string[] forenames =
-    {
+    [
         "Abraham",
         "Reginald",
         "Cheryl",
@@ -1343,10 +1343,10 @@ class Constants
         "Dirk",
         "Desmond",
         "Akiko"
-    };
+    ];
 
     public static string[] buzzPhrases =
-    {
+    [
         "|1 |2 |3",
         "|1 |2 |3",
         "|2 |3",
@@ -1354,10 +1354,10 @@ class Constants
         "|1 |2 |3",
         "|4",
         "|4"
-    };
+    ];
 
     public static string[] cardinalSequences =
-    {
+    [
         "one",
         "two",
         "three",
@@ -1370,30 +1370,30 @@ class Constants
         "ten",
         "eleven",
         "twelve"
-    };
+    ];
 
     public static string[] ordinalSequences =
-    {
+    [
         "first",
         "second",
         "third",
         "fourth",
         "fifth"
-    };
+    ];
 
     public static string[] maybeHeading =
-    {
+    [
         "",
         "",
         "The |uc.",
         ""
-    };
+    ];
 
     public static bool[] maybeParagraph =
-    {
+    [
         false,
         false,
         true,
         false
-    };
+    ];
 }
