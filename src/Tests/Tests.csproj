@@ -10,7 +10,7 @@
     <PackageReference Include="Verify.Nunit" Version="23.1.0" />
     <ProjectReference Include="..\WaffleGenerator.Bogus\WaffleGenerator.Bogus.csproj" />
     <ProjectReference Include="..\WaffleGenerator\WaffleGenerator.csproj" />
-    <PackageReference Include="ProjectDefaults" Version="1.0.109" PrivateAssets="all" />
+    <PackageReference Include="ProjectDefaults" Version="1.0.110" PrivateAssets="all" />
     <Using Include="NUnit.Framework.Legacy.ClassicAssert" Static="True" />
     <Using Include="NUnit.Framework.Assert" Static="True" />
   </ItemGroup>
