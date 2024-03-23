@@ -113,11 +113,11 @@ public static class WaffleEngine
             if (paragraph.Heading != null)
             {
                 builder.AppendLine($"## {paragraph.Heading}");
-                builder.AppendLine("");
+                builder.AppendLine();
             }
 
             builder.AppendLine(paragraph.Body);
-            builder.AppendLine("");
+            builder.AppendLine();
         }
 
         return builder.ToString();
