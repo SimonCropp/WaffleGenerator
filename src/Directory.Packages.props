@@ -7,7 +7,7 @@
     <PackageVersion Include="Bogus" Version="35.6.0" />
     <PackageVersion Include="MarkdownSnippets.MsBuild" Version="27.0.2" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.11.0" />
-    <PackageVersion Include="NUnit" Version="4.2.0" />
+    <PackageVersion Include="NUnit" Version="4.2.1" />
     <PackageVersion Include="NUnit3TestAdapter" Version="4.6.0" />
     <PackageVersion Include="Polyfill" Version="6.4.1" />
     <PackageVersion Include="ProjectDefaults" Version="1.0.134" />
