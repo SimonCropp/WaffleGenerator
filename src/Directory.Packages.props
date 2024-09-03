@@ -11,6 +11,6 @@
     <PackageVersion Include="NUnit3TestAdapter" Version="4.6.0" />
     <PackageVersion Include="Polyfill" Version="6.5.0" />
     <PackageVersion Include="ProjectDefaults" Version="1.0.134" />
-    <PackageVersion Include="Verify.Nunit" Version="26.2.0" />
+    <PackageVersion Include="Verify.Nunit" Version="26.3.1" />
   </ItemGroup>
 </Project>
