@@ -2,7 +2,7 @@
 <Project>
   <PropertyGroup>
     <NoWarn>CS1591</NoWarn>
-    <Version>4.2.1</Version>
+    <Version>4.2.2</Version>
     <AssemblyVersion>1.0.0</AssemblyVersion>
     <LangVersion>preview</LangVersion>
     <PackageTags>WaffleGenerator, Bogus</PackageTags>
