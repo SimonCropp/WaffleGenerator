@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net8;net48</TargetFrameworks>
+    <TargetFrameworks>net9;net48</TargetFrameworks>
     <Description>Produces Bogus (https://github.com/bchavez/Bogus) text which, on first glance, looks like real, ponderous, prose; replete with clichés.</Description>
     <DefineConstants>$(DefineConstants);Bogus</DefineConstants>
   </PropertyGroup>
