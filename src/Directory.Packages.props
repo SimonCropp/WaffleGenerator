@@ -9,7 +9,7 @@
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
     <PackageVersion Include="NUnit" Version="4.3.2" />
     <PackageVersion Include="NUnit3TestAdapter" Version="5.0.0" />
-    <PackageVersion Include="Polyfill" Version="7.20.0" />
+    <PackageVersion Include="Polyfill" Version="7.21.0" />
     <PackageVersion Include="ProjectDefaults" Version="1.0.148" />
     <PackageVersion Include="Verify.NUnit" Version="28.13.0" />
   </ItemGroup>
