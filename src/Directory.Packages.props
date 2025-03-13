@@ -4,7 +4,7 @@
     <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
   </PropertyGroup>
   <ItemGroup>
-    <PackageVersion Include="Bogus" Version="35.6.1" />
+    <PackageVersion Include="Bogus" Version="35.6.2" />
     <PackageVersion Include="MarkdownSnippets.MsBuild" Version="27.0.2" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
     <PackageVersion Include="NUnit" Version="4.3.2" />
@@ -12,5 +12,6 @@
     <PackageVersion Include="Polyfill" Version="7.21.0" />
     <PackageVersion Include="ProjectDefaults" Version="1.0.148" />
     <PackageVersion Include="Verify.NUnit" Version="28.14.0" />
+    <PackageVersion Include="Verify.Nunit" Version="28.15.0" />
   </ItemGroup>
 </Project>
