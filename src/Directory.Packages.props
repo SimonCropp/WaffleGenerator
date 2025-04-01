@@ -10,7 +10,7 @@
     <PackageVersion Include="NUnit" Version="4.3.2" />
     <PackageVersion Include="NUnit3TestAdapter" Version="5.0.0" />
     <PackageVersion Include="Polyfill" Version="7.24.0" />
-    <PackageVersion Include="ProjectDefaults" Version="1.0.149" />
+    <PackageVersion Include="ProjectDefaults" Version="1.0.150" />
     <PackageVersion Include="Verify.NUnit" Version="29.0.0" />
   </ItemGroup>
 </Project>
