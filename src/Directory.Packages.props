@@ -12,5 +12,6 @@
     <PackageVersion Include="Polyfill" Version="7.30.0" />
     <PackageVersion Include="ProjectDefaults" Version="1.0.152" />
     <PackageVersion Include="Verify.NUnit" Version="30.0.0" />
+    <PackageVersion Include="Microsoft.Sbom.Targets" Version="3.1.0" />
   </ItemGroup>
 </Project>
