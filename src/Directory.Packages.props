@@ -9,7 +9,7 @@
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
     <PackageVersion Include="NUnit" Version="4.3.2" />
     <PackageVersion Include="NUnit3TestAdapter" Version="5.0.0" />
-    <PackageVersion Include="Polyfill" Version="8.0.1" />
+    <PackageVersion Include="Polyfill" Version="8.2.0" />
     <PackageVersion Include="ProjectDefaults" Version="1.0.156" />
     <PackageVersion Include="Verify.NUnit" Version="30.4.0" />
     <PackageVersion Include="Microsoft.Sbom.Targets" Version="4.0.3" />
