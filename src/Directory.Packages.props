@@ -11,7 +11,7 @@
     <PackageVersion Include="NUnit3TestAdapter" Version="5.0.0" />
     <PackageVersion Include="Polyfill" Version="8.7.3" />
     <PackageVersion Include="ProjectDefaults" Version="1.0.156" />
-    <PackageVersion Include="Verify.NUnit" Version="30.4.0" />
+    <PackageVersion Include="Verify.NUnit" Version="30.5.0" />
     <PackageVersion Include="Microsoft.Sbom.Targets" Version="4.0.3" />
   </ItemGroup>
 </Project>
