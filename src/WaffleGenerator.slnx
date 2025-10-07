@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="appveyor.yml" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Project Path="Tests/Tests.csproj" />
+  <Project Path="WaffleGenerator.Bogus/WaffleGenerator.Bogus.csproj" />
+  <Project Path="WaffleGenerator/WaffleGenerator.csproj" />
+</Solution>
