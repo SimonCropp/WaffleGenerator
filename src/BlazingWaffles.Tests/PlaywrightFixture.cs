@@ -10,11 +10,40 @@ public class PlaywrightFixture :
 
     public IBrowser Browser => browser!;
 
-    public Task InitializeAsync()
+    public async Task InitializeAsync()
     {
         StartBlazorApp();
 
-        return StartDriver();
+        await StartDriver();
+        await WaitForServerReady();
+    }
+
+    async Task WaitForServerReady()
+    {
+        using var handler = new HttpClientHandler
+        {
+            ServerCertificateCustomValidationCallback = (_, _, _, _) => true
+        };
+        using var client = new HttpClient(handler);
+
+        for (var i = 0; i < 30; i++)
+        {
+            try
+            {
+                var response = await client.GetAsync("https://localhost:5001");
+                if (response.IsSuccessStatusCode)
+                {
+                    return;
+                }
+            }
+            catch
+            {
+                // Server not ready yet
+            }
+            await Task.Delay(1000);
+        }
+
+        throw new Exception("Server failed to start within 30 seconds");
     }
 
     void StartBlazorApp()
