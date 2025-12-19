@@ -8,6 +8,7 @@
     <PackageReference Include="AngleSharp" />
     <PackageReference Include="AngleSharp.Diffing" />
     <PackageReference Include="Microsoft.Playwright" />
+    <PackageReference Include="ProjectFiles" />
     <PackageReference Include="Verify.AngleSharp" />
     <PackageReference Include="MarkdownSnippets.MsBuild" PrivateAssets="all" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" />

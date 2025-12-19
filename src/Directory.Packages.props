@@ -17,6 +17,7 @@
     <PackageVersion Include="NUnit3TestAdapter" Version="6.0.0" />
     <PackageVersion Include="Polyfill" Version="9.4.0" />
     <PackageVersion Include="ProjectDefaults" Version="1.0.167" />
+    <PackageVersion Include="ProjectFiles" Version="0.4.0" />
     <PackageVersion Include="Verify.NUnit" Version="31.9.0" />
     <PackageVersion Include="Verify.AngleSharp" Version="4.7.0" />
     <PackageVersion Include="Verify.Blazor" Version="11.0.0" />

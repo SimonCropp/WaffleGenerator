@@ -18,7 +18,7 @@ public class PlaywrightFixture :
         await WaitForServerReady();
     }
 
-    async Task WaitForServerReady()
+    static async Task WaitForServerReady()
     {
         using var handler = new HttpClientHandler
         {
@@ -43,14 +43,12 @@ public class PlaywrightFixture :
             await Task.Delay(1000);
         }
 
-        throw new Exception("Server failed to start within 30 seconds");
+        throw new("Server failed to start within 30 seconds");
     }
 
     void StartBlazorApp()
     {
-        var baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-        var binPath = baseDirectory.Replace(".Tests","");
-        var projectDir = Path.GetFullPath(Path.Combine(binPath, "../../"));
+        var projectDir = Path.GetFullPath(Path.Combine(ProjectFiles.ProjectDirectory, "BlazingWaffles"));
         var startInfo = new ProcessStartInfo("dotnet", "run --no-build --no-restore")
         {
             WorkingDirectory = projectDir
