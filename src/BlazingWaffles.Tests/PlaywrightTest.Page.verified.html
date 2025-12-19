@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html style="--blazor-load-percentage: 100%; --blazor-load-percentage-text: &quot;100%&quot;;">
+  <head>
+    <meta charset="utf-8">
+    <base href="/">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" as="style">
+    <link rel="preload" href="/favicon.svg" as="image">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="site.css" rel="stylesheet">
+    <link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="alternate icon" href="/favicon.ico">
+    <title>Blazing Waffles</title>
+  </head>
+  <body>
+    <app>
+      <div class="main">
+        <nav class="navbar navbar-light bg-light">
+          <a class="navbar-brand" href="#">
+            <img src="favicon.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            Blazing Waffles
+          </a>
+        </nav>
+        <div class="content px-4">
+          <div class="container.container-fluid ">
+            <h5 class="card-header">What is this?</h5>
+            <div class="card-body">
+                               Blazor app that uses 
+              <a href="https://github.com/SimonCropp/WaffleGenerator">Waffle Generator</a>
+              to generate readable gibberish. An alternative to 
+              <a href="https://en.wikipedia.org/wiki/Lorem_ipsum">Lorum Ipsum</a>.
+            </div>
+          </div>
+          <div class="container.card">
+            <h5 class="card-header">Options</h5>
+            <div class="card-body">
+              <div class="container.align-items-baseline" style="width: 250px;">
+                <div class="form-group form-check">
+                  <input class="form-check-input" type="checkbox" id="headerschk" style="caret-color: transparent !important;">
+                  <label class="form-check-label" for="headerschk">Include Heading</label>
+                </div>
+                <div class="form-group">
+                  <label for="paragraphs">Generate 1 Paragraph(s)</label>
+                  <input class="form-control-range" type="range" min="1" max="10" step="1" id="paragraphs" style="caret-color: transparent !important;">
+                </div>
+                <div class="form-inline">
+                  <select class="form-control" id="outputType">
+                    <option value="Text">Text Output</option>
+                    <option value="Html">Html Output</option>
+                    <option value="Markdown">Markdown Output</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <h5 class="card-header">
+                       Output
+              <button type="button" class="btn btn-primary btn-sm">Copy</button>
+              <button type="button" class="btn btn-primary btn-sm">Regen</button>
+            </h5>
+            <div class="card-body border-dark">
+              <code id="waffle" style="color: darkred;white-space: pre-line">TheWaffle</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </app>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script>navigator.serviceWorker.register('service-worker.js');</script>
+    <script src="site.js"></script>
+  </body>
+</html>

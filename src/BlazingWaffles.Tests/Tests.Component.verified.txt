@@ -1,0 +1,9 @@
+﻿{
+  Instance: {
+    Clipboard: {},
+    Waffle: The Waffle,
+    Sha: TheSha,
+    Paragraphs: 1,
+    IncludeHeading: false
+  }
+}

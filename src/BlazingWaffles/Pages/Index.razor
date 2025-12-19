@@ -1,0 +1,54 @@
+﻿@page "/"
+
+<div class="container.container-fluid ">
+    <Connection>
+        <Online>
+            <h5 class="card-header">What is this?</h5>
+            <div class="card-body">
+                Blazor app that uses <a href="https://github.com/SimonCropp/WaffleGenerator">Waffle Generator</a> to generate readable gibberish. An alternative to <a href="https://en.wikipedia.org/wiki/Lorem_ipsum">Lorum Ipsum</a>.
+                <a href="https://github.com/gbiellem/BlazingWaffles">Source</a>/<a href="https://github.com/gbiellem/BlazingWaffles/commit/@Sha">Commit</a>.
+            </div>
+        </Online>
+        <Offline>
+            <h5 class="card-header">What is this?</h5>
+            <div class="card-body">
+                A Blazor app that uses the Waffle Generator project to generate readable gibberish that can be used in place of Lorum Ipsum.<br/>
+                Currently this app is running offline as a PWA
+            </div>
+        </Offline>
+    </Connection>
+</div>
+
+<div class="container.card">
+    <h5 class="card-header">Options</h5>
+    <div class="card-body">
+        <div class="container.align-items-baseline" style="width: 250px;">
+            <div class="form-group form-check">
+                <input class="form-check-input" type="checkbox" id="headerschk" @bind="IncludeHeading" />
+                <label class="form-check-label" for="headerschk">Include Heading</label>
+            </div>
+            <div class="form-group">
+                <label for="paragraphs">Generate @Paragraphs Paragraph(s)</label>
+                <input class="form-control-range" @bind="Paragraphs" type="range" min=1 max=10 step=1 id="paragraphs" />
+            </div>
+            <div class="form-inline">
+                <select @bind="OutputType" class="form-control" id="outputType">
+                    <option value="Text">Text Output</option>
+                    <option value="Html">Html Output</option>
+                    <option value="Markdown">Markdown Output</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <h5 class="card-header">
+        Output
+        <button type="button" class="btn btn-primary btn-sm" @onclick="CopyTextToClipboard">Copy</button>
+        <button type="button" class="btn btn-primary btn-sm" @onclick="SetWaffle">Regen</button>
+    </h5>
+    <div class="card-body border-dark">
+        <code id="waffle" style="color: darkred;white-space: pre-line">@Waffle</code>
+    </div>
+</div>

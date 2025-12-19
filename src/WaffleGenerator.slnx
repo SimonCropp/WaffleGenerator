@@ -5,6 +5,8 @@
     <File Path="Directory.Build.props" />
     <File Path="Directory.Packages.props" />
   </Folder>
+  <Project Path="BlazingWaffles.Tests/BlazingWaffles.Tests.csproj" />
+  <Project Path="BlazingWaffles/BlazingWaffles.csproj" />
   <Project Path="Tests/Tests.csproj" />
   <Project Path="WaffleGenerator.Bogus/WaffleGenerator.Bogus.csproj" />
   <Project Path="WaffleGenerator/WaffleGenerator.csproj" />
