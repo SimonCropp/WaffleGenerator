@@ -58,7 +58,7 @@ var text = WaffleEngine.Html(
     includeHeadAndBody: true);
 Debug.WriteLine(text);
 ```
-<sup><a href='/src/Tests/WaffleEngineTests.cs#L35-L43' title='Snippet source file'>snippet source</a> | <a href='#snippet-htmlUsage' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/WaffleEngineTests.cs#L33-L41' title='Snippet source file'>snippet source</a> | <a href='#snippet-htmlUsage' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -72,7 +72,7 @@ var text = WaffleEngine.Text(
     includeHeading: true);
 Debug.WriteLine(text);
 ```
-<sup><a href='/src/Tests/WaffleEngineTests.cs#L9-L16' title='Snippet source file'>snippet source</a> | <a href='#snippet-textUsage' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/WaffleEngineTests.cs#L7-L14' title='Snippet source file'>snippet source</a> | <a href='#snippet-textUsage' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -86,7 +86,7 @@ var markdown = WaffleEngine.Markdown(
     includeHeading: true);
 Debug.WriteLine(markdown);
 ```
-<sup><a href='/src/Tests/WaffleEngineTests.cs#L22-L29' title='Snippet source file'>snippet source</a> | <a href='#snippet-markdownUsage' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/WaffleEngineTests.cs#L20-L27' title='Snippet source file'>snippet source</a> | <a href='#snippet-markdownUsage' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 

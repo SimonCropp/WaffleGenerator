@@ -1,6 +1,4 @@
-﻿using WaffleGenerator;
-
-[TestFixture]
+﻿[TestFixture]
 public class WaffleEngineTests
 {
     [Test]

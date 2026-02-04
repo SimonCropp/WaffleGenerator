@@ -2,7 +2,7 @@
 
  > In this regard, the underlying surrealism of the take home message should not divert attention from The Aesthetic Of Economico-Social Disposition
 
- * Humphrey Yokomoto in The Journal of the Total Entative Item (20114U)
+ * Humphrey Yokomoto in The Journal of the Total Entative Item (20124U)
 
 ## causation of milieu.
 
