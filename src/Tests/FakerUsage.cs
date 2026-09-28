@@ -3,7 +3,6 @@
 // ReSharper disable RedundantArgumentDefaultValue
 // ReSharper disable UnusedParameter.Local
 
-[TestFixture]
 public class FakerUsage
 {
     [Test]
@@ -43,7 +42,7 @@ public class FakerUsage
     }
 
     [Test]
-    public void Run()
+    public async Task Run()
     {
         var faker = new Faker<Target>()
             .RuleFor(u => u.Title, (f, u) => f.WaffleTitle())
@@ -54,12 +53,12 @@ public class FakerUsage
         Trace.WriteLine(target.Title);
         Trace.WriteLine(target.Property1);
         Trace.WriteLine(target.Property2);
-        NotNull(target.Title);
-        IsNotEmpty(target.Title);
-        NotNull(target.Property1);
-        IsNotEmpty(target.Property1);
-        NotNull(target.Property2);
-        IsNotEmpty(target.Property2);
+        await Assert.That(target.Title).IsNotNull();
+        await Assert.That(target.Title).IsNotEmpty();
+        await Assert.That(target.Property1).IsNotNull();
+        await Assert.That(target.Property1).IsNotEmpty();
+        await Assert.That(target.Property2).IsNotNull();
+        await Assert.That(target.Property2).IsNotEmpty();
     }
 
     public class Target

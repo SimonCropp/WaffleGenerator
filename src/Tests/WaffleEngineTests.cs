@@ -1,5 +1,4 @@
-﻿[TestFixture]
-public class WaffleEngineTests
+﻿public class WaffleEngineTests
 {
     [Test]
     public void TextWaffleSample()
@@ -50,55 +49,55 @@ public class WaffleEngineTests
     }
 
     [Test]
-    public void EndsWith()
+    public async Task EndsWith()
     {
-        True(new StringBuilder("a").EndsWith('a'));
-        True(new StringBuilder("ba").EndsWith('a'));
-        True(new StringBuilder("ba").EndsWith('b', 'a'));
-        True(new StringBuilder("a ").EndsWith('a'));
-        True(new StringBuilder("ba ").EndsWith('a'));
-        True(new StringBuilder("ba ").EndsWith('b', 'a'));
-        True(new StringBuilder("a	").EndsWith('a'));
-        True(new StringBuilder("ba	").EndsWith('a'));
-        True(new StringBuilder("ba	").EndsWith('b', 'a'));
+        await Assert.That(new StringBuilder("a").EndsWith('a')).IsTrue();
+        await Assert.That(new StringBuilder("ba").EndsWith('a')).IsTrue();
+        await Assert.That(new StringBuilder("ba").EndsWith('b', 'a')).IsTrue();
+        await Assert.That(new StringBuilder("a ").EndsWith('a')).IsTrue();
+        await Assert.That(new StringBuilder("ba ").EndsWith('a')).IsTrue();
+        await Assert.That(new StringBuilder("ba ").EndsWith('b', 'a')).IsTrue();
+        await Assert.That(new StringBuilder("a	").EndsWith('a')).IsTrue();
+        await Assert.That(new StringBuilder("ba	").EndsWith('a')).IsTrue();
+        await Assert.That(new StringBuilder("ba	").EndsWith('b', 'a')).IsTrue();
 
-        False(new StringBuilder("a").EndsWith('c'));
-        False(new StringBuilder("ba").EndsWith('c'));
-        False(new StringBuilder("ba").EndsWith('c', 'd'));
-        False(new StringBuilder("a ").EndsWith('c'));
-        False(new StringBuilder("ba ").EndsWith('c'));
-        False(new StringBuilder("ba ").EndsWith('c', 'd'));
-        False(new StringBuilder("a	").EndsWith('c'));
-        False(new StringBuilder("ba	").EndsWith('c'));
-        False(new StringBuilder("ba	").EndsWith('c', 'd'));
-        False(new StringBuilder(" ").EndsWith('c'));
-        False(new StringBuilder("	").EndsWith('c'));
-        False(new StringBuilder("").EndsWith('c'));
-        False(new StringBuilder("").EndsWith('c'));
+        await Assert.That(new StringBuilder("a").EndsWith('c')).IsFalse();
+        await Assert.That(new StringBuilder("ba").EndsWith('c')).IsFalse();
+        await Assert.That(new StringBuilder("ba").EndsWith('c', 'd')).IsFalse();
+        await Assert.That(new StringBuilder("a ").EndsWith('c')).IsFalse();
+        await Assert.That(new StringBuilder("ba ").EndsWith('c')).IsFalse();
+        await Assert.That(new StringBuilder("ba ").EndsWith('c', 'd')).IsFalse();
+        await Assert.That(new StringBuilder("a	").EndsWith('c')).IsFalse();
+        await Assert.That(new StringBuilder("ba	").EndsWith('c')).IsFalse();
+        await Assert.That(new StringBuilder("ba	").EndsWith('c', 'd')).IsFalse();
+        await Assert.That(new StringBuilder(" ").EndsWith('c')).IsFalse();
+        await Assert.That(new StringBuilder("	").EndsWith('c')).IsFalse();
+        await Assert.That(new StringBuilder("").EndsWith('c')).IsFalse();
+        await Assert.That(new StringBuilder("").EndsWith('c')).IsFalse();
     }
 
     [Test]
-    public void MultiTextShouldNotDuplicate()
+    public async Task MultiTextShouldNotDuplicate()
     {
         var text1 = WaffleEngine.Text(1, true);
         var text2 = WaffleEngine.Text(1, true);
-        AreNotEqual(text1, text2);
+        await Assert.That(text2).IsNotEqualTo(text1);
     }
 
     [Test]
-    public void MultiHtmlShouldNotDuplicate()
+    public async Task MultiHtmlShouldNotDuplicate()
     {
         var text1 = WaffleEngine.Html(1, true, true);
         var text2 = WaffleEngine.Html(1, true, true);
-        AreNotEqual(text1, text2);
+        await Assert.That(text2).IsNotEqualTo(text1);
     }
 
     [Test]
-    public void MultiMarkdownShouldNotDuplicate()
+    public async Task MultiMarkdownShouldNotDuplicate()
     {
         var text1 = WaffleEngine.Markdown(1, true);
         var text2 = WaffleEngine.Markdown(1, true);
-        AreNotEqual(text1, text2);
+        await Assert.That(text2).IsNotEqualTo(text1);
     }
 
     [Test]
