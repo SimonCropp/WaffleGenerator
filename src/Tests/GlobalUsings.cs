@@ -1,2 +1,1 @@
-﻿global using VerifyTests.DiffPlex;
-global using WaffleGenerator;
+﻿global using WaffleGenerator;
